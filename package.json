@@ -1,0 +1,42 @@
+{
+  "name": "boom_radio",
+  "version": "1.0.0",
+  "description": "Boom Radio theme",
+  "main": "src/assets/js/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node src/assets/js/index.js",
+    "css": "node-sass src/assets/scss/app.scss style.css",
+    "watch:css": "yarn css -w"
+  },
+  "author": "Boom Team",
+  "contributors": [
+    "John Robertson <john@myjamjar.com.au> (https://www.myjamjar.com.au)",
+    "Fanny LeFert <other@example.com> (http://other-website.com)",
+    "Alessandro Corraglia <other@example.com> (http://other-website.com)"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "foundation": "^4.2.1-1",
+    "node-sass": "^4.12.0",
+    "slick-carousel": "^1.8.1",
+    "yarn": "^1.17.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boom-radio/wordpress.git"
+  },
+  "keywords": [
+    "Boom",
+    "Radio",
+    "WordPress",
+    "theme"
+  ],
+  "bugs": {
+    "url": "https://github.com/boom-radio/wordpress/issues"
+  },
+  "homepage": "https://github.com/boom-radio/wordpress#readme"
+}

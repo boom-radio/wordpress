@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="113.437" height="52.778" viewBox="0 0 113.437 52.778">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+      }
+    </style>
+  </defs>
+  <g id="wave_left" transform="translate(-764.031 -287)">
+    <path id="wave_left-2" data-name="wave_left" class="cls-1" d="M1147.6,1120.563s-1.7,34.836,7.916,34.3,5.878-51.469,16.166-51.77,6.914,42.017,15.564,42.017,6.073-26.152,12.525-26.152,5.578,18.637,14.763,19.2,10.589-13.36,18.9-13.36c8.617,0,14.195,4.867,26.937,4.566" transform="translate(2024.417 1442.371) rotate(180)"/>
+  </g>
+</svg>

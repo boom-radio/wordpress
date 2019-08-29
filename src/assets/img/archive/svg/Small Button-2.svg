@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="41.581" height="27.122" viewBox="0 0 41.581 27.122">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #eb5b27;
+        font-size: 14px;
+        font-family: SegoeUI, Segoe UI;
+      }
+    </style>
+  </defs>
+  <g id="Small_Button" data-name="Small Button" transform="translate(-304.047 -854)">
+    <path id="Path_12" data-name="Path 12" class="cls-1" d="M3.1,0H38.484c1.71,0,3.1,1.977,3.1,4.415V22.707c0,2.438-1.386,4.415-3.1,4.415H3.1c-1.71,0-3.1-1.977-3.1-4.415V4.415C0,1.977,1.386,0,3.1,0Z" transform="translate(304.047 854)"/>
+    <text id="Go" class="cls-2" transform="translate(316.435 873.402)"><tspan x="0" y="0">Go</tspan></text>
+  </g>
+</svg>

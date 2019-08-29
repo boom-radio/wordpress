@@ -1,0 +1,96 @@
+@import "config";
+
+@include mediaMd {
+    :target:before {
+        content:"";
+        display:block;
+        height:133px; /* fixed header height*/
+        }
+
+    .icons {
+        height: 70%;
+        width: 70%;
+    }
+    .social-button, .feed, .twitter-feed iframe{
+        width: 300px!important;   
+    }   
+    /////////STYLES ON LISTEN PAGE////////////////////////////
+    /////////TABS ON LISTEN PAGE
+    .slide {
+        background: $color-eight;
+        width: calc(100% / 3);
+        height: 4px;
+        position: relative;
+        left: 0;
+        top: 53px;
+        transition: left 0.3s ease-out;
+    }
+    .off-canvas {
+        width: 25%;
+        overflow:hidden;
+    }
+    .md-tabs {
+        background-color: $color-five;
+        text-align: center;
+
+        > {
+
+            .tabs {
+                margin: 0;
+                border: 0;
+                background: transparent;
+                list-style-type: none;
+                display: table;
+                width: 100%;
+
+                .cell {
+                    padding: 5px;
+                }
+
+                >.tabs-title {
+                    display: table-cell;
+                    width: calc(100% / 3);
+                    text-align: center;
+                    display: inline-block;
+
+                    &.is-active {
+                        >a {
+                            color: $color-white;
+                            @include gradient-three-four;
+                            outline: none;
+                        }
+
+                        &:nth-of-type(1)~.slide {
+                            left: calc((100% / 3) * 0);
+                        }
+
+                        &:nth-of-type(2)~.slide {
+                            left: calc((100% / 3) * 1);
+                        }
+
+                        &:nth-of-type(3)~.slide {
+                            left: calc((100% / 3) * 2);
+                        }
+                    }
+
+                    >a {
+                        color: $color-white;
+                        font-size: 16px;
+
+                        &:hover {
+                            color: $color-four;
+                            background-color: transparent;
+                        }
+
+                        &:focus {
+                            @include gradient-three-four;
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /////////STYLES ON LISTEN PAGE////////////////////////////
+}

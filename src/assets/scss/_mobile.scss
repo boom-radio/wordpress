@@ -1,0 +1,446 @@
+@import "config";
+
+//BEGINNING GENERAL STYLES ========================================================================================================
+body {
+    background: $color-eight;
+    font-family: 'Quicksand-Regular', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include title-font;
+}
+
+h1 {
+    font-size: 2em;
+    display: block;
+    padding: 1em 0.5em;
+    color: $color-six;
+}
+
+h2 {
+    font-size: 1.4em;
+    padding-bottom: 1em;
+    padding-top: 0.5em;
+}
+
+h3 {
+    font-size: 1.6em;
+    display: block;
+    padding: 14px 0.5em;
+    color: $color-six;
+}
+
+h4 {
+    font-size: 1.2em;
+    padding: 0.5em;
+    color: $color-eight;
+    text-align: center;
+}
+
+h5 {
+    font-size: 1.1rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+a {
+    @include title-font;
+    color: $color-white;
+    font-size: 1.1em;
+
+    &:hover {
+        color: $color-six;
+    }
+
+    i:hover {
+        color: $color-white;
+    }
+}
+
+.test {
+    border: 1px solid blue;
+}
+
+//Site wide title controller
+.section-title {
+    color: $color-six;
+    padding: 0.5rem;
+}
+
+//Site wide contact form controller
+input,
+textarea,
+button,
+label {
+    @include title-font;
+}
+
+label {
+    color: $color-white;
+    padding-bottom: 0.25rem;
+}
+
+textarea {
+    padding: 0.5rem;
+}
+
+form {
+    margin-top: 2.5rem;
+}
+
+iframe {
+    border: 0 !important;
+    overflow: hidden !important;
+}
+
+.list-group-item {
+    margin-bottom: 1.5rem;
+}
+
+//END GENERAL STYLES =================================================================================================================
+
+//BEGINNING BODY STYLES ??????????????????????????????????????????????????????????????????????????????????????????????????????????????
+//This is this BOOM embedded player from tunein.com
+.boomPlayer {
+    width: 100%;
+    height: 100px;
+    margin: 0;
+}
+
+//Instagram & Facebook feed styles on contact.html
+.instagram-media,
+#facebook {
+    background: #FFF;
+    border: 0;
+    border-radius: 0;
+    min-width: 300px !important;
+    max-width: 98vw !important;
+    height: 250px;
+    padding: 0;
+}
+
+.feed,
+.twitter-feed iframe {
+    width: 95vw !important;
+    padding: 0 !important;
+}
+
+//Styling of icons on the site
+.icons {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    padding: 0.5rem;
+}
+
+//iframe of tune-in player
+.card-section iframe {
+    width: 100% !important;
+}
+
+//This is the customised audio player (Commented because we are using the BOOM embedded one)
+// $color-white: rgba(255, 255, 255, 0.3); //Setting color-white opacity for player border
+// #audioplayer {
+//     //width: 195px;
+//     border: 1px solid $color-white;
+//     border-radius: 15px;
+// }
+// $color-white: rgba(255, 255, 255, 1); //Re-declaring the original white after using it
+
+// #pButton {
+//     color: $color-six;
+// }
+
+// #timeline {
+//     width: 70px;
+//     border-radius: 15px;
+//     background: $gradient-three-four;
+
+// }
+
+// #playhead {
+//     width: 1rem;
+//     height: 1rem;
+//     border-radius: 50%;
+//     background: $gradient-five-six;
+
+// }
+//End of customised player
+
+.gradiented-box {
+    border-radius: 5px;
+
+    img {
+        border-radius: 5px;
+    }
+}
+
+.gradient-one-two {
+    @include gradient-one-two;
+}
+
+.gradient-three-four {
+    @include gradient-three-four;
+}
+
+.gradient-five-six {
+    @include gradient-five-six;
+}
+
+//Setting variables for box shadows on about page boxes
+$box-shadow: 5px 5px 0 rgba($color-eight, 0.3);
+
+.box-shadowed {
+    @include box-shadow;
+}
+
+.card {
+    border: 0 !important;
+
+    img {
+        @include box-shadow;
+    }
+}
+
+.card-section {
+    background-color: $color-nine;
+    color: $color-white;
+    font-family: 'Quicksand-Regular', sans-serif;
+    font-size: 0.8rem;
+}
+
+.bio {
+    width: 100%;
+
+    p {
+        padding-left: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+.list-group {
+    list-style: disc;
+    padding-left: 2rem;
+}
+
+.shared {
+    margin-bottom: 0.7rem;
+}
+
+.map {
+    width: 100%;
+    background-size: cover;
+    height: 60vh;
+    max-height: 400px;
+    margin-bottom: 2rem;
+    ;
+}
+
+/////////STYLES ON LISTEN PAGE////////////////////////////
+/////////TABS
+div {
+
+    .tabs,
+    .tabs-content,
+    .tabs-content,
+    .accordion,
+    .md-tabs,
+    .accordion-content,
+    .accordion-item {
+        background-color: transparent !important;
+    }
+
+    .tabs-panel {
+        padding: 0;
+    }
+}
+
+.md-tabs,
+.tabs-content {
+    border: none;
+}
+
+.accordion-content {
+    padding: 0;
+}
+
+div.md-tabs {
+    border: 0px !important;
+
+    >.accordion-content {
+        padding: 0;
+    }
+
+    >.accordion {
+        margin-left: 0;
+        list-style-type: none;
+
+        >.accordion-item>.accordion-title {
+            position: relative;
+            display: block;
+            padding: 1.25rem 1rem;
+            border: 0px;
+            font-size: 1rem;
+            line-height: 1;
+            @include gradient-three-four;
+            color: $color-white;
+
+            &:hover {
+                background-color: $color-four;
+                color: $color-nav;
+                outline: none;
+            }
+        }
+    }
+
+    >.accordion> {
+        .is-active.accordion-item>a.accordion-title {
+            border-bottom: 4px solid $color-eight;
+            color: $color-black;
+        }
+
+        .accordion-item>.accordion-content {
+            display: none;
+            border: 0px;
+            background-color: #fefefe;
+            color: #0a0a0a;
+        }
+    }
+}
+
+div.md-tabs>.accordion>.accordion-item>.accordion-title:focus {
+    background-color: $color-four;
+    color: $color-five;
+    outline: none;
+}
+
+.md-tabs>.tabs>.tabs-title.is-active>a:hover {
+    color: $color-white;
+}
+
+/*.contact {
+    a {
+        font-family: inherit !important;
+        font-size: inherit !important;
+
+    }
+}*/
+
+/////////////////END OF TABS
+////////////////COLORED CALLOUT
+.callout {
+    border: none;
+    min-height: 400px;
+
+    img {
+        @include box-shadow;
+        border-radius: 10px;
+        margin: 20px auto;
+        display: block;
+        opacity: .50;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    p {
+        display: inline-block;
+        margin: 5px 10px;
+    }
+}
+
+:target:before {
+    content: "";
+    display: block;
+    height: 84px;
+    /* fixed header height*/
+}
+
+//////////////END OF CALLOUT
+//////////////END OF LISTEN STYLES//////////////
+//////////////BEGINNING OF CONTACT STYLES//////////////
+.info-container li {
+    padding: 5px;
+}
+
+//////////////END OF CONTACT STYLES//////////////
+
+#copyright {
+    color: $color-white;
+    font-size: 0.75rem;
+    font-weight: 100;
+}
+
+//END BODY STYLES ??????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+
+//BEGINNING BUTTONS STYLES =================================================================================================================
+
+//INSERTED TO PASS VALIDATION
+a.boom-button {
+    border-radius: 0.7rem;
+    padding: .5rem 1.5rem;
+    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+    border: solid 2px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, $color-five, $color-six);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px $color-nine inset;
+    @include button-hover;
+}
+
+//John's Wave Animation
+//Sound wave
+.animation-container {
+    @include sound-wave;
+}
+
+//Fanny's button
+.boom-button-white {
+    border-radius: 0.7rem;
+    padding: .5rem 1.5rem;
+    margin-bottom: 1rem;
+    border: solid 2px $color-white;
+    background-color: transparent;
+    @include button-hover;
+}
+
+.social-button {
+    width: 95vw;
+    margin-bottom: 0 !important;
+    @include button-hover;
+}
+
+.small-social-button {
+    margin: 5px;
+    @include button-hover;
+}
+
+//Slick carousel styling
+/*John's Style*/
+.responsive {
+    margin: 1rem;
+}
+
+//END BUTTONS STYLES =========================================================================================================
+
+//BEGINNING FOOTER STYLES ????????????????????????????????????????????????????????????????????????????????????????????????????
+footer {
+    a {
+        color: $color-six;
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+}
+
+//END FOOTER STYLES ??????????????????????????????????????????????????????????????????????????????????????????????????????????

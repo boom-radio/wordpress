@@ -1,0 +1,269 @@
+//Set variables for the main site colours
+$color-white: rgba(255, 255, 255, 1); //#FFFFFF
+$color-black: rgba(0, 0, 0, 1); //#000000
+$color-one: rgba(250, 162, 148, 1); //#FAA294
+$color-two: rgba(254, 101, 126, 1); //#FE657E
+$color-three: rgba(63, 197, 190, 1); //#3FC5BE
+$color-four: rgba(58, 169, 225, 1); //#3AA9E1
+$color-five: rgba(252, 171, 98, 1); //#FCAB62
+$color-six: rgba(235, 91, 39, 1); //#EB5B27
+$color-eight: rgba(16, 33, 38, 1); //#0A1417
+$color-nine: rgba(83, 81, 86, 1);
+$color-nav: rgba(10, 10, 10, 1); //#0a0a0a
+
+.clearfloat {
+  font-size: 0px;
+  margin: 0px;
+  padding: 0px;
+  clear: both;
+  float: none;
+  height: 0;
+  width: 0;
+  border: 0px none;
+  line-height: 0px;
+}
+
+//Set the fonts
+@font-face {
+  font-family: 'Fjalla One', sans-serif;
+  src: url(//fonts.googleapis.com/css?family=Fjalla+One);
+}
+
+@font-face {
+  font-family: 'Quicksand-Regular', sans-serif;
+  src: url(//fonts.googleapis.com/css?family=Quicksand);
+}
+
+@mixin title-font {
+  font-family: 'Fjalla One', sans-serif !important;
+}
+
+//Set media query mixins
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (min-width: 668px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+//Set variables for gradients
+$gradient-one-two: linear-gradient(to right, $color-one, $color-two);
+$gradient-three-four: linear-gradient(to right, $color-three, $color-four);
+$gradient-five-six: linear-gradient(to right, $color-five, $color-six);
+
+//Set mixins for gradients
+@mixin gradient-one-two {
+  background-image: $gradient-one-two;
+}
+
+@mixin gradient-three-four {
+  background-image: $gradient-three-four;
+}
+
+@mixin gradient-five-six {
+  background-image: $gradient-five-six;
+}
+
+//Set variables for the box-shadows
+//First is negative left, positive right; second is negative top, positive bottom. Third is blur. Fourth is the colour.
+$box-shadow: 0 0 0 0;
+
+//Set box shadow colours
+@mixin box-shadow {
+  -webkit-box-shadow: $box-shadow;
+  -moz-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+}
+
+
+//Set mixins for transitions
+//$transform-property is the property affected (all, transform)
+//$transform-duration is the duration of the transition
+//$transform-timing is the timing of the transition (ease,linear, ease-in, ease-out, ease-in-out)
+//$transform-delay is the delay on the beginning of the transition (usually ms)
+//Initialising variables
+$transition-property: 0;
+$transition-duration: 0;
+$transition-timing: 0;
+$transition-delay: 0;
+
+@mixin mixin-transition {
+  -webkit-transition: $transition-property $transition-duration $transition-timing $transition-delay;
+  -moz-transition: $transition-property $transition-duration $transition-timing $transition-delay;
+  -ms-transition: $transition-property $transition-duration $transition-timing $transition-delay;
+  -o-transition: $transition-property $transition-duration $transition-timing $transition-delay;
+  transition: $transition-property $transition-duration $transition-timing $transition-delay;
+}
+
+//Set mixin for transform
+//$transform-rotation-degrees are the degrees for the rotation (0deg to 360deg)
+//$transform-x-translation is the length of the horizontal translation (px, rem)
+//$transform-y-translation is the length of the verticalal translation (px, rem)
+//$transform-scale is the scaling size (1 equal, 2 double size, 3 triple size)
+//Initialising variables
+$transform-rotation-degrees: 0deg;
+$transform-x-translation: 0rem;
+$transform-y-translation: 0rem;
+$transform-scale: 0;
+
+@mixin mixin-transform {
+  -webkit-transform: rotate($transform-rotation-degrees) translateX($transform-x-translation) translateY($transform-y-translation) scale($transform-scale);
+  -moz-transform: rotate($transform-rotation-degrees) translateX($transform-x-translation) translateY($transform-y-translation) scale($transform-scale);
+  -ms-transform: rotate($transform-rotation-degrees) translateX($transform-x-translation) translateY($transform-y-translation) scale($transform-scale);
+  -o-transform: rotate($transform-rotation-degrees) translateX($transform-x-translation) translateY($transform-y-translation) scale($transform-scale);
+  transform: rotate($transform-rotation-degrees) translateX($transform-x-translation) translateY($transform-y-translation) scale($transform-scale);
+}
+
+//Sound wave
+@mixin sound-wave {
+  width: 100%;
+  height: 15px;
+  /*position: absolute;*/
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+
+  .sound-container {
+    //Position relative was commented and top -8px did not exist.
+    position: relative;
+    top: 20px;
+    left: 10px;
+    width: 150px;
+    height: 80%;
+    display: inline-block;
+    margin-left: 4px;
+  }
+
+  .sound-container>div {
+    /*position: relative;*/
+    height: 100%;
+    width: 0.05rem;
+    background: $color-black;
+    display: inline-block;
+    animation: wave 3s infinite ease-in-out;
+    -webkit-animation: wave 3s infinite ease-in-out;
+    -moz-animation: wave 3s infinite ease-in-out;
+    -ms-animation: wave 3s infinite ease-in-out;
+    -o-animation: wave 3s infinite ease-in-out;
+
+  }
+
+  .sound-container .rect-2 {
+    animation-delay: 0.1s;
+    -webkit-animation-delay: 0.1s;
+    -moz-animation-delay: 0.1s;
+    -ms-animation-delay: 0.1s;
+    -o-animation-delay: 0.1s;
+  }
+
+  .sound-container .rect-3 {
+    animation-delay: 0.2s;
+    -webkit-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+    -ms-animation-delay: 0.2s;
+    -o-animation-delay: 0.2s;
+  }
+
+  .sound-container .rect-4 {
+    animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+    -ms-animation-delay: 0.3s;
+    -o-animation-delay: 0.3s;
+  }
+
+  .sound-container .rect-5 {
+    animation-delay: 0.4s;
+    -webkit-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+    -ms-animation-delay: 0.4s;
+    -o-animation-delay: 0.4s;
+  }
+
+  .sound-container .rect-6 {
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.6s;
+    -ms-animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+  }
+
+  /*Controller for colour of waves*/
+  @keyframes wave {
+    0% {}
+
+    100% {
+      transform: scaleY(1);
+      background: $color-eight;
+    }
+
+    20% {
+      transform: scaleY(3);
+      background: $color-four;
+    }
+
+    33% {
+      transform: scaleY(1);
+      background: $color-three;
+    }
+
+    50% {
+      transform: scaleY(3);
+      background: $color-five;
+    }
+
+    66% {
+      transform: scaleY(1);
+      background: $color-two;
+    }
+
+    84% {
+      transform: scaleY(3);
+      background: $color-one;
+    }
+  }
+}
+
+/*Styling for button 'glint' effect*/
+@mixin button-hover {
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    z-index: -1;
+    background-color: hsla(0, 0%, 100%, 0.2);
+    position: absolute;
+    top: -300%;
+    bottom: -90%;
+    width: 5em;
+    transform: translateX(-400%) rotate(35deg);
+  }
+
+  &:hover {
+    box-shadow: 2px 2px 0px 0px rgba($color-black, .4) inset;
+    background-color: transparent;
+    cursor: pointer;
+    color: $color-white;
+  }
+
+  &:hover::after {
+    transition: transform 0.45s ease-in-out;
+    transform: translateX(200%) rotate(35deg);
+  }
+
+}
