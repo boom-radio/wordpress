@@ -22,8 +22,16 @@ function _themename_assets()
     //Main theme stylesheet
     wp_enqueue_style('boom_radio_stylesheet', get_template_directory_uri() . '/style.css', array(), '1.0.0', 'all');
 
-    //Enqueue WordPress core jquery script
-    wp_enqueue_script('jquery');
+    //this code below allow Foundation JS to work (off-canvas...)
+        // Deregister the jquery version bundled with WordPress.
+		wp_deregister_script( 'jquery' );
+		// CDN hosted jQuery placed in the header, as some plugins require that jQuery is loaded in the header.
+		wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array(), '3.2.1', false );
+		// Deregister the jquery-migrate version bundled with WordPress.
+		wp_deregister_script( 'jquery-migrate' );
+		// CDN hosted jQuery migrate for compatibility with jQuery 3.x
+        wp_register_script( 'jquery-migrate', '//code.jquery.com/jquery-migrate-3.0.1.min.js', array('jquery'), '3.0.1', false );
+        
 
     wp_enqueue_script('foundation_min_scripts', '//cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/foundation.min.js', array(), null, true);
 
