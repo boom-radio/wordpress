@@ -218,6 +218,11 @@ html * {
   width: 100%;
   z-index: 100; }
 
+.close-button {
+  font-size: 1em; }
+  .close-button:hover {
+    color: white; }
+
 #mobile-logo {
   width: 150px; }
 
