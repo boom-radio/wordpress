@@ -2,7 +2,7 @@
   "name": "boom_radio",
   "version": "1.0.0",
   "description": "Boom Radio theme",
-  "main": "src/assets/js/index.js",
+  "main": "src/assets/js/app.js",
   "directories": {
     "lib": "lib"
   },
