@@ -219,6 +219,11 @@ html * {
   width: 100%;
   z-index: 100; }
 
+.close-button {
+  font-size: 1em; }
+  .close-button:hover {
+    color: white; }
+
 #mobile-logo {
   width: 150px; }
 
@@ -848,7 +853,7 @@ footer a {
 /*Styling for button 'glint' effect*/
 @media screen and (min-width: 1024px) {
   header {
-    background-image: url(../assets/img/BackHeader.png);
+    background-image: url(src/assets/img/BackHeader.png);
     height: 150px; }
   #logo {
     width: 200px; }

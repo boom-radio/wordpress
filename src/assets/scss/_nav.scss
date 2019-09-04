@@ -50,6 +50,13 @@ $color-black: rgba(0, 0, 0, 0.9);
     z-index: 100;
 }
 
+// style x to close the off-canvas part
+.close-button{
+    font-size: 1em;
+    &:hover {
+        color:white;
+    }
+}
 //Mobile logo styles
 #mobile-logo {
     width: 150px;
