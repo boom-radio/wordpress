@@ -1,0 +1,1 @@
+//Placeholder for the WP core page that delivers paginated archive pages (archive results with multiple posts - ole posts from previous booom site)
