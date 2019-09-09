@@ -55,24 +55,43 @@ get_header(); ?>
                             <div class="grid-x grid-padding-x grid-padding-y">
                                 <div class="cell text-justify">
 
-                                    <?php if (have_posts()) { ?>
-                                        <?php
-                                            // Start of the Loop
-                                            while (have_posts()) : ?>
-                                            <?php the_post(); ?>
-
-                                            <?php the_content(); ?>
-                                            <!--This is to attach the White boom Radio button, code in lib/helpers.php as an example of how we can resue sections of code across the site-->
-                                            <?php boom_radio_readmore_link(); ?>
-
-                                        <?php endwhile; // End of the loop. 
-                                            ?>
-                                    <?php } ?>
+                                    <?php // Get post content to extract first title.
+                                    $blocks = parse_blocks(get_the_content());
+                                    foreach ($blocks as $block) {
+                                        if ('core/first-chapter' === $block['blockName']) {
+                                            echo do_shortcode($block['innerHTML']);
+                                            break;
+                                        }
+                                    }
+                                    // Display the title.
+                                    ?>
+                                    <!--This is to attach the White boom Radio button, code in lib/helpers.php as an example of how we can resue sections of code across the site-->
+                                    <?php boom_radio_readmore_link(); ?>
 
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="grid-container-fluid gradiented-box gradient-three-four">
+            <div class="grid-x grid-padding-x grid-padding-y align-spaced align-middle">
+                <div class="cell medium-6">
+                    <div class="grid-container-fluid">
+                        <div class="grid-x grid-padding-x grid-padding-y">
+                            <div class="cell text-justify">
+
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell medium-4">
+                    <img class="img-left box-shadowed" src="assets/img/shows/urban_jungle_lrg.jpg" alt="show image">
                 </div>
             </div>
         </div>
