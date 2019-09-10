@@ -1,3 +1,13 @@
+<?php
+
+/**
+ * The template for displaying Header for the site
+ *
+ * @package WordPress
+ * @subpackage boom_radio
+ * @since Boom Radio 1.0
+ */ ?>
+
 <!--Header for the site-->
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
