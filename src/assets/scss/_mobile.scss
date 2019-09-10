@@ -424,6 +424,21 @@ a.boom-button {
     @include button-hover;
 }
 
+//Music Page submit button
+#wpforms-submit-37 {
+    border-radius: 0.7rem;
+    padding: .5rem 1.5rem;
+    margin-bottom: 1rem;
+    border: solid 2px $color-white;
+    color: $color-white;
+    background-color: transparent;
+}
+
+#wpforms-37-field_1,
+#wpforms-37-field_0 {
+    max-width: 100%;
+}
+
 //Slick carousel styling
 /*John's Style*/
 .responsive {
