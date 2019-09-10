@@ -50,6 +50,7 @@ get_header(); ?>
                 </div>
             </div>
 
+
             <div class="cell">
                 <div class="grid-container">
                     <div class="grid-x grid-margin-x grid-margin-y align-center">
@@ -60,17 +61,6 @@ get_header(); ?>
                                     comments_template();
                                 endif; ?>
                         </div>
-                        <div class="cell">
-                            <?php
-                                the_post_navigation(array(
-                                    'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('Next', 'twentyfifteen') . '</span> ' .
-                                        '<span class="screen-reader-text">' . __('Next post:', 'twentyfifteen') . '</span> ' .
-                                        '<span class="post-title">%title</span>',
-                                    'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __('Previous', 'twentyfifteen') . '</span> ' .
-                                        '<span class="screen-reader-text">' . __('Previous post:', 'twentyfifteen') . '</span> ' .
-                                        '<span class="post-title">%title</span>',
-                                )); ?>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -80,19 +70,20 @@ get_header(); ?>
 
 
 <!--Previous/next post navigation. Example this code should be php tagged on each line to match WP standards and could be a template part-->
-<div class="grid-x grid-margin-x grid-margin-y align-center">
-    <div class="cell">
+<div class="grid-x grid-margin-x grid-margin-y">
+    <div class="cell large-6">
         <?php the_post_navigation(array(
-            'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('Next', 'boom_radio') . '</span> ' .
+            'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __('Previous', 'boom_radio') . '</span> ' .
                 '<span class="screen-reader-text">' . __('post:', 'boom_radio') . '</span> ' .
                 '<span class="post-title">%title</span>',
-            'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __('Previous', 'boom_radio') . '</span> ' .
+            'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('Next', 'boom_radio') . '</span> ' .
                 '<span class="screen-reader-text">' . __('post:', 'boom_radio') . '</span> ' .
                 '<span class="post-title">%title</span>',
         ));
         ?>
     </div>
 </div>
+
 </div>
 </div><!-- .content-area -->
 <?php get_footer(); ?>
