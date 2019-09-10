@@ -182,61 +182,35 @@ get_header(); ?>
     <div class="grid-container" >
       <div class="cell">
         <div class="responsive">
-          <div class="callout gradient-one-two">
-            <h4>Jamie</h4>
-            <img class="box-shadowed" src="assets/img/boom_team/presenter_bio_1_sml.jpg" alt="presenter image">
-            <a href="presenters.html#presenter1" class="boom-button-white float-right">Tell me more!</a>
-          </div>
-          <div class="callout gradient-three-four">
-            <h4>Mary</h4>
-            <img class="box-shadowed" src="assets/img/boom_team/presenter_bio_2_sml.jpg" alt="presenter image">
-            <a href="presenters.html#presenter2" class="boom-button-white float-right">Tell me more!</a>
-          </div>
-          <div class="callout gradient-five-six">
-            <h4>Lauren</h4>
-            <img class="box-shadowed" src="assets/img/boom_team/presenter_bio_3_sml.jpg" alt="presenter image">
-            <a href="presenters.html#presenter3" class="boom-button-white float-right">Tell me more!</a>
-          </div>
-          <div class="callout gradient-one-two">
-            <h4>Sam</h4>
-            <img class="box-shadowed" src="assets/img/boom_team/presenter_bio_4_sml.jpg" alt="presenter image">
-            <a href="presenters.html#presenter4" class="boom-button-white float-right">Tell me more!</a>
-          </div>
-          <div class="callout gradient-three-four">
-            <h4>Jordy</h4>
-            <img class="box-shadowed" src="assets/img/boom_team/presenter_bio_5_sml.jpg" alt="presenter image">
-            <a href="presenters.html#presenter5" class="boom-button-white float-right">Tell me more!</a>
-          </div>
-          <div class="callout gradient-five-six">
-            <h4>Bronwyn</h4>
-            <img class="box-shadowed" src="assets/img/boom_team/presenter_bio_6_sml.jpg" alt="presenter image">
-            <a href="presenters.html#presenter6" class="boom-button-white float-right">Tell me more!</a>
-          </div>
-          <div class="callout gradient-one-two">
-            <h4>Matty</h4>
-            <img class="box-shadowed" src="assets/img/boom_team/presenter_bio_7_sml.jpg" alt="presenter image">
-            <a href="presenters.html#presenter7" class="boom-button-white float-right">Tell me more!</a>
-          </div>
-          <div class="callout gradient-three-four">
-            <h4>Callan</h4>
-            <img class="box-shadowed" src="assets/img/boom_team/presenter_bio_8_sml.jpg" alt="presenter image">
-            <a href="presenters.html#presenter8" class="boom-button-white float-right">Tell me more!</a>
-          </div>
-          <div class="callout gradient-five-six">
-            <h4>Cindy</h4>
-            <img class="box-shadowed" src="assets/img/boom_team/presenter_bio_9_sml.jpg" alt="presenter image">
-            <a href="presenters.html#presenter9" class="boom-button-white float-right">Tell me more!</a>
-          </div>
-          <div class="callout gradient-one-two">
-            <h4>Pete</h4>
-            <img class="box-shadowed" src="assets/img/boom_team/presenter_bio_10_sml.jpg" alt="presenter image">
-            <a href="presenters.html#presenter10" class="boom-button-white float-right">Tell me more!</a>
-          </div>
-          <div class="callout gradient-three-four">
-            <h4>Kyan</h4>
-            <img class="box-shadowed" src="assets/img/boom_team/presenter_bio_11_sml.jpg" alt="presenter image">
-            <a href="presenters.html#presenter11" class="boom-button-white float-right">Tell me more!</a>
-          </div>
+            <?php 
+                $args = array(
+                    'post_type' => 'presenter', 
+                    'posts_per_page' => -1,
+                );
+
+                //The Query
+                $the_query = new WP_Query( $args ); 
+                ?>
+            <!-- The Loop -->
+            <?php if ( $the_query->have_posts() ) : ?>
+                <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                    <?php //render random gradient background
+                    $list = array('gradient-one-two', 'gradient-three-four', 'gradient-five-six' );
+                    $i = array_rand($list);
+                    $gradient = $list[$i];
+                    ?>
+                    <div class=" callout <?php echo $gradient?>">
+                    <!-- insert selected post's title-->
+                        <h4><?php the_title(); ?></h4>
+                        <?php if ( has_post_thumbnail() ) {
+                            the_post_thumbnail();
+                        }?>
+                        <a href="<?php echo the_permalink();?>" class="boom-button-white float-right">Tell me more!</a>
+                    </div>
+                    <?php wp_reset_postdata(); ?>
+                    <?php endwhile; else:  ?>
+                    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+                <?php endif; ?>
         </div>
       </div>
     </div>
