@@ -9,8 +9,7 @@
  */
 get_header(); ?>
 
-<?php  //---------CONTENT HERE 
-?>
+<!-----------CONTENT HERE---------------->
 <!--Start of Artists Section-->
 <article class="grid-container">
     <!--Title for secton-->
@@ -55,7 +54,7 @@ get_header(); ?>
                 <div <?php post_class('cell'); ?>>
                     <div class="card">
                         <?php if (has_post_thumbnail()) :
-                                    the_post_thumbnail('medium', array());
+                                    the_post_thumbnail(array(400, 300));
                                 endif; ?>
                         <div class="card-section">
                             <div class="bio">
@@ -141,7 +140,6 @@ get_header(); ?>
         <!--Start of the Loop-->
         <?php if ($the_query->have_posts()) :
             while ($the_query->have_posts()) : $the_query->the_post(); ?>
-
                 <div <?php post_class('cell'); ?>>
                     <div class="grid-container gradiented-box gradient-five-six">
                         <div class="grid-x grid-padding-x grid-padding-y align-spaced align-middle">
@@ -162,13 +160,12 @@ get_header(); ?>
                             </div>
                             <div class="cell medium-4">
                                 <?php if (has_post_thumbnail()) :
-                                            the_post_thumbnail('medium', array('class' => 'img-right box-shadowed'));
+                                            the_post_thumbnail('large', array('class' => 'img-right box-shadowed'));
                                         endif; ?>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="cell"></div>
                 <div class="cell"></div>
             <?php endwhile;
@@ -179,12 +176,10 @@ get_header(); ?>
         <?php endif; ?>
         <!-- End of the loop.-->
 
-
     </div>
 </div>
 <div class="cell"></div>
 <!--End of Review Section-->
-
 
 <!--Start of Events Section-->
 <div class="grid-container" id="yoursong">
@@ -253,10 +248,11 @@ get_header(); ?>
 
                             <div <?php post_class('card'); ?>>
                                 <div class="cell"></div>
-
+                                <!--Check if a featured image has been uplaoded with the post-->
                                 <?php if (has_post_thumbnail()) :
                                             the_post_thumbnail('large', array());
                                         endif; ?>
+
                                 <div class="card-section">
                                     <div class="bio">
                                         <h5 class="section-title"><?php the_title() ?></h5>
