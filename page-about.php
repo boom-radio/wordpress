@@ -59,23 +59,20 @@ get_header(); ?>
                     <!-- Gradiented container ????????????????????????????????????????????????????????????????????????????????????????????? -->
                     <div class="grid-container-fluid gradiented-box <?php
 
-                                                                            
                                                                             $gradientedColour = array("gradient-one-two", "gradient-three-four", "gradient-five-six");
-                                                                            // $randomColour = array_rand($gradientedColour);
+                                                                            // $randomColour = array_rand($gradientedColour); //pick a random post background
                                                                             // echo $gradientedColour[$randomColour];
+                                                                            $arrayLength = (count($gradientedColour) - 1); //Counting the array elements minus 1
                                                                             if (empty($counter)) {
                                                                                 $counter = 0;
-                                                                            } 
+                                                                            } //If the variable is empty set it to 0 (first array index)
 
-                                                                            if ($counter == 0) {
-                                                                                echo $gradientedColour[$counter];
-                                                                                $counter++;
-                                                                            } else if ($counter == 1) {
-                                                                                echo $gradientedColour[$counter];
-                                                                                $counter++;
-                                                                            } else if ($counter == 2) {
-                                                                                echo $gradientedColour[$counter];
-                                                                                $counter = 0;
+                                                                            echo $gradientedColour[$counter]; //echo the background colour
+
+                                                                            if ($counter != $arrayLength) {
+                                                                                $counter++; //Increase the counter by 1 until the last index of the array is reached
+                                                                            } else {
+                                                                                $counter = 0; //When the last index of the array is reached reset the counter to 0 (restart with first backgroud colour)
                                                                             }
                                                                             ?>">
                         <div class="grid-x grid-padding-x grid-padding-y align-spaced align-middle">
