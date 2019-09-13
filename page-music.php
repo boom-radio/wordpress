@@ -39,9 +39,9 @@ get_header(); ?>
             'tax_query' => array(
                 array(
                     'taxonomy' => 'category_music',
-                    'field'    => 'term_id',
+                    'field'    => 'slug',
                     //Album term id number in db
-                    'terms' =>  7
+                    'terms' =>  'album'
                 )
             )
         );
@@ -129,8 +129,8 @@ get_header(); ?>
             'tax_query' => array(
                 array(
                     'taxonomy' => 'category_music',
-                    'field'    => 'term_id',
-                    'terms' =>  6
+                    'field'    => 'slug',
+                    'terms' =>  'featured-artist'
                 )
             )
         );
@@ -234,8 +234,8 @@ get_header(); ?>
                         'tax_query' => array(
                             array(
                                 'taxonomy' => 'category_music',
-                                'field'    => 'term_id',
-                                'terms' =>  8
+                                'field'    => 'slug',
+                                'terms' =>  'event'
                             )
                         )
                     );

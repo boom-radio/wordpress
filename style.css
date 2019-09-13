@@ -479,6 +479,10 @@ div .tabs-panel {
 .md-tabs,
 .tabs-content {
   border: none; }
+  .md-tabs :target:before,
+  .tabs-content :target:before {
+    height: 0px;
+    /*to correct the space created by the fixer header height*/ }
 
 .accordion-content {
   padding: 0; }
@@ -519,6 +523,14 @@ div.md-tabs > .accordion > .accordion-item > .accordion-title:focus {
 
 .md-tabs > .tabs > .tabs-title.is-active > a:hover {
   color: white; }
+
+.presenter .wp-block-image img {
+  -webkit-box-shadow: 5px 5px 0 rgba(16, 33, 38, 0.3);
+  -moz-box-shadow: 5px 5px 0 rgba(16, 33, 38, 0.3);
+  box-shadow: 5px 5px 0 rgba(16, 33, 38, 0.3); }
+
+.presenter p {
+  padding-bottom: 15px; }
 
 /*.contact {
     a {
@@ -858,7 +870,15 @@ footer a {
             background-color: transparent; }
           .md-tabs > .tabs > .tabs-title > a:focus {
             background-image: linear-gradient(to right, #3fc5be, #3aa9e1);
-            color: white; } }
+            color: white; }
+    .md-tabs :target:before {
+      height: 0px;
+      /*to correct the space created by the fixer header height*/ }
+  .presenter .wp-block-image {
+    float: right;
+    max-width: 50%; }
+    .presenter .wp-block-image img {
+      margin-left: 20px; } }
 
 .clearfloat {
   font-size: 0px;

@@ -266,6 +266,9 @@ div {
 .md-tabs,
 .tabs-content {
     border: none;
+    :target:before {
+        height:0px; /*to correct the space created by the fixer header height*/
+        }
 }
 
 .accordion-content {
@@ -312,7 +315,7 @@ div.md-tabs {
             border: 0px;
             background-color: #fefefe;
             color: #0a0a0a;
-        }
+        } 
     }
 }
 
@@ -325,7 +328,14 @@ div.md-tabs>.accordion>.accordion-item>.accordion-title:focus {
 .md-tabs>.tabs>.tabs-title.is-active>a:hover {
     color: $color-white;
 }
-
+.presenter {
+    .wp-block-image img{
+            @include box-shadow;
+        }
+    p{
+        padding-bottom:15px;
+    }
+}
 /*.contact {
     a {
         font-family: inherit !important;
