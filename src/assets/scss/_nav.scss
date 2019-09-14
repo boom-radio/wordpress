@@ -121,6 +121,13 @@ $color-black: rgba(0, 0, 0, 0.9);
     }
 }
 
-
+//Navigation on single post
+.post-navigation{
+    width:100vw;
+    .nav-links{
+        display: flex;
+        justify-content: space-around;
+    }
+}
 
 //END NAVIGATION MENU STYLES =================================================================================================================

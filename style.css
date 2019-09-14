@@ -282,6 +282,12 @@ html * {
 .multilevel-accordion-menu .menu > li:not(.menu-text) > a {
   padding: 1rem 1rem; }
 
+.post-navigation {
+  width: 100vw; }
+  .post-navigation .nav-links {
+    display: flex;
+    justify-content: space-around; }
+
 .clearfloat {
   font-size: 0px;
   margin: 0px;

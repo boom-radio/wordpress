@@ -37,23 +37,23 @@ get_header(); ?>
                                         <!--OR use the_content for full post, this can be split into template parts at the end;-->
                                         <?php the_content(); ?>
 
-                                        <!-- check if the custom fiel is not empty before displaying the button-->
+                                        <!-- check if the custom field created with metabox is not empty before displaying the button-->
                                         <?php 
-                                        $fb_custom_field = get_post_meta($post->ID, 'facebook_link', true);
+                                        $fb_custom_field = get_post_meta($post->ID, 'mbp_insta', true);
                                         if ($fb_custom_field) { ?>
-                                        <a class="small-social-button button gradiented-box gradient-three-four float-right" href="<?php echo get_post_meta($post->ID, 'facebook_link', true); ?>" target="_blank"
-                                        title="Share on Facebook"> <i class="fab fa-facebook-f fa-1x"></i> Share</a>
+                                        <a class="small-social-button button gradiented-box gradient-five-six " href="<?php echo get_post_meta($post->ID, 'mbp_insta', true); ?>" target="_blank"
+                                        title="Follow on Instgram"> <i class="fab fa-instagram fa-1x"></i> Follow</a>
                                         <?php 
                                         } else { 
-                                        // don't display Fb button 
+                                        // don't display Insta button 
                                         }
                                         ?>
-                                        <!-- check if the custom fiel is not empty before displaying the button-->
+                                        <!-- check if the custom field created with metabox is not empty before displaying the button-->
                                         <?php 
-                                        $insta_custom_field = get_post_meta($post->ID, 'instagram_link', true);
+                                        $insta_custom_field = get_post_meta($post->ID, 'mbp_email', true);
                                         if ($insta_custom_field) { ?>
-                                        <a class="small-social-button button gradiented-box gradient-one-two float-right" href="<?php echo get_post_meta($post->ID, 'instagram_link', true); ?>" target="_blank"
-                                        title="Follow on Instagram"><i class="fab fa-instagram fa-1x"></i> Follow</a>
+                                        <a class="small-social-button button gradiented-box gradient-one-two " href="<?php echo get_post_meta($post->ID, 'mbp_email', true); ?>" target="_blank"
+                                        title="Write an Email"><i class="fas fa-envelope fa-1x"></i> Write an Email</a>
                                         <?php
                                         } else { 
                                         // don't display Fb button 
@@ -85,18 +85,10 @@ get_header(); ?>
 <?php endwhile; ?>
 
 
-<!--Previous/next post navigation. Example this code should be php tagged on each line to match WP standards and could be a template part-->
+<!--Previous/next post navigation.-->
 <div class="grid-x grid-margin-x grid-margin-y">
     <div class="cell">
-        <?php the_post_navigation(array(
-            'prev_text' => '<span class="meta-nav sr-only" aria-hidden="true">' . __('Previous', 'boom_radio') . '</span> ' .
-                '<span class="screen-reader-text sr-only">' . __('post:', 'boom_radio') . '</span> ' .
-                '<span class="post-title">%title</span>',
-            'next_text' => '<span class="meta-nav sr-only" aria-hidden="true">' . __('Next', 'boom_radio') . '</span> ' .
-                '<span class="screen-reader-text sr-only">' . __('post:', 'boom_radio') . '</span> ' .
-                '<img url="src/assets/img/arrow-slider.png"> ' .
-                '<span class="post-title">%title</span>',
-        ));
+        <?php echo boom_radio_the_post_navigation();
         ?>
     </div>
 </div>
