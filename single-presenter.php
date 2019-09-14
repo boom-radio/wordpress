@@ -52,11 +52,11 @@ get_header(); ?>
                                         <?php 
                                         $insta_custom_field = get_post_meta($post->ID, 'mbp_email', true);
                                         if ($insta_custom_field) { ?>
-                                        <a class="small-social-button button gradiented-box gradient-one-two " href="<?php echo get_post_meta($post->ID, 'mbp_email', true); ?>" target="_blank"
+                                        <a class="small-social-button button gradiented-box gradient-one-two " href="mailto:<?php echo get_post_meta($post->ID, 'mbp_email', true); ?>?Subject=Hello%20from%20Boom%20Radio%20website" 
                                         title="Write an Email"><i class="fas fa-envelope fa-1x"></i> Write an Email</a>
                                         <?php
                                         } else { 
-                                        // don't display Fb button 
+                                        // don't display Email button 
                                         }
                                         ?>
                                     </div>
