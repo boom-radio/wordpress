@@ -25,7 +25,12 @@ get_header(); ?>
             <!--TEMPLATE PART example path ------get_template_part('content', get_post_format());-->
 
             <div <?php post_class('cell'); ?>>
-                <div class="grid-container-fluid gradiented-box gradient-three-four">
+                <?php //render random gradient background
+                    $list = array('gradient-one-two', 'gradient-three-four', 'gradient-five-six' );
+                    $i = array_rand($list);
+                    $gradient = $list[$i];
+                ?>
+                <div class="grid-container-fluid gradiented-box <?php echo $gradient?>">
                     <div class="grid-x grid-padding-x grid-padding-y align-spaced align-middle">
                         <div class="cell medium-10">
                             <div class="grid-container-fluid">
