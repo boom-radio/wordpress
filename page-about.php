@@ -41,27 +41,13 @@ get_header(); ?>
 
         <!--Start of the Loop-->
         <?php if ($the_query->have_posts()) :
+            //The $postBackgroundColourCounter is the variable used in the posts background function and needs to be set to 0 before the beginning of WP loop
+            $postBackgroundColourCounter = null;
             while ($the_query->have_posts()) : $the_query->the_post(); ?>
+
                 <div <?php post_class('cell'); ?>>
                     <!-- Gradiented container ????????????????????????????????????????????????????????????????????????????????????????????? -->
-                    <div class="grid-container-fluid gradiented-box <?php
-
-                                                                            $gradientedColour = array("gradient-one-two", "gradient-three-four", "gradient-five-six");
-                                                                            // $randomColour = array_rand($gradientedColour); //pick a random post background
-                                                                            // echo $gradientedColour[$randomColour];
-                                                                            $arrayLength = (count($gradientedColour) - 1); //Counting the array elements minus 1
-                                                                            if (empty($counter)) {
-                                                                                $counter = 0;
-                                                                            } //If the variable is empty set it to 0 (first array index)
-
-                                                                            echo $gradientedColour[$counter]; //echo the background colour
-
-                                                                            if ($counter != $arrayLength) {
-                                                                                $counter++; //Increase the counter by 1 until the last index of the array is reached
-                                                                            } else {
-                                                                                $counter = 0; //When the last index of the array is reached reset the counter to 0 (restart with first backgroud colour)
-                                                                            }
-                                                                            ?>">
+                    <div class="grid-container-fluid gradiented-box <?= posts_background_colour_function($postBackgroundColourCounter);  ?>">
                         <div class="grid-x grid-padding-x grid-padding-y align-spaced align-middle">
                             <div class="cell medium-4">
                                 <?php if (has_post_thumbnail()) :
@@ -93,6 +79,9 @@ get_header(); ?>
                 <!-- Empty cell/s used  for spacing-->
                 <div class="cell"></div>
                 <div class="cell"></div>
+                <?php 
+                // Increasing the value of the $postBackgroundColourCounter variable before the end of the WP loop to keep having a different post background colour
+                $postBackgroundColourCounter++; ?>
             <?php endwhile;
                 wp_reset_postdata(); ?>
 
