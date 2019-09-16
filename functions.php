@@ -15,5 +15,7 @@ require_once('lib/duplicate_post_function.php');
 require_once('lib/thumbnails_display_and_link.php');
 //Function to diplay a generic navigation in single-post files
 require_once('lib/the_post_navigation.php');
-//Function too pick the posts background in order pink, blue, orange and loop
+//Function to pick the posts background in order pink, blue, orange and loop
 require_once('lib/posts_background_colour_function.php');
+//Function to layout the post (image right or left)
+require_once('lib/posts_image_paragraph_position_function.php');

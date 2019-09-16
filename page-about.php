@@ -43,16 +43,22 @@ get_header(); ?>
         <?php if ($the_query->have_posts()) :
             //The $postBackgroundColourCounter is the variable used in the posts background function and needs to be set to 0 before the beginning of WP loop
             $postBackgroundColourCounter = null;
+            //The $postNumber Is used into the function to swap image and paragraph left/right
+            $postNumber = null;
+
             while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
                 <div <?php post_class('cell'); ?>>
                     <!-- Gradiented container ????????????????????????????????????????????????????????????????????????????????????????????? -->
                     <div class="grid-container-fluid gradiented-box <?= posts_background_colour_function($postBackgroundColourCounter);  ?>">
                         <div class="grid-x grid-padding-x grid-padding-y align-spaced align-middle">
+                            <?php //posts_image_paragraph_position($postNumber) ?>
                             <div class="cell medium-4">
+
                                 <?php if (has_post_thumbnail()) :
-                                            the_post_thumbnail('large', array('class' => 'img-right box-shadowed'));
+                                            the_post_thumbnail('large', array('class' => 'img-left box-shadowed'));
                                         endif; ?>
+
                             </div>
                             <div class="cell medium-6">
                                 <div class="grid-container-fluid">
@@ -65,10 +71,6 @@ get_header(); ?>
                                         <div class="cell text-justify">
                                             <?php the_content(); ?>
                                         </div>
-                                        <div class="cell">
-                                            <!-- <a href="https://www.northmetrotafe.wa.edu.au/courses/" class="boom-button-white float-right">Visit TAFE
-                                    </a> -->
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -79,9 +81,11 @@ get_header(); ?>
                 <!-- Empty cell/s used  for spacing-->
                 <div class="cell"></div>
                 <div class="cell"></div>
-                <?php 
-                // Increasing the value of the $postBackgroundColourCounter variable before the end of the WP loop to keep having a different post background colour
-                $postBackgroundColourCounter++; ?>
+                <?php
+                        // Increasing the value of the $postBackgroundColourCounter variable before the end of the WP loop to keep having a different post background colour
+                        $postBackgroundColourCounter++;
+                        // Increasing the $postNumber variable every loop to swap image and paragraphs left/right
+                        $postNumber++; ?>
             <?php endwhile;
                 wp_reset_postdata(); ?>
 
