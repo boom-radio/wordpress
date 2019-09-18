@@ -66,6 +66,9 @@ get_header(); ?>
                                         <div class="card-section">
                                             <div class="bio">
                                                 <div class="entry-content">
+                                                <?php if ( has_post_thumbnail() ) {
+                                                    the_post_thumbnail();
+                                                }?>
                                                     <?php the_content(); ?> 
                                                 </div>
                                             </div>
@@ -105,6 +108,9 @@ get_header(); ?>
                                         <div class="card-section">
                                             <div class="bio">
                                                 <div class="entry-content">
+                                                <?php if ( has_post_thumbnail() ) {
+                                                    the_post_thumbnail();
+                                                }?>
                                                     <?php the_content(); ?> 
                                                 </div>
                                             </div>
@@ -145,6 +151,9 @@ get_header(); ?>
                                         <div class="card-section">
                                             <div class="bio">
                                                 <div class="entry-content">
+                                                <?php if ( has_post_thumbnail() ) {
+                                                    the_post_thumbnail();
+                                                }?>
                                                     <?php the_content(); ?> 
                                                 </div>
                                             </div>
