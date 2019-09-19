@@ -371,7 +371,8 @@ h4 {
   text-align: center; }
 
 h5 {
-  font-size: 1.1rem; }
+  font-size: 1.1rem;
+  padding: 0.5em; }
 
 p {
   font-size: 1rem; }
@@ -406,7 +407,7 @@ textarea {
   padding: 0.5rem; }
 
 form {
-  margin-top: 2.5rem; }
+  margin-top: 0.75rem; }
 
 iframe {
   border: 0 !important;
@@ -464,11 +465,15 @@ iframe {
   box-shadow: 5px 5px 0 rgba(16, 33, 38, 0.3); }
 
 .card {
-  border: 0 !important; }
+  border: 0 !important;
+  /*To style schedule card class images*/
+  /*To style all other card class images*/ }
   .card img {
     -webkit-box-shadow: 5px 5px 0 rgba(16, 33, 38, 0.3);
     -moz-box-shadow: 5px 5px 0 rgba(16, 33, 38, 0.3);
     box-shadow: 5px 5px 0 rgba(16, 33, 38, 0.3); }
+  .card .single-card {
+    box-shadow: none; }
 
 .card-section {
   background-color: #535156;
@@ -799,6 +804,15 @@ a.boom-button {
 #wpforms-27551-field_1,
 #wpforms-27551-field_0 {
   max-width: 100%; }
+
+.title-bar > .title-bar-left > div > div > form > input:hover,
+.search-input:hover {
+  border: 2px #eb5b27 solid; }
+
+.title-bar > .title-bar-left > div > div > .nav-search {
+  margin: 0;
+  padding: 0;
+  margin-right: 0.5em; }
 
 /*John's Style*/
 .responsive {

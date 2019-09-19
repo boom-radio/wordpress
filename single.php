@@ -16,6 +16,7 @@ get_header(); ?>
             * use this in a child theme, then include a file called called content-___.php
             * (where ___ is the post format) and that will be used instead.
             */-->
+        <div class="cell"></div>
         <?php
         // Start the loop.
         while (have_posts()) : the_post(); ?>
@@ -67,7 +68,6 @@ get_header(); ?>
     </div>
     <!--End the loop.-->
 <?php endwhile; ?>
-
 
 <!--Previous/next post navigation. Example this code should be php tagged on each line to match WP standards and could be a template part-->
 <div class="grid-x grid-margin-x grid-margin-y">

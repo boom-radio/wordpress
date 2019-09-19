@@ -8,13 +8,6 @@
  * @since boom_radio 1.0
  */
 get_header(); ?>
-<div class="grid-container" id=artist>
-    <div class="grid-x grid-padding-x grid-padding-y align-center">
-        <div class="cell">
-            <?php get_search_form(true); ?>
-        </div>
-    </div>
-</div>
 <!-----------------------CONTENT HERE-------------------------------------->
 <!-----------------------Start of News Section------------------------------------------------------>
 <article class="grid-container">
@@ -65,9 +58,9 @@ get_header(); ?>
                 <div <?php post_class('cell'); ?>>
                     <div class="card">
 
-                        <?php if (has_post_thumbnail()) {
-                                    the_post_thumbnail(array(400, 300));
-                                } else {
+                        <?php if (has_post_thumbnail()) { ?>
+                            <img class="single-card" src="<?php the_post_thumbnail_url(); ?>" />
+                        <?php } else {
                                     echo '<img src="' . get_bloginfo("template_url") . '/src/assets/img/img-default.png" />';
                                 }
                                 ?>
@@ -112,6 +105,7 @@ get_header(); ?>
 
     </div>
 </article>
+<div class="cell"></div>
 <div class="cell"></div>
 <!-----------------------End of News Section------------------------------------------------------>
 
@@ -386,12 +380,12 @@ get_header(); ?>
                                     <div class="cell"></div>
                                     <!--Check if a featured image has been uplaoded with the post-->
                                     <?php if (has_post_thumbnail()) : ?>
-                                        <img src="<?php the_post_thumbnail_url(); ?>" />
+                                        <img class="single-card" src="<?php the_post_thumbnail_url(); ?>" />
                                     <?php endif; ?>
 
                                     <div class="card-section">
                                         <div class="bio">
-                                            <h5 class="section-title"><?php the_title() ?></h5>
+                                            <h5 class="section-title"><?php the_title(); ?></h5>
                                             <div class="cell">
                                                 <?php the_content(); ?>
                                             </div>

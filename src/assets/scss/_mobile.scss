@@ -44,6 +44,7 @@ h4 {
 
 h5 {
     font-size: 1.1rem;
+    padding: 0.5em;
 }
 
 p {
@@ -92,7 +93,7 @@ textarea {
 }
 
 form {
-    margin-top: 2.5rem;
+    margin-top: 0.75rem;
 }
 
 iframe {
@@ -204,8 +205,14 @@ $box-shadow: 5px 5px 0 rgba($color-eight, 0.3);
 .card {
     border: 0 !important;
 
+    /*To style schedule card class images*/
     img {
         @include box-shadow;
+    }
+
+    /*To style all other card class images*/
+    .single-card {
+        box-shadow: none;
     }
 }
 
@@ -452,6 +459,19 @@ a.boom-button {
 #wpforms-27551-field_1,
 #wpforms-27551-field_0 {
     max-width: 100%;
+}
+
+//Search form
+.title-bar>.title-bar-left>div>div>form>input:hover,
+.search-input:hover {
+
+    border: 2px $color-six solid;
+}
+
+.title-bar>.title-bar-left>div>div>.nav-search {
+    margin: 0;
+    padding: 0;
+    margin-right: 0.5em;
 }
 
 //Slick carousel styling

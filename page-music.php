@@ -52,13 +52,15 @@ get_header(); ?>
 
         <!--Start of the Loop-->
         <?php if ($the_query->have_posts()) :
-            while ($the_query->have_posts()) : $the_query->the_post(); ?>
+            //Set variable for the loop to control amount of posts
+            $i = 1;
+            while ($the_query->have_posts() && $i < 13) : $the_query->the_post(); ?>
 
                 <div <?php post_class('cell'); ?>>
                     <div class="card">
-                        <?php if (has_post_thumbnail()) :
-                                    the_post_thumbnail(array(400, 300));
-                                endif; ?>
+                        <?php if (has_post_thumbnail()) : ?>
+                            <img class="single-card" src="<?php the_post_thumbnail_url(); ?>" />
+                        <?php endif; ?>
                         <div class="card-section">
                             <div class="bio">
                                 <h5 class="section-title">
@@ -88,7 +90,8 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
-            <?php endwhile;
+            <?php $i++;
+                endwhile;
                 //Ensure global wp variable are set to default after custom query
                 wp_reset_postdata(); ?>
 
@@ -206,7 +209,7 @@ get_header(); ?>
     <!--Social split cell section-->
     <article class="grid-container">
         <div class="grid-x grid-margin-x">
-            <div class="cell large-7 shared">
+            <div class="cell large-8 shared">
                 <div class="grid-container-fluid gradiented-box gradient-one-two">
                     <div class="grid-x grid-padding-x grid-padding-y align-spaced align-middle">
                         <div class=" cell">
@@ -258,9 +261,9 @@ get_header(); ?>
                             <div <?php post_class('card'); ?>>
                                 <div class="cell"></div>
                                 <!--Check if a featured image has been uplaoded with the post-->
-                                <?php if (has_post_thumbnail()) :
-                                            the_post_thumbnail();
-                                        endif; ?>
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <img class="single-card" src="<?php the_post_thumbnail_url(); ?>" />
+                                <?php endif; ?>
 
                                 <div class="card-section">
                                     <div class="bio">
