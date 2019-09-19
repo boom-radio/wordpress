@@ -266,9 +266,11 @@ div {
 .md-tabs,
 .tabs-content {
     border: none;
+
     :target:before {
-        height:0px; /*to correct the space created by the fixer header height*/
-        }
+        height: 0px;
+        /*to correct the space created by the fixer header height*/
+    }
 }
 
 .accordion-content {
@@ -315,7 +317,7 @@ div.md-tabs {
             border: 0px;
             background-color: #fefefe;
             color: #0a0a0a;
-        } 
+        }
     }
 }
 
@@ -328,14 +330,17 @@ div.md-tabs>.accordion>.accordion-item>.accordion-title:focus {
 .md-tabs>.tabs>.tabs-title.is-active>a:hover {
     color: $color-white;
 }
+
 .presenter {
-    .wp-block-image img{
-            @include box-shadow;
-        }
-    p{
-        padding-bottom:15px;
+    .wp-block-image img {
+        @include box-shadow;
+    }
+
+    p {
+        padding-bottom: 15px;
     }
 }
+
 /*.contact {
     a {
         font-family: inherit !important;
@@ -435,7 +440,7 @@ a.boom-button {
 }
 
 //Music Page submit button
-#wpforms-submit-37 {
+#wpforms-submit-27551 {
     border-radius: 0.7rem;
     padding: .5rem 1.5rem;
     margin-bottom: 1rem;
@@ -444,8 +449,8 @@ a.boom-button {
     background-color: transparent;
 }
 
-#wpforms-37-field_1,
-#wpforms-37-field_0 {
+#wpforms-27551-field_1,
+#wpforms-27551-field_0 {
     max-width: 100%;
 }
 
@@ -456,30 +461,35 @@ a.boom-button {
 
     // a touch of Fanny ;)
     .slick-prev {
-        transform: rotate(180deg)!important;
-        margin-top:-13px!important;
-        &::before{
-        content: "";
+        transform: rotate(180deg) !important;
+        margin-top: -13px !important;
+
+        &::before {
+            content: "";
         }
     }
+
     .slick-next {
-        &::before{
-        content: "";
+        &::before {
+            content: "";
         }
     }
-    .slick-arrow{
-    top: 50%;
-    height: 26px!important;
-    width: 14px!important;
-    position: absolute;
-    background-image: url(src/assets/img/arrow-slider.png)!important;
-    background-repeat: no-repeat;
+
+    .slick-arrow {
+        top: 50%;
+        height: 26px !important;
+        width: 14px !important;
+        position: absolute;
+        background-image: url(src/assets/img/arrow-slider.png) !important;
+        background-repeat: no-repeat;
     }
-    .slick-dots li button::before{
-        font-size: 2rem!important;
-        color: white!important;
+
+    .slick-dots li button::before {
+        font-size: 2rem !important;
+        color: white !important;
     }
 }
+
 //END BUTTONS STYLES =========================================================================================================
 
 //BEGINNING FOOTER STYLES ????????????????????????????????????????????????????????????????????????????????????????????????????

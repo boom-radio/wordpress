@@ -10,7 +10,8 @@
 
 ?>
 
-<form id="searchform" method="get" action="<?php echo home_url('/'); ?>">
-    <input type="text" class="search-field" name="s" placeholder="Search" value="<?php the_search_query(); ?>">
-    <input type="submit" value="Search">
+<!--Updated search bar with Screen Reader span included-->
+<form action="<?php echo esc_url(home_url('/')); ?>" method="get" role="search">
+    <span class="u-screen-reader-text"><?php echo esc_attr_x('Search Boom:', 'label', 'boom_radio') ?></span>
+    <input type="search" name="s" placeholder="<?php echo esc_attr_x('Search Boom', 'placeholder', 'boom_radio') ?>" value="<?php echo esc_attr(get_search_query()); ?>" />
 </form>

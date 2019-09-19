@@ -288,6 +288,33 @@ html * {
     display: flex;
     justify-content: space-around; }
 
+/*Folder to allow us to build screen reader styling*/
+/*For any spans with text*/
+.u-screen-reader-text {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden; }
+
+/*For site skip links*/
+.u-skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden; }
+  .u-skip-link:focus {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    background: #ffffff;
+    padding: 10px 15px;
+    width: auto;
+    height: auto; }
+
 .clearfloat {
   font-size: 0px;
   margin: 0px;
@@ -761,7 +788,7 @@ a.boom-button {
     transition: transform 0.45s ease-in-out;
     transform: translateX(200%) rotate(35deg); }
 
-#wpforms-submit-37 {
+#wpforms-submit-27551 {
   border-radius: 0.7rem;
   padding: .5rem 1.5rem;
   margin-bottom: 1rem;
@@ -769,8 +796,8 @@ a.boom-button {
   color: white;
   background-color: transparent; }
 
-#wpforms-37-field_1,
-#wpforms-37-field_0 {
+#wpforms-27551-field_1,
+#wpforms-27551-field_0 {
   max-width: 100%; }
 
 /*John's Style*/

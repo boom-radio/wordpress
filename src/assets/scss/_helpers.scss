@@ -1,0 +1,31 @@
+/*Folder to allow us to build screen reader styling*/
+
+/*For any spans with text*/
+.u-screen-reader-text {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/*For site skip links*/
+.u-skip-link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+
+    &:focus {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        background: #ffffff;
+        padding: 10px 15px;
+        width: auto;
+        height: auto;
+    }
+}

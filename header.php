@@ -33,7 +33,7 @@
                 <!-- Empty cell/s used  for spacing-->
                 <div class="cell"></div>
                 <div class="cell"></div>
-                <?php get_search_form () ?>
+                <?php get_search_form() ?>
                 <div class="cell">
                     <!-- ASIDE menu -->
                     <?php

@@ -9,6 +9,7 @@
  */ ?>
 
 <?php wp_footer(); ?>
+<!--Closing tag for off canvas div-->
 </div>
 
 </body>
