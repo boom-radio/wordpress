@@ -13,6 +13,7 @@ get_header();
     <!--Addition of some Foundation classes used in the prototype-->
     <div class="grid-container">
         <div class="grid-x grid-padding-x grid-padding-y">
+            <div class="cell"></div>
             <?php if (have_posts()) { ?>
                 <!--The $postBackgroundColourCounter is the variable used in the posts background function and needs to be set to 0 before the beginning of WP loop-->
                 <?php $postBackgroundColourCounter = null;
