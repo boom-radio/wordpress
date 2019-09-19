@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <!-----------CONTENT HERE---------------->
-<!--Start of Artists Section-->
+<!-----------------------------Start of Artists Section---------------------------->
 <article class="grid-container">
     <!--Title for secton-->
     <div class="grid-x grid-padding-y align-center align-middle">
@@ -103,9 +103,9 @@ get_header(); ?>
     </div>
 </article>
 <div class="cell"></div>
-<!--End of Artists Section-->
+<!-----------------------------End of Artists Section------------------------------->
 
-<!--Start of Review Section-->
+<!-----------------------------Start of Review Section------------------------------>
 <!--Addition of some Foundation classes used in the prototype-->
 <div class="grid-container" id=artist>
     <div class="grid-x grid-padding-x grid-padding-y align-center">
@@ -188,9 +188,9 @@ get_header(); ?>
     </div>
 </div>
 <div class="cell"></div>
-<!--End of Review Section-->
+<!-----------------------------End of Review Section-------------------------------->
 
-<!--Start of Events Section-->
+<!-----------------------------Start of Events Section------------------------------>
 <div class="grid-container" id="yoursong">
     <div class="grid-x grid-padding-y align-center align-middle">
         <div class="cell auto text-right">
@@ -206,10 +206,12 @@ get_header(); ?>
     <!-- Empty cell/s used  for spacing-->
     <div class="cell"></div>
 
-    <!--Social split cell section-->
+    <!-------------------Social split cell section------------------------->
     <article class="grid-container">
         <div class="grid-x grid-margin-x">
+            <!--Static info box and contact form section--->
             <div class="cell large-8 shared">
+                <!--Static text on link-->
                 <div class="grid-container-fluid gradiented-box gradient-one-two">
                     <div class="grid-x grid-padding-x grid-padding-y align-spaced align-middle">
                         <div class=" cell">
@@ -226,11 +228,20 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
+                <!--Contact Form-->
+                <div class="grid-container-fluid">
+                    <div class="grid-x grid-padding-x align-center">
+                        <div class="cell">
+                            <?php echo do_shortcode('[wpforms id="27551" title="false" description="false"]'); ?>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!--Create space between cells in card section-->
             <div class="cell show-for-small show-for-medium hide-for-large"><br></div>
 
+            <!--------------------Single Events post section------------------------->
             <div class="cell auto">
                 <div class="cell">
                     <!-- Start of the loop-->
@@ -286,14 +297,9 @@ get_header(); ?>
         </div>
     </article>
 </div>
+<!-----------------------------End of Events Section-------------------------------->
 <div class="cell"></div>
-<div class="grid-container">
-    <div class="grid-x grid-padding-x align-center">
-        <div class="cell">
-            <?php echo do_shortcode('[wpforms id="27551" title="false" description="false"]'); ?>
-        </div>
-    </div>
-</div>
-
+<!-----------------------------PLACEHOLDER Start of Contact Old Form------------------------------>
+<!-----------------------------PLACEHOLDER End of Contact Form------------------------------>
 <?php
 get_footer();
