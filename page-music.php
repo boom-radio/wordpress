@@ -36,6 +36,9 @@ get_header(); ?>
             'posts_per_page'      => 3,
             'post__in'            => get_option('sticky_posts'),
             'ignore_sticky_posts' => 1,
+            'orderby'   => array(
+                'date' => 'DESC',
+            ),
             'tax_query' => array(
                 array(
                     'taxonomy' => 'category_music',
@@ -126,6 +129,9 @@ get_header(); ?>
             'posts_per_page'      => 1,
             'post__in'            => get_option('sticky_posts'),
             'ignore_sticky_posts' => 1,
+            'orderby'   => array(
+                'date' => 'DESC',
+            ),
             'tax_query' => array(
                 array(
                     'taxonomy' => 'category_music',
@@ -231,6 +237,9 @@ get_header(); ?>
                         'posts_per_page'      => 1,
                         'post__in'            => get_option('sticky_posts'),
                         'ignore_sticky_posts' => 1,
+                        'orderby'   => array(
+                            'date' => 'DESC',
+                        ),
                         'tax_query' => array(
                             array(
                                 'taxonomy' => 'category_music',

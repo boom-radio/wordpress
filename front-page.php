@@ -42,6 +42,9 @@ get_header(); ?>
             //Set maximum to three
             'post__in'            => get_option('sticky_posts'),
             'ignore_sticky_posts' => 1,
+            'orderby'   => array(
+                'date' => 'DESC',
+            ),
             'tax_query' => array(
                 array(
                     'taxonomy' => 'category_news',
@@ -138,6 +141,9 @@ get_header(); ?>
                 'posts_per_page'      => 1,
                 'post__in'            => get_option('sticky_posts'),
                 'ignore_sticky_posts' => 1,
+                'orderby'   => array(
+                    'date' => 'DESC',
+                ),
                 'tax_query' => array(
                     array(
                         'taxonomy' => 'category_music',
@@ -227,7 +233,10 @@ get_header(); ?>
                 //'orderby' => 'post__in'
                 'posts_per_page'      => 1,
                 'post__in'            => get_option('sticky_posts'),
-                'ignore_sticky_posts' => 1
+                'ignore_sticky_posts' => 1,
+                'orderby'   => array(
+                    'date' => 'DESC',
+                ),
             );
 
             $the_query = new WP_Query($args); ?>
@@ -275,9 +284,10 @@ get_header(); ?>
         <div class="cell"></div>
 
         <!---------------------------------Social section------------------------------->
+
         <article class="grid-container">
             <div class="grid-x grid-margin-x">
-                <div class="cell large-7 shared" style="margin-bottom: 1rem">
+                <div class="cell large-8 shared" style="margin-bottom: 1rem">
                     <div class="grid-container-fluid gradiented-box gradient-one-two">
                         <!------------------------ Start of Events loop.---------------------------->
                         <?php
@@ -286,6 +296,9 @@ get_header(); ?>
                             'posts_per_page'      => 1,
                             'post__in'            => get_option('sticky_posts'),
                             'ignore_sticky_posts' => 1,
+                            'orderby'   => array(
+                                'date' => 'DESC',
+                            ),
                             'tax_query' => array(
                                 array(
                                     'taxonomy' => 'category_music',
