@@ -34,8 +34,6 @@ get_header();
                                     <?php the_excerpt(); ?>
                                     <!--This is to attach the White boom Radio button, code in lib/helpers.php as an example of how we can resue sections of code across the site-->
                                     <?php boom_radio_readmore_link(); ?>
-
-                                    <?= posts_image_paragraph_position($postNumber) ?>
                                 </div>
                             </div>
                         </div>
