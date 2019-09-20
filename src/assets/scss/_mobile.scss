@@ -474,6 +474,27 @@ a.boom-button {
     margin-right: 0.5em;
 }
 
+//Pagination
+
+.pagination {
+
+    a,
+    button {
+        display: inline !important;
+        list-style-type: none;
+
+    }
+
+    .current {
+        background-color: $color-six;
+        font-family: 'Fjalla One', sans-serif;
+    }
+
+    a {
+        color: $color-white;
+    }
+}
+
 //Slick carousel styling
 /*John's Style*/
 .responsive {

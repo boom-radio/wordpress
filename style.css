@@ -315,6 +315,18 @@ html * {
     width: auto;
     height: auto; }
 
+.pagination a,
+.pagination button {
+  display: inline !important;
+  list-style-type: none; }
+
+.pagination .current {
+  background-color: #eb5b27;
+  font-family: 'Fjalla One', sans-serif; }
+
+.pagination a {
+  color: white; }
+
 .clearfloat {
   font-size: 0px;
   margin: 0px;
@@ -813,6 +825,18 @@ a.boom-button {
   margin: 0;
   padding: 0;
   margin-right: 0.5em; }
+
+.pagination a,
+.pagination button {
+  display: inline !important;
+  list-style-type: none; }
+
+.pagination .current {
+  background-color: #eb5b27;
+  font-family: 'Fjalla One', sans-serif; }
+
+.pagination a {
+  color: white; }
 
 /*John's Style*/
 .responsive {
