@@ -106,7 +106,7 @@
                                             <div class="cell shrink">
                                                 <div class="grid-x align-left align-middle">
                                                     <div class="cell shrink">
-                                                        <a href="./"><img id="logo" src="<?php echo get_theme_file_uri('src/assets/img/boom_logo_orange.svg'); ?>" alt="Boom Radio logo"></a>
+                                                        <a href="<?php echo get_option("siteurl"); ?>"><img id="logo" src="<?php echo get_theme_file_uri('src/assets/img/boom_logo_orange.svg'); ?>" alt="Boom Radio logo"></a>
                                                     </div>
                                                     <div class="cell shrink">
                                                         <button type="button" data-toggle="offCanvas"><img src="<?php echo get_theme_file_uri('src/assets/img/icons/+.svg'); ?>" alt="plus button"></button>
