@@ -29,22 +29,3 @@
         height: auto;
     }
 }
-
-.pagination {
-
-    a,
-    button {
-        display: inline !important;
-        list-style-type: none;
-
-    }
-
-    .current {
-        background-color: $color-six;
-        font-family: 'Fjalla One', sans-serif;
-    }
-
-    a {
-        color: $color-white;
-    }
-}

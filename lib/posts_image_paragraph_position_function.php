@@ -2,12 +2,12 @@
 //This function is for swapping images and paragraphs left and right alternatively (img left-parag right and viceversa
 
 function posts_image_paragraph_position($postNumber)
-{   
+{
     // Check if the post number (basically the post order, first post on page, second post etc.) is empty; if it is, is set to 0
     if (empty($postNumber)) {
         $postNumber = 0;
     }
-    
+
     // Check if the post has thumbnail image (featured image)
     if (has_post_thumbnail()) :
         // If there is a thumbnail get the URL and set it to the variable $featuredImgUrl
@@ -31,12 +31,12 @@ function posts_image_paragraph_position($postNumber)
                                     <div class="grid-x grid-padding-x grid-padding-y">
                                         <div class="cell">
                                             <h2>' .
-                                            $postTitle .
-                                            '</h2>
+        $postTitle .
+        '</h2>
                                         </div>
                                         <div class="cell text-justify">' .
-                                        $postContent .
-                                        '</div>
+        $postContent .
+        '</div>
                                     </div>
                                 </div>
                             </div>';
@@ -48,12 +48,12 @@ function posts_image_paragraph_position($postNumber)
                                 <div class="grid-x grid-padding-x grid-padding-y">
                                     <div class="cell">
                                         <h2>' .
-                                        $postTitle .
-                                        '</h2>
+        $postTitle .
+        '</h2>
                                     </div>
                                     <div class="cell text-justify">' .
-                                    $postContent .
-                                    '</div>
+        $postContent .
+        '</div>
                                 </div>
                             </div>
                         </div>
