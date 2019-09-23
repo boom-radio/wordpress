@@ -15,9 +15,6 @@ get_header(); ?>
         <img src="<?php echo get_theme_file_uri('src/assets/img/wave_left.svg'); ?>" alt="wave left">
     </div>
     <div class="cell shrink">
-        <h1>This is the Archive-news.php page</h1>
-    </div>
-    <div class="cell shrink">
         <h1>News</h1>
     </div>
     <div class="cell auto text-left">
