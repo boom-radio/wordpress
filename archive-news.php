@@ -15,10 +15,10 @@ get_header(); ?>
         <img src="<?php echo get_theme_file_uri('src/assets/img/wave_left.svg'); ?>" alt="wave left">
     </div>
     <div class="cell shrink">
-    <h1>This is the Page-news.php page</h1>
+        <h1>This is the Archive-news.php page</h1>
     </div>
     <div class="cell shrink">
-        <?php the_title('<h1>', '</h1>'); ?>
+        <h1>News</h1>
     </div>
     <div class="cell auto text-left">
         <img src="<?php echo get_theme_file_uri('src/assets/img/wave_right.svg'); ?>" alt="wave right">
@@ -30,12 +30,20 @@ get_header(); ?>
         <?php
         $args = array(
             'post_type' => 'news',
-            'posts_per_page'      => 1,
+            'posts_per_page'      => 1, //Set maximum to three
             'post__in'            => get_option('sticky_posts'),
             'ignore_sticky_posts' => 1,
             'orderby'   => array(
                 'date' => 'DESC',
-            )
+            ),
+            // 'tax_query' => array(
+            //     array(
+            //         'taxonomy' => 'category_news',
+            //         'field'    => 'slug',
+            //         //Album term id number in db
+            //         'terms' =>  'old-posts'
+            //     )
+            // )
         );
 
         $the_query = new WP_Query($args); ?>
@@ -62,6 +70,7 @@ get_header(); ?>
                 </div>
                 <!-- Empty cell/s used  for spacing-->
                 <div class="cell"></div>
+                <?php the_posts_pagination(); ?>
                 <div class="cell"></div>
                 <?php
                         // Increasing the value of the $postBackgroundColourCounter variable before the end of the WP loop to keep having a different post background colour
@@ -74,20 +83,20 @@ get_header(); ?>
         <?php else : ?>
             <p style="color: #FFF;"><?php _e('Sorry, no posts matched your criteria.'); ?></p>
         <?php endif; ?>
-        <?php the_posts_pagination(); ?>
+
         <!-- End of the loop.-->
     </div>
 </div>
 <!---Title with Wave -->
 <div class="grid-x grid-padding-y align-center align-middle">
     <div class="cell auto text-right">
-        <img src="assets/img/wave_left.svg" alt="wave left">
+        <img src="<?php echo get_theme_file_uri('src/assets/img/wave_left.svg'); ?>" alt="wave left">
     </div>
     <div class="cell shrink">
         <h3>Events</h3>
     </div>
     <div class="cell auto text-left">
-        <img src="assets/img/wave_right.svg" alt="wave right">
+        <img src="<?php echo get_theme_file_uri('src/assets/img/wave_right.svg'); ?>" alt="wave right">
     </div>
 </div>
 <!--END OF H3 WAVE-->
@@ -162,7 +171,9 @@ get_header(); ?>
         <?php else : ?>
             <p style="color: #FFF;"><?php _e('Sorry, no posts matched your criteria.'); ?></p>
         <?php endif; ?>
-        <?php the_posts_pagination(); ?>
+        <div class="cell">
+            <?php the_posts_pagination(); ?>
+        </div>
     </div>
 </article>
 <!--End of News Section-->
