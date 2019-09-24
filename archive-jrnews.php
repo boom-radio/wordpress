@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Full News Page
+ * Template Name: Full Archive News Page
  *
  * @package WordPress
  * @subpackage boom_radio

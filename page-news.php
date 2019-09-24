@@ -15,10 +15,7 @@ get_header(); ?>
         <img src="<?php echo get_theme_file_uri('src/assets/img/wave_left.svg'); ?>" alt="wave left">
     </div>
     <div class="cell shrink">
-    <h1>This is the Page-news.php page</h1>
-    </div>
-    <div class="cell shrink">
-        <?php the_title('<h1>', '</h1>'); ?>
+        <?php the_title('<h1>Not Archive ', '</h1>'); ?>
     </div>
     <div class="cell auto text-left">
         <img src="<?php echo get_theme_file_uri('src/assets/img/wave_right.svg'); ?>" alt="wave right">
@@ -30,11 +27,19 @@ get_header(); ?>
         <?php
         $args = array(
             'post_type' => 'news',
-            'posts_per_page'      => 1,
+            //'posts_per_page'      => 1,
             'post__in'            => get_option('sticky_posts'),
             'ignore_sticky_posts' => 1,
             'orderby'   => array(
                 'date' => 'DESC',
+            ),
+
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'category_news',
+                    'field'    => 'slug',
+                    'terms' =>  'old-posts'
+                )
             )
         );
 
@@ -46,9 +51,9 @@ get_header(); ?>
             $postBackgroundColourCounter = null;
             //The $postNumber Is used into the function to swap image and paragraph left/right
             $postNumber = null;
-
-            while ($the_query->have_posts()) : $the_query->the_post(); ?>
-
+            //Set varibale for the loop to control amount of posts
+            $i = 1;
+            while ($the_query->have_posts() && $i < 13) : $the_query->the_post(); ?>
                 <div <?php post_class('cell'); ?>>
                     <!-- Gradiented container ????????????????????????????????????????????????????????????????????????????????????????????? -->
                     <div class="grid-container-fluid gradiented-box <?= posts_background_colour_function($postBackgroundColourCounter);  ?>">
@@ -68,7 +73,8 @@ get_header(); ?>
                         $postBackgroundColourCounter++;
                         // Increasing the $postNumber variable every loop to swap image and paragraphs left/right
                         $postNumber++; ?>
-            <?php endwhile;
+            <?php $i++;
+                endwhile;
                 wp_reset_postdata(); ?>
 
         <?php else : ?>
@@ -81,13 +87,13 @@ get_header(); ?>
 <!---Title with Wave -->
 <div class="grid-x grid-padding-y align-center align-middle">
     <div class="cell auto text-right">
-        <img src="assets/img/wave_left.svg" alt="wave left">
+        <img src="<?php echo get_theme_file_uri('src/assets/img/wave_left.svg'); ?>" alt="wave left">
     </div>
     <div class="cell shrink">
         <h3>Events</h3>
     </div>
     <div class="cell auto text-left">
-        <img src="assets/img/wave_right.svg" alt="wave right">
+        <img src="<?php echo get_theme_file_uri('src/assets/img/wave_right.svg'); ?>" alt="wave right">
     </div>
 </div>
 <!--END OF H3 WAVE-->
