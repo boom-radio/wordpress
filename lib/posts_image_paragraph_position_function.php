@@ -19,7 +19,9 @@ function posts_image_paragraph_position($postNumber)
     // Get the post title and set it into the variable $postTitle
     $postTitle = get_the_title();
     // Get the post content and set it into the variable $postContent
-    $postContent = get_the_content();
+    //$postContent = get_the_content();
+    // Get the post excerpt and set it into the variable $postContent
+    $postContent = get_the_excerpt();
 
     // Put the HTML for a left image and a right paragraph into the variable $imgLeftParagRight
     $imgLeftParagRight = '
