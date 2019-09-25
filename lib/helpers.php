@@ -35,6 +35,8 @@ add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 999);
  * @param string $more "Read more" excerpt string.
  * @return string (Maybe) modified "read more" excerpt string.
  */
+
+//Excerpt link conditional loop for single post permalink formatting and styling
 function wpdocs_excerpt_more($more)
 {
     if (!is_single()) {
@@ -48,3 +50,12 @@ function wpdocs_excerpt_more($more)
     return $more;
 }
 add_filter('excerpt_more', 'wpdocs_excerpt_more');
+
+//Global function to allow is_post_type('post_type') to be used in conditional loops throuout the site
+function is_post_type($type)
+{
+    global $wp_query;
+    if ($type == get_post_type($wp_query->post->ID))
+        return true;
+    return false;
+}

@@ -466,12 +466,11 @@ iframe {
 
 .card {
   border: 0 !important;
-  /*To style schedule card class images*/
+  /*To style schedule card class images
+    img {
+        @include box-shadow;
+    }*/
   /*To style all other card class images*/ }
-  .card img {
-    -webkit-box-shadow: 5px 5px 0 rgba(16, 33, 38, 0.3);
-    -moz-box-shadow: 5px 5px 0 rgba(16, 33, 38, 0.3);
-    box-shadow: 5px 5px 0 rgba(16, 33, 38, 0.3); }
   .card .single-card {
     box-shadow: none; }
 
