@@ -205,10 +205,10 @@ $box-shadow: 5px 5px 0 rgba($color-eight, 0.3);
 .card {
     border: 0 !important;
 
-    /*To style schedule card class images*/
+    /*To style schedule card class images
     img {
         @include box-shadow;
-    }
+    }*/
 
     /*To style all other card class images*/
     .single-card {

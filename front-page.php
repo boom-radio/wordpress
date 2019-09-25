@@ -9,6 +9,92 @@
  */
 get_header(); ?>
 <!-----------------------CONTENT HERE-------------------------------------->
+<!-----------------------Start of Artist of the Month Section------------------------------------------>
+<div class="grid-container">
+    <div class="grid-container" id=artist>
+        <div class="grid-x grid-padding-x grid-padding-y align-center">
+            <!--Title with wave-->
+            <div class="grid-x grid-padding-y align-center align-middle">
+                <div class="cell auto text-right">
+                    <img src="<?php echo get_theme_file_uri('src/assets/img/wave_left.svg'); ?>" alt="wave left">
+                </div>
+                <div class="cell shrink">
+                    <h1>Artist of the Month</h1>
+                </div>
+                <div class="cell auto text-left">
+                    <img src="<?php echo get_theme_file_uri('src/assets/img/wave_right.svg'); ?>" alt="wave right">
+                </div>
+            </div>
+            <!-- Empty cell/s used  for spacing-->
+            <div class="cell"></div>
+
+            <!--wp query arg set for featured artist terms-->
+            <?php
+            $args = array(
+                'post_type' => 'music_post',
+                'posts_per_page'      => 1,
+                'post__in'            => get_option('sticky_posts'),
+                'ignore_sticky_posts' => 1,
+                'orderby'   => array(
+                    'date' => 'DESC',
+                ),
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'category_music',
+                        'field'    => 'slug',
+                        'terms' =>  'featured-artist'
+                    )
+                )
+            );
+
+            $the_query = new WP_Query($args); ?>
+
+            <!--Start of the Loop-->
+            <?php if ($the_query->have_posts()) :
+                //Set varibale for the loop to control amount of posts
+                $i = 1;
+                while ($the_query->have_posts() && $i < 3) : $the_query->the_post(); ?>
+                    <div <?php post_class('grid-container gradiented-box gradient-three-four'); ?>>
+                        <div class="grid-x grid-padding-x grid-padding-y align-spaced align-middle">
+                            <div class="cell medium-6">
+                                <div class="grid-container-fluid">
+                                    <div class="grid-x grid-margin-x grid-margin-y grid-padding-x grid-padding-y">
+                                        <div class="cell text-justify">
+                                            <h2>
+                                                <a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><?php the_title() ?></a>
+                                            </h2>
+                                            <!--OR use the_content for full post, this can be split into template parts at the end;-->
+                                            <?php the_excerpt(); ?>
+                                        </div>
+                                        <div class="cell">
+                                            <!--This is to attach the White boom Radio button, code in lib/helpers.php as an example of how we can resue sections of code across the site-->
+                                            <?php boom_radio_readmore_link(); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell medium-4">
+                                <?php if (has_post_thumbnail()) :
+                                            the_post_thumbnail('large', array('class' => 'img-right box-shadowed'));
+                                        endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Add one to variable and reset global $post-->
+                <?php $i++;
+                    endwhile;
+                    wp_reset_postdata(); ?>
+
+            <?php else : ?>
+                <p style="color: #FFF;"><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+            <?php endif; ?>
+            <!-- End of the loop.-->
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+    </div>
+</div>
+<!------------------------End of Featured Artist Section-------------------------------->
 <!-----------------------Start of News Section------------------------------------------------------>
 <article class="grid-container">
     <!--Title for secton-->
@@ -17,7 +103,7 @@ get_header(); ?>
             <img src="<?php echo get_theme_file_uri('src/assets/img/wave_left.svg'); ?>" alt="wave left">
         </div>
         <div class="cell shrink">
-            <h1>News</h1>
+            <h3>News</h3>
         </div>
         <div class="cell auto text-left">
             <img src="<?php echo get_theme_file_uri('src/assets/img/wave_right.svg'); ?>" alt="wave right">
@@ -134,10 +220,9 @@ get_header(); ?>
 
                 <div <?php post_class('cell'); ?>>
                     <div class="card">
-
-                        <?php if (has_post_thumbnail()) { ?>
-                            <img class="single-card" src="<?php the_post_thumbnail_url(); ?>" />
-                        <?php } else {
+                        <?php if (has_post_thumbnail()) {
+                                    the_post_thumbnail('large');
+                                } else {
                                     echo '<img src="' . get_bloginfo("template_url") . '/src/assets/img/img-default.png" />';
                                 }
                                 ?>
@@ -211,9 +296,10 @@ get_header(); ?>
 
                 <div <?php post_class('cell'); ?>>
                     <div class="card">
-                        <?php if (has_post_thumbnail()) { ?>
-                            <img class="single-card" src="<?php the_post_thumbnail_url(); ?>" />
-                        <?php } else {
+
+                        <?php if (has_post_thumbnail()) {
+                                    the_post_thumbnail('large');
+                                } else {
                                     echo '<img src="' . get_bloginfo("template_url") . '/src/assets/img/img-default.png" />';
                                 }
                                 ?>
@@ -260,93 +346,6 @@ get_header(); ?>
 <div class="cell"></div>
 <div class="cell"></div>
 <!-----------------------End of News Section------------------------------------------------------>
-
-<!-----------------------Start of Featured Artist Section------------------------------------------>
-<div class="grid-container">
-    <div class="grid-container" id=artist>
-        <div class="grid-x grid-padding-x grid-padding-y align-center">
-            <!--Title with wave-->
-            <div class="grid-x grid-padding-y align-center align-middle">
-                <div class="cell auto text-right">
-                    <img src="<?php echo get_theme_file_uri('src/assets/img/wave_left.svg'); ?>" alt="wave left">
-                </div>
-                <div class="cell shrink">
-                    <h3>Music</h3>
-                </div>
-                <div class="cell auto text-left">
-                    <img src="<?php echo get_theme_file_uri('src/assets/img/wave_right.svg'); ?>" alt="wave right">
-                </div>
-            </div>
-            <!-- Empty cell/s used  for spacing-->
-            <div class="cell"></div>
-
-            <!--wp query arg set for featured artist terms-->
-            <?php
-            $args = array(
-                'post_type' => 'music_post',
-                'posts_per_page'      => 1,
-                'post__in'            => get_option('sticky_posts'),
-                'ignore_sticky_posts' => 1,
-                'orderby'   => array(
-                    'date' => 'DESC',
-                ),
-                'tax_query' => array(
-                    array(
-                        'taxonomy' => 'category_music',
-                        'field'    => 'slug',
-                        'terms' =>  'featured-artist'
-                    )
-                )
-            );
-
-            $the_query = new WP_Query($args); ?>
-
-            <!--Start of the Loop-->
-            <?php if ($the_query->have_posts()) :
-                //Set varibale for the loop to control amount of posts
-                $i = 1;
-                while ($the_query->have_posts() && $i < 3) : $the_query->the_post(); ?>
-                    <div <?php post_class('grid-container gradiented-box gradient-three-four'); ?>>
-                        <div class="grid-x grid-padding-x grid-padding-y align-spaced align-middle">
-                            <div class="cell medium-6">
-                                <div class="grid-container-fluid">
-                                    <div class="grid-x grid-margin-x grid-margin-y grid-padding-x grid-padding-y">
-                                        <div class="cell text-justify">
-                                            <h2>
-                                                <a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><?php the_title() ?></a>
-                                            </h2>
-                                            <!--OR use the_content for full post, this can be split into template parts at the end;-->
-                                            <?php the_excerpt(); ?>
-                                        </div>
-                                        <div class="cell">
-                                            <!--This is to attach the White boom Radio button, code in lib/helpers.php as an example of how we can resue sections of code across the site-->
-                                            <?php boom_radio_readmore_link(); ?>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cell medium-4">
-                                <?php if (has_post_thumbnail()) :
-                                            the_post_thumbnail('large', array('class' => 'img-right box-shadowed'));
-                                        endif; ?>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Add one to variable and reset global $post-->
-                <?php $i++;
-                    endwhile;
-                    wp_reset_postdata(); ?>
-
-            <?php else : ?>
-                <p style="color: #FFF;"><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-            <?php endif; ?>
-            <!-- End of the loop.-->
-
-        </div>
-    </div>
-</div>
-<div class="cell"></div>
-<!------------------------End of Featured Artist Section-------------------------------->
 
 <!------------------------Start of Social Section------------------------------>
 <div class="grid-container">
