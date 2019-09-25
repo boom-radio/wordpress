@@ -27,7 +27,7 @@ get_header(); ?>
         <?php
         $args = array(
             'post_type' => 'news',
-            'posts_per_page'      => 1, //Set maximum to three
+            'posts_per_page'      => 3, //Set maximum to three
             'post__in'            => get_option('sticky_posts'),
             'ignore_sticky_posts' => 1,
             'orderby'   => array(
@@ -67,7 +67,6 @@ get_header(); ?>
                 </div>
                 <!-- Empty cell/s used  for spacing-->
                 <div class="cell"></div>
-                <?php the_posts_pagination(); ?>
                 <div class="cell"></div>
                 <?php
                         // Increasing the value of the $postBackgroundColourCounter variable before the end of the WP loop to keep having a different post background colour
@@ -82,6 +81,10 @@ get_header(); ?>
         <?php endif; ?>
 
         <!-- End of the loop.-->
+
+        <!-- Pagination menu -->
+        <?php the_posts_pagination(); ?>
+        <div class="cell"></div>
     </div>
 </div>
 <!---Title with Wave -->
