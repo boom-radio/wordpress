@@ -19,3 +19,9 @@ require_once('lib/the_post_navigation.php');
 require_once('lib/posts_background_colour_function.php');
 //Function to layout the post (image right or left)
 require_once('lib/posts_image_paragraph_position_function.php');
+
+function add_custom_sizes()
+{
+    add_image_size('card-large', 600, 600, false);
+}
+add_action('after_setup_theme', 'add_custom_sizes');

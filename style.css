@@ -478,7 +478,18 @@ iframe {
   background-color: #535156;
   color: white;
   font-family: 'Quicksand-Regular', sans-serif;
-  font-size: 0.8rem; }
+  font-size: 0.8rem;
+  min-height: 20vh; }
+
+.attachment-card-style {
+  display: block;
+  height: 45vh;
+  float: right; }
+
+.attachment-gradient-img-style {
+  display: block;
+  height: 30vh;
+  width: auto; }
 
 .bio {
   width: 100%; }
@@ -877,10 +888,17 @@ footer a {
     display: block;
     height: 133px;
     /* fixed header height*/ }
+  .attachment-card-style {
+    display: block;
+    height: 32vh; }
+  .card-section {
+    min-height: 17vh; }
   .icons {
     height: 70%;
     width: 70%; }
-  .social-button, .feed, .twitter-feed iframe {
+  .social-button,
+  .feed,
+  .twitter-feed iframe {
     width: 300px !important; }
   .slide {
     background: #102126;
@@ -971,7 +989,11 @@ footer a {
   .img-left {
     left: 1rem; }
   .img-right {
-    right: 1rem; } }
+    right: 1rem; }
+  .attachment-card-style {
+    height: 37vh; }
+  .card-section {
+    min-height: 20vh; } }
 
 /* Slider */
 .slick-slider {

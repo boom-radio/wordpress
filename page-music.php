@@ -43,8 +43,8 @@ get_header(); ?>
                 array(
                     'taxonomy' => 'category_music',
                     'field'    => 'slug',
-                    //Album term id number in db
-                    'terms' =>  'album'
+                    //Artists term id number in db
+                    'terms' =>  'Artists'
                 )
             )
         );

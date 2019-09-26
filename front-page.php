@@ -144,10 +144,10 @@ get_header(); ?>
                 <div <?php post_class('cell'); ?>>
                     <div class="card">
 
-                        <?php if (has_post_thumbnail()) { ?>
-                            <img class="single-card" src="<?php the_post_thumbnail_url(); ?>" />
-                        <?php } else {
-                                    echo '<img src="' . get_bloginfo("template_url") . '/src/assets/img/img-default.png" />';
+                        <?php if (has_post_thumbnail()) {
+                                    the_post_thumbnail(array('large', 'class' => 'card-style'));
+                                } else {
+                                    echo '<img src="' . get_bloginfo("template_url") . '/src/assets/img/img-default.png" class="attachment-card-style"/>';
                                 }
                                 ?>
                         <div class="card-section">
@@ -205,8 +205,8 @@ get_header(); ?>
                 array(
                     'taxonomy' => 'category_music',
                     'field'    => 'slug',
-                    //Album term id number in db
-                    'terms' =>  'album'
+                    //Artists term id number in db
+                    'terms' =>  'Artists'
                 )
             )
         );
@@ -221,9 +221,9 @@ get_header(); ?>
                 <div <?php post_class('cell'); ?>>
                     <div class="card">
                         <?php if (has_post_thumbnail()) {
-                                    the_post_thumbnail('large');
+                                    the_post_thumbnail('card-style');
                                 } else {
-                                    echo '<img src="' . get_bloginfo("template_url") . '/src/assets/img/img-default.png" />';
+                                    echo '<img src="' . get_bloginfo("template_url") . '/src/assets/img/img-default.png"/>';
                                 }
                                 ?>
                         <div class="card-section">
@@ -298,9 +298,9 @@ get_header(); ?>
                     <div class="card">
 
                         <?php if (has_post_thumbnail()) {
-                                    the_post_thumbnail('large');
+                                    the_post_thumbnail('card-style');
                                 } else {
-                                    echo '<img src="' . get_bloginfo("template_url") . '/src/assets/img/img-default.png" />';
+                                    echo '<img src="' . get_bloginfo("template_url") . '/src/assets/img/img-default.png"/>';
                                 }
                                 ?>
                         <div class="card-section">
@@ -326,7 +326,6 @@ get_header(); ?>
                                     </div>
                                 </div>
                             </div>
-
                             <!--This is to attach the Orange boom button button, code in lib/helpers.php as an example of how we can resue sections of code across the site-->
                             <?php boom_radio_card_link(); ?>
                         </div>
@@ -344,7 +343,6 @@ get_header(); ?>
     </div>
 </article>
 <div class="cell"></div>
-<div class="cell"></div>
 <!-----------------------End of News Section------------------------------------------------------>
 
 <!------------------------Start of Social Section------------------------------>
@@ -352,7 +350,6 @@ get_header(); ?>
     <div class="grid-x grid-margin-x grid-margin-y align-center">
 
         <!-- Empty cell/s used  for spacing-->
-        <div class="cell"></div>
         <div class="cell"></div>
 
         <!---Title with Wave -->
@@ -370,7 +367,6 @@ get_header(); ?>
 
         <!-------------------------Start of competitions loop-------------------------->
         <div class="cell">
-
             <!--wp query arg set-->
             <?php
             $args = array(
@@ -460,12 +456,12 @@ get_header(); ?>
                             $i = 1;
                             while ($the_query->have_posts() && $i < 2) : $the_query->the_post(); ?>
 
-                                <div class="grid-x grid-padding-x grid-padding-y align-spaced align-middle">
+                                <div class="grid-x grid-padding-x grid-padding-y align-spaced small-up-1 medium-up-2">
                                     <div class="cell medium-5">
 
                                         <!--Set thumbnail image and default if no image-->
                                         <?php if (has_post_thumbnail()) {
-                                                    the_post_thumbnail('featured-large', array('class' => 'img-left box-shadowed'));
+                                                    the_post_thumbnail('large', array('class' => 'img-left box-shadowed'));
                                                 } else {
                                                     echo '<img src="' . get_bloginfo("template_url") . '/src/assets/images/img-default.png" />';
                                                 }
@@ -527,11 +523,11 @@ get_header(); ?>
                             $i = 1;
                             while ($the_query->have_posts() && $i < 2) : $the_query->the_post(); ?>
 
-                                <div <?php post_class('card'); ?>>
+                                <div <?php post_class('card align-center gradient-five-six'); ?>>
                                     <div class="cell"></div>
                                     <!--Check if a featured image has been uplaoded with the post-->
                                     <?php if (has_post_thumbnail()) : ?>
-                                        <img class="single-card" src="<?php the_post_thumbnail_url(); ?>" />
+                                        <?php the_post_thumbnail('card-style'); ?>
                                     <?php endif; ?>
 
                                     <div class="card-section">
