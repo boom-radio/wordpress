@@ -465,11 +465,11 @@ iframe {
 
 .card {
   border: 0 !important;
-  /*To style schedule card class images
+  /*------------To style schedule card class images--------------
     img {
         @include box-shadow;
     }*/
-  /*To style all other card class images*/ }
+  /*-------------To style all other card class images------------*/ }
   .card .single-card {
     box-shadow: none; }
 
@@ -837,7 +837,8 @@ a.boom-button {
 
 /*John's Style*/
 .responsive {
-  margin: 1rem; }
+  margin: 1rem;
+  /*a touch of Fanny*/ }
   .responsive .slick-prev {
     transform: rotate(180deg) !important;
     margin-top: -13px !important; }
@@ -855,6 +856,59 @@ a.boom-button {
   .responsive .slick-dots li button::before {
     font-size: 2rem !important;
     color: white !important; }
+
+.c-comments__title {
+  margin: rem-calc(60 0 20 0);
+  font-size: 2rem; }
+
+.c-comments__list {
+  list-style: none;
+  margin: 0; }
+  .c-comments__list .children {
+    font-size: 100%;
+    list-style: none; }
+
+.c-comment {
+  background-color: #535156;
+  border: 1px solid #eb5b27;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.05);
+  padding: rem-calc(20);
+  position: relative; }
+  .c-comment--child {
+    box-shadow: none;
+    border-color: #3aa9e1; }
+    .c-comment--child .c-comment__avatar {
+      width: 70px;
+      height: 70px;
+      margin-right: rem-calc(15px); }
+  .c-comment__reply-link {
+    text-align: right; }
+  .c-comment__edit-link {
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+  .c-comment__time {
+    margin-bottom: rem-calc(15);
+    display: inline-block;
+    font-size: rem-calc(14);
+    border-bottom: none; }
+  .c-comment__body {
+    display: flex; }
+  .c-comment__avatar {
+    width: 100px;
+    height: 100px;
+    margin-right: rem-calc(20px); }
+  .c-comment__content {
+    flex: 1; }
+    .c-comment__content p {
+      color: black; }
+  .c-comment__author {
+    color: #000000;
+    font-weight: 600;
+    font-size: rem-calc(20); }
+    .c-comment__author a {
+      color: inherit;
+      border-bottom: none; }
 
 footer a {
   color: #eb5b27; }

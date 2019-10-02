@@ -19,6 +19,8 @@ require_once('lib/the_post_navigation.php');
 require_once('lib/posts_background_colour_function.php');
 //Function to layout the post (image right or left)
 require_once('lib/posts_image_paragraph_position_function.php');
+//Function to control html output of comments section
+require_once('lib/comment-callback.php');
 
 function add_custom_sizes()
 {

@@ -1,6 +1,6 @@
 @import "config";
 
-//BEGINNING GENERAL STYLES ========================================================================================================
+///////////////////////////////////////////////////////NEGINNING GENERAL STYLES////////////////////////////////////////////////////// 
 body {
     background: $color-eight;
     font-family: 'Quicksand-Regular', sans-serif;
@@ -69,13 +69,13 @@ a {
     border: 1px solid blue;
 }
 
-//Site wide title controller
+//--------------Site wide title controller-----------------
 .section-title {
     color: $color-six;
     padding: 0.5rem;
 }
 
-//Site wide contact form controller
+//--------------Site wide contact form controller------------
 input,
 textarea,
 button,
@@ -105,9 +105,9 @@ iframe {
     margin-bottom: 1.5rem;
 }
 
-//END GENERAL STYLES =================================================================================================================
+///////////////////////////////////////////////////////END GENERALSTYLES////////////////////////////////////////////////////// 
 
-//BEGINNING BODY STYLES ??????????????????????????????????????????????????????????????????????????????????????????????????????????????
+///////////////////////////////////////////////////////BEGINNING BODY STYLES////////////////////////////////////////////////////// 
 //This is this BOOM embedded player from tunein.com
 .boomPlayer {
     width: 100%;
@@ -146,7 +146,8 @@ iframe {
     width: 100% !important;
 }
 
-//This is the customised audio player (Commented because we are using the BOOM embedded one)
+//----------------------------This is the customised audio player---------------
+// (Commented because we are using the BOOM embedded one)
 // $color-white: rgba(255, 255, 255, 0.3); //Setting color-white opacity for player border
 // #audioplayer {
 //     //width: 195px;
@@ -195,7 +196,7 @@ iframe {
     @include gradient-five-six;
 }
 
-//Setting variables for box shadows on about page boxes
+//--------------------Setting variables for box shadows on about page boxes--------------------
 $box-shadow: 5px 5px 0 rgba($color-eight, 0.3);
 
 .box-shadowed {
@@ -205,12 +206,12 @@ $box-shadow: 5px 5px 0 rgba($color-eight, 0.3);
 .card {
     border: 0 !important;
 
-    /*To style schedule card class images
+    /*------------To style schedule card class images--------------
     img {
         @include box-shadow;
     }*/
 
-    /*To style all other card class images*/
+    /*-------------To style all other card class images------------*/
     .single-card {
         box-shadow: none;
     }
@@ -224,14 +225,14 @@ $box-shadow: 5px 5px 0 rgba($color-eight, 0.3);
     min-height: 20vh;
 }
 
-//Responsive image classes for card sections
+//----------------------Responsive image classes for card sections--------------------
 .attachment-card-style {
     display: block;
     height: 45vh;
     float: right;
 }
 
-//Responsive image class for schedule card section
+//------------------Responsive image class for schedule card section----------------
 .attachment-gradient-img-style {
     display: block;
     height: 30vh;
@@ -266,8 +267,8 @@ $box-shadow: 5px 5px 0 rgba($color-eight, 0.3);
     ;
 }
 
-/////////STYLES ON LISTEN PAGE////////////////////////////
-/////////TABS
+/////////////////////////////////////////////////////BEGINNING LISTEN STYLES////////////////////////////////////////////////////// 
+//------------------------TABS------------------------------
 div {
 
     .tabs,
@@ -371,8 +372,8 @@ div.md-tabs>.accordion>.accordion-item>.accordion-title:focus {
     }
 }*/
 
-/////////////////END OF TABS
-////////////////COLORED CALLOUT
+//----------------------- OF TABS------------------------
+//-----------------------COLORED CALLOUT-----------------
 .callout {
     border: none;
     min-height: 400px;
@@ -402,14 +403,14 @@ div.md-tabs>.accordion>.accordion-item>.accordion-title:focus {
     /* fixed header height*/
 }
 
-//////////////END OF CALLOUT
-//////////////END OF LISTEN STYLES//////////////
-//////////////BEGINNING OF CONTACT STYLES//////////////
+///////////////////////////////////////////////////////END LISTEN STYLES////////////////////////////////////////////////////// 
+
+///////////////////////////////////////////////////////BEGINNING CONTACT STYLES////////////////////////////////////////////////////// 
 .info-container li {
     padding: 5px;
 }
 
-//////////////END OF CONTACT STYLES//////////////
+///////////////////////////////////////////////////////END CONTACT STYLES////////////////////////////////////////////////////// 
 
 #copyright {
     color: $color-white;
@@ -417,9 +418,9 @@ div.md-tabs>.accordion>.accordion-item>.accordion-title:focus {
     font-weight: 100;
 }
 
-//END BODY STYLES ??????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+///////////////////////////////////////////////////////END BODY STYLES////////////////////////////////////////////////////// 
 
-//BEGINNING BUTTONS STYLES =================================================================================================================
+///////////////////////////////////////////////////////BEGINNING BUTTON STYLES////////////////////////////////////////////////////// 
 
 //INSERTED TO PASS VALIDATION
 a.boom-button {
@@ -434,13 +435,12 @@ a.boom-button {
     @include button-hover;
 }
 
-//John's Wave Animation
-//Sound wave
+//-----------------------------John's Wave Animation--------------------
 .animation-container {
     @include sound-wave;
 }
 
-//Fanny's button
+//---------------------------Fanny's button------------------------
 .boom-button-white {
     border-radius: 0.7rem;
     padding: .5rem 1.5rem;
@@ -461,7 +461,7 @@ a.boom-button {
     @include button-hover;
 }
 
-//Music Page submit button
+//-------------------------Music Page submit button-------------------------------
 #wpforms-submit-27551 {
     border-radius: 0.7rem;
     padding: .5rem 1.5rem;
@@ -476,7 +476,7 @@ a.boom-button {
     max-width: 100%;
 }
 
-//Search form
+//----------------------------Search form------------------------------
 .title-bar>.title-bar-left>div>div>form>input:hover,
 .search-input:hover {
 
@@ -489,7 +489,7 @@ a.boom-button {
     margin-right: 0.5em;
 }
 
-//Pagination
+//-----------------------------Pagination---------------------------
 
 .pagination {
 
@@ -510,12 +510,12 @@ a.boom-button {
     }
 }
 
-//Slick carousel styling
+//-------------------------Slick carousel styling---------------------------
 /*John's Style*/
 .responsive {
     margin: 1rem;
 
-    // a touch of Fanny ;)
+    /*a touch of Fanny*/
     .slick-prev {
         transform: rotate(180deg) !important;
         margin-top: -13px !important;
@@ -546,9 +546,95 @@ a.boom-button {
     }
 }
 
-//END BUTTONS STYLES =========================================================================================================
+///////////////////////////////////////////////////////END BUTTON STYLES////////////////////////////////////////////////////// 
 
-//BEGINNING FOOTER STYLES ????????????????????????????????????????????????????????????????????????????????????????????????????
+///////////////////////////////////////////////////////START COMMENT STYLES////////////////////////////////////////////////////// 
+.c-comments {
+    &__title {
+        margin: rem-calc(60 0 20 0);
+        font-size: 2rem;
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0;
+
+        .children {
+            font-size: 100%;
+            list-style: none;
+        }
+    }
+}
+
+.c-comment {
+    background-color: $color-nine;
+    border: 1px solid $color-six;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.05);
+    padding: rem-calc(20);
+    position: relative;
+    $p: &;
+
+    &--child {
+        box-shadow: none;
+        border-color: $color-four;
+
+        #{$p}__avatar {
+            width: 70px;
+            height: 70px;
+            margin-right: rem-calc(15px);
+        }
+    }
+
+    &__reply-link {
+        text-align: right;
+    }
+
+    &__edit-link {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    &__time {
+        margin-bottom: rem-calc(15);
+        display: inline-block;
+        font-size: rem-calc(14);
+        border-bottom: none;
+    }
+
+    &__body {
+        display: flex;
+    }
+
+    &__avatar {
+        width: 100px;
+        height: 100px;
+        margin-right: rem-calc(20px);
+    }
+
+    &__content {
+        flex: 1;
+
+        p {
+            color: $color-black;
+        }
+    }
+
+    &__author {
+        color: #000000;
+        font-weight: 600;
+        font-size: rem-calc(20);
+
+        a {
+            color: inherit;
+            border-bottom: none;
+        }
+    }
+}
+
+///////////////////////////////////////////////////////END COMMENT STYLES////////////////////////////////////////////////////// 
+
+///////////////////////////////////////////////////////BEGINNNING FOOTER STYLES/////////////////////////////////////////////// 
 footer {
     a {
         color: $color-six;
@@ -559,4 +645,4 @@ footer {
     }
 }
 
-//END FOOTER STYLES ??????????????????????????????????????????????????????????????????????????????????????????????????????????
+///////////////////////////////////////////////////////END FOOTER STYLES////////////////////////////////////////////////////// 

@@ -49,6 +49,11 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
+                <?php
+                    if (comments_open() || get_comments_number()) {
+                        comments_template();
+                    }
+                    ?>
             </div>
             <!--End the loop.-->
         <?php endwhile; ?>

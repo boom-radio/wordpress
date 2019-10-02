@@ -43,6 +43,11 @@ function _themename_assets()
 
     //Enqueue the theme's purpose built js file - REVIEW PATH FOR DISTRIBUTION
     wp_enqueue_script('boom_radio_scripts', get_template_directory_uri() . '/src/assets/js/app.js', array('jquery'), '1.0.0', true);
+
+    //Get the comments reply form from wp core    
+    if (is_singular() && comments_open() && get_option('thread_comments')) {
+        wp_enqueue_script('comment-reply');
+    }
 }
 
 add_action('wp_enqueue_scripts', '_themename_assets');

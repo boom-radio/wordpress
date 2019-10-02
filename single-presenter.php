@@ -26,11 +26,11 @@ get_header(); ?>
 
             <div <?php post_class('cell'); ?>>
                 <?php //render random gradient background
-                    $list = array('gradient-one-two', 'gradient-three-four', 'gradient-five-six' );
+                    $list = array('gradient-one-two', 'gradient-three-four', 'gradient-five-six');
                     $i = array_rand($list);
                     $gradient = $list[$i];
-                ?>
-                <div class="grid-container-fluid gradiented-box <?php echo $gradient?>">
+                    ?>
+                <div class="grid-container-fluid gradiented-box <?php echo $gradient ?>">
                     <div class="grid-x grid-padding-x grid-padding-y align-spaced align-middle">
                         <div class="cell medium-10">
                             <div class="grid-container-fluid">
@@ -43,27 +43,25 @@ get_header(); ?>
                                         <?php the_content(); ?>
 
                                         <!-- check if the custom field created with metabox is not empty before displaying the button-->
-                                        <?php 
-                                        $fb_custom_field = get_post_meta($post->ID, 'mbp_insta', true);
-                                        if ($fb_custom_field) { ?>
-                                        <a class="small-social-button button gradiented-box gradient-five-six " href="<?php echo get_post_meta($post->ID, 'mbp_insta', true); ?>" target="_blank"
-                                        title="Follow on Instgram"> <i class="fab fa-instagram fa-1x"></i> Follow</a>
-                                        <?php 
-                                        } else { 
-                                        // don't display Insta button 
-                                        }
-                                        ?>
-                                        <!-- check if the custom field created with metabox is not empty before displaying the button-->
-                                        <?php 
-                                        $insta_custom_field = get_post_meta($post->ID, 'mbp_email', true);
-                                        if ($insta_custom_field) { ?>
-                                        <a class="small-social-button button gradiented-box gradient-one-two " href="mailto:<?php echo get_post_meta($post->ID, 'mbp_email', true); ?>?Subject=Hello%20from%20Boom%20Radio%20website" 
-                                        title="Write an Email"><i class="fas fa-envelope fa-1x"></i> Write an Email</a>
                                         <?php
-                                        } else { 
-                                        // don't display Email button 
-                                        }
-                                        ?>
+                                            $fb_custom_field = get_post_meta($post->ID, 'mbp_insta', true);
+                                            if ($fb_custom_field) { ?>
+                                            <a class="small-social-button button gradiented-box gradient-five-six " href="<?php echo get_post_meta($post->ID, 'mbp_insta', true); ?>" target="_blank" title="Follow on Instgram"> <i class="fab fa-instagram fa-1x"></i> Follow</a>
+                                        <?php
+                                            } else {
+                                                // don't display Insta button 
+                                            }
+                                            ?>
+                                        <!-- check if the custom field created with metabox is not empty before displaying the button-->
+                                        <?php
+                                            $insta_custom_field = get_post_meta($post->ID, 'mbp_email', true);
+                                            if ($insta_custom_field) { ?>
+                                            <a class="small-social-button button gradiented-box gradient-one-two " href="mailto:<?php echo get_post_meta($post->ID, 'mbp_email', true); ?>?Subject=Hello%20from%20Boom%20Radio%20website" title="Write an Email"><i class="fas fa-envelope fa-1x"></i> Write an Email</a>
+                                        <?php
+                                            } else {
+                                                // don't display Email button 
+                                            }
+                                            ?>
                                     </div>
                                 </div>
                             </div>
@@ -72,32 +70,32 @@ get_header(); ?>
                 </div>
 
 
-            <div class="cell">
-                <div class="grid-container">
-                    <div class="grid-x grid-margin-x grid-margin-y align-center">
-                        <div class="cell">
-                            <?php
-                                // If comments are open or we have at least one comment, load up the comment template.
-                                if (comments_open() || get_comments_number()) :
-                                    comments_template();
-                                endif; ?>
+                <div class="cell">
+                    <div class="grid-container">
+                        <div class="grid-x grid-margin-x grid-margin-y align-center">
+                            <div class="cell">
+                                <?php
+                                    // If comments are open or we have at least one comment, load up the comment template.
+                                    if (comments_open() || get_comments_number()) :
+                                        comments_template();
+                                    endif; ?>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!--End the loop.-->
+        <?php endwhile; ?>
+
+
+        <!--Previous/next post navigation.-->
+        <div class="grid-x grid-margin-x grid-margin-y">
+            <div class="cell">
+                <?php echo boom_radio_the_post_navigation();
+                ?>
+            </div>
+        </div>
+
     </div>
-    <!--End the loop.-->
-<?php endwhile; ?>
-
-
-<!--Previous/next post navigation.-->
-<div class="grid-x grid-margin-x grid-margin-y">
-    <div class="cell">
-        <?php echo boom_radio_the_post_navigation();
-        ?>
-    </div>
-</div>
-
-</div>
 </div><!-- .content-area -->
 <?php get_footer(); ?>
