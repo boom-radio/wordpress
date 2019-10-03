@@ -10,8 +10,8 @@
 get_header();
 ?>
 <div class="cell"></div>
+<h6 class="align centre" style="color: white;">This is index.php</h6>
 <aside>
-    This is the index
     <!--Addition of some Foundation classes used in the prototype-->
     <div class="grid-container">
         <div class="grid-x grid-padding-x grid-padding-y">

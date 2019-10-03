@@ -69,17 +69,25 @@ get_header(); ?>
     <!--End the loop.-->
 <?php endwhile; ?>
 
-<!--Previous/next post navigation. Example this code should be php tagged on each line to match WP standards and could be a template part-->
-<div class="grid-x grid-margin-x grid-margin-y">
+<!--OLD POST NAVIGATION FOR ACCESSIBILITY REFERENCE ONLY TO BE DELETED-->
+<!--<div class="grid-x grid-margin-x grid-margin-y">
     <div class="cell large-6">
-        <?php the_post_navigation(array(
-            'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __('Previous', 'boom_radio') . '</span> ' .
-                '<span class="screen-reader-text">' . __('post:', 'boom_radio') . '</span> ' .
-                '<span class="post-title">%title</span>',
-            'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('Next', 'boom_radio') . '</span> ' .
-                '<span class="screen-reader-text">' . __('post:', 'boom_radio') . '</span> ' .
-                '<span class="post-title">%title</span>',
-        ));
+ //the_post_navigation(array(
+            //'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __('Previous', 'boom_radio') . '</span> ' .
+             //   '<span class="screen-reader-text">' . __('post:', 'boom_radio') . '</span> ' .
+             //   '<span class="post-title">%title</span>',
+           // 'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('Next', 'boom_radio') . '</span> ' .
+             //   '<span class="screen-reader-text">' . __('post:', 'boom_radio') . '</span> ' .
+             //   '<span class="post-title">%title</span>',
+        //));
+        //?>
+    </div>
+</div>-->
+
+<!--Previous/next post navigation.-->
+<div class="grid-x grid-margin-x grid-margin-y">
+    <div class="cell">
+        <?php echo boom_radio_the_post_navigation();
         ?>
     </div>
 </div>
