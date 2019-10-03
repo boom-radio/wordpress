@@ -10,7 +10,7 @@ if (post_password_required()) {
         <div class="cell">
             <div id="comments" class="c-comments">
                 <?php if (have_comments()) { ?>
-                    <h3 class="">
+                    <h3 class="c-comments__title">
 
                         <?php
                             /* translators: 1 is number of comments  and 2 is post title*/
@@ -28,10 +28,10 @@ if (post_password_required()) {
                     </h3>
 
                     <!--List the comment fo the post-->
-                    <ul class="">
+                    <ul class="c-comments__list">
                         <?php wp_list_comments(array(
                                 'short_ping' => true,
-                                'avatar_size' => 100,
+                                'avatar_size' => 50,
                                 'reply_text' => 'Reply',
                                 //Callback to function to create comment markup
                                 'callback' => 'boom_radio_comment_callback'
@@ -43,11 +43,12 @@ if (post_password_required()) {
                 <?php } ?>
                 <!--Send message if there are comments but comments are closed-->
                 <?php if (!comments_open() && get_comments_number()) { ?>
-                    <p class=""><?php esc_html_e('Comments are closed for this post', '_themename') ?></p>
+                    <p class="c-comments_closed"><?php esc_html_e('Comments are closed for this post', '_themename') ?></p>
                 <?php } ?>
-
                 <!--Display the fomr outside the loop-->
-                <?php comment_form() ?>
+                <div class="cell auto">
+                    <?php comment_form() ?>
+                </div>
             </div>
         </div>
     </div>

@@ -1,0 +1,190 @@
+///////////////////////////////////////////////////////START COMMENT STYLES////////////////////////////////////////////////////// 
+//------------------Comment list including children-------------------------
+.c-comments {
+    &__title {
+        margin: 1.5rem 0 0 0;
+        padding: 0.5rem 0.5rem 1rem 0;
+
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0;
+
+        .children {
+            font-size: 100%;
+            list-style: none;
+        }
+    }
+}
+
+.c-comment {
+    background-color: $color-white;
+    //border: 1px solid $color-six;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.05);
+    padding: rem-calc(20);
+    position: relative;
+    $p: &;
+
+    &--child {
+        box-shadow: none;
+        //border-color: $color-six;
+        border: 1px solid lightgrey;
+
+        #{$p}__avatar {
+            width: 50px;
+            height: 50px;
+            margin-right: rem-calc(15px);
+        }
+    }
+
+    .comment-respond {
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+
+        .comment-form {
+
+            .logged-in-as a {
+                color: $color-black;
+            }
+
+            .logged-in-as a:hover {
+                color: $color-four;
+            }
+
+            .logged-in-as a:nth-child(2) {
+                color: $color-four;
+                margin-left: 0.5rem;
+            }
+
+            .logged-in-as a:hover {
+                color: $color-six;
+            }
+        }
+    }
+
+    &__reply-link {
+        text-align: right;
+
+        a {
+            color: $color-four;
+        }
+
+        a:hover {
+            color: $color-six;
+        }
+    }
+
+    &__edit-link {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        a {
+            color: $color-six;
+        }
+    }
+
+    &__time {
+        margin: 0.25rem;
+        color: $color-four;
+        display: inline-block;
+        //font-size: rem-calc(14);
+        border-bottom: none;
+    }
+
+    &__body {
+        display: flex;
+    }
+
+    &__avatar {
+        width: 75px;
+        height: 75px;
+        margin: 0.5rem;
+    }
+
+    &__content {
+        flex: 1;
+        margin: 0.5rem;
+
+        p {
+            color: $color-black;
+            margin: 0.50rem 0.25rem 0.25rem 0.25rem;
+        }
+    }
+
+    &__author {
+        color: #000000;
+        font-weight: 600;
+        font-size: rem-calc(20);
+        margin: 0.25rem;
+
+        a {
+            color: inherit;
+            border-bottom: none;
+        }
+    }
+}
+
+//--------------Comment response box and input-----------------
+.comment-respond {
+    margin-top: 2rem;
+
+    .comment-reply-title {
+        padding: 0;
+
+        #cancel-comment-reply-link {
+            color: $color-four;
+            font-size: 0.75em;
+            margin-left: 0.5rem;
+
+            &:hover {
+                color: $color-six;
+            }
+        }
+    }
+
+    .comment-form {
+
+        .logged-in-as {
+            margin: 0.5rem 0.5rem 1rem 0;
+        }
+
+        .comment-form-comment {
+            label {
+                padding: 0.5rem 0;
+            }
+        }
+
+        .comment-form-author,
+        .comment-form-email,
+        .comment-form-url {
+            label {
+                padding: 0.5rem 0 0.5rem 0;
+            }
+        }
+
+
+        .form-submit {
+            margin-top: 0.75rem;
+
+            input {
+                border-radius: 0.7rem;
+                padding: .5rem 1.5rem;
+                margin-bottom: 1rem;
+                border: solid 2px $color-nine;
+                color: $color-nine;
+                background-color: transparent;
+                //@include button-hover;
+            }
+
+            input:hover {
+                border: solid 2px $color-four;
+                color: $color-four;
+            }
+        }
+    }
+
+}
+
+///////////////////////////////////////////////////////END COMMENT STYLES////////////////////////////////////////////////////// 

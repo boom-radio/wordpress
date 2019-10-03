@@ -45,7 +45,7 @@ function boom_radio_comment_callback($comment, $args, $depth)
 
                 <?php comment_reply_link(array_merge($args, array(
                         'depth' => $depth,
-                        'style' => 'div',
+                        'style' => 'li',
                         'add_below' => 'div-comment',
                         'before' => '<div class="c-comment__reply-link">',
                         'after' => '</div>'

@@ -69,20 +69,12 @@ get_header(); ?>
                     </div>
                 </div>
 
-
-                <div class="cell">
-                    <div class="grid-container">
-                        <div class="grid-x grid-margin-x grid-margin-y align-center">
-                            <div class="cell">
-                                <?php
-                                    // If comments are open or we have at least one comment, load up the comment template.
-                                    if (comments_open() || get_comments_number()) :
-                                        comments_template();
-                                    endif; ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!--Update dcomment templates contains styling-->
+                <?php
+                    if (comments_open() || get_comments_number()) {
+                        comments_template();
+                    }
+                    ?>
             </div>
             <!--End the loop.-->
         <?php endwhile; ?>

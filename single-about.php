@@ -36,9 +36,9 @@ get_header(); ?>
                             <div class="grid-container-fluid">
                                 <div class="grid-x grid-padding-x grid-padding-y">
                                     <div class="cell text-justify">
-                                        
-                                            <?php the_title('<h2>', '</h2>') ?>
-                                        
+
+                                        <?php the_title('<h2>', '</h2>') ?>
+
                                         <!--OR use the_content for full post, this can be split into template parts at the end;-->
                                         <?php the_content(); ?>
                                     </div>
@@ -47,6 +47,12 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
+                <!--Updated comments form contains styling-->
+                <?php
+                    if (comments_open() || get_comments_number()) {
+                        comments_template();
+                    }
+                    ?>
             </div>
             <!--End the loop.-->
         <?php endwhile; ?>
