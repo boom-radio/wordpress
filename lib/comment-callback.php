@@ -1,12 +1,16 @@
 <?php
 
-function _themename_comment_callback($comment, $args, $depth)
-{ ?>
-    <li id="comment-<?php comment_ID(); ?>" <?php comment_class(['c-comment', $comment->comment_parent ? 'c-comment--child' : '']) ?>>
+function boom_radio_comment_callback($comment, $args, $depth)
+{
+    //Ternary conditional to ensure if div ia nor sleected in $args style that li element is created to contain comments
+    $tag = ($args['style'] === 'div') ? 'div' : 'li';
+    //Echo comment type to find pnig type
+    echo $comment->comment_type; ?>
+    <<?php echo $tag ?> id="comment-<?php comment_ID(); ?>" <?php comment_class(['c-comment', $comment->comment_parent ? 'c-comment--child' : '']) ?>>
 
         <article id="div-comment-<?php comment_ID(); ?>" class=" c-comment__body">
-            <?php echo get_avatar($comment, 100, false, false, array('class' => 'c-comment__avatar')); ?>
-            <?php edit_comment_link(esc_html__('Edit Comment', '_themename'), '<span 
+            <?php if ($args['avatar_size'] != 0) echo get_avatar($comment, $args['avatar_size'], false, false, array('class' => 'c-comment__avatar')); ?>
+            <?php edit_comment_link(esc_html__('Edit Comment', 'boom_radio'), '<span 
             class="c-comment__edit-link">', '</span>'); ?>
 
             <div class="c-comment__content">
@@ -18,7 +22,7 @@ function _themename_comment_callback($comment, $args, $depth)
                     <time datetime="<?php comment_time('c') ?>">
                         <!--Translate the the time for internationalisation-->
                         <?php
-                            printf(esc_html__('%s ago', '_themename'), human_time_diff(
+                            printf(esc_html__('%s ago', 'boom_radio'), human_time_diff(
                                 get_comment_time('U'),
                                 current_time('U')
                             ));
@@ -31,17 +35,22 @@ function _themename_comment_callback($comment, $args, $depth)
                     <p class="c-comment__awaiting-moderation"><?php esc_html_e('Your comment is awaiting moderation.', '_themename'); ?></p>
                 <?php } ?>
 
-                <?php comment_text() ?>
+                <?php
+                    //echo $comment->comment_type;
+                    //Check to see if the comment is a ping or track and if the short_ping arg is false, then deliver entire comment text
+                    if ($comment->comment_type == 'comment' || (($comment->comment_type == 'pingback' || $comment->comment_type == 'trackback') && !$args['short_ping'])) {
+                        comment_text();
+                    }
+                    ?>
 
-                <?php comment_reply_link(array(
+                <?php comment_reply_link(array_merge($args, array(
                         'depth' => $depth,
-                        'max_depth' => $args['max_depth'],
+                        'style' => 'div',
                         'add_below' => 'div-comment',
                         'before' => '<div class="c-comment__reply-link">',
                         'after' => '</div>'
-                    ));
+                    )));
                     ?>
-
             </div>
         </article>
     <?php } ?>
