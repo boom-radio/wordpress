@@ -3,7 +3,6 @@
 //Import functions partials from lib/ folder to main functions files
 //This file add core functionaility that we need from Wordpress
 require_once('lib/theme-support.php');
-
 require_once('lib/helpers.php');
 require_once('lib/enqueue-assets.php');
 require_once('lib/sidebars.php');
@@ -22,9 +21,10 @@ require_once('lib/posts_image_paragraph_position_function.php');
 //Function to control html output of comments section
 require_once('lib/comment-callback.php');
 
-function add_custom_sizes()
-{
+/*---JOHN R PLaceholder for final image stying---*/
+//function add_custom_sizes()
+//{
     //Use true to initiate cropping
-    add_image_size('card-large', 600, 600, false);
-}
-add_action('after_setup_theme', 'add_custom_sizes');
+  //  add_image_size('card-large', 600, 600, false);
+//}
+//add_action('after_setup_theme', 'add_custom_sizes');
