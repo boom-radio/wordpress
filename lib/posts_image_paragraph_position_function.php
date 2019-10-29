@@ -32,19 +32,15 @@ function posts_image_paragraph_position($postNumber)
                             <img src="' . $thumbnail . '" class="img-left box-shadowed">
                         </div>
                         <div class="cell medium-6">
-                                <div class="grid-container-fluid">
-                                    <div class="grid-x grid-padding-x grid-padding-y">
-                                        <div class="cell">
-                                            <h2>' .
-        $postTitle .
-        '</h2>
-                                        </div>
-                                        <div class="cell text-justify">' .
-        $postContent .
-        '</div>
+                            <div class="grid-container-fluid">
+                                <div class="grid-x grid-padding-x grid-padding-y">
+                                    <div class="cell">
+                                        <h2>' . $postTitle . '</h2>
                                     </div>
+                                    <div class="cell text-justify">' . $postContent . '</div>
                                 </div>
-                            </div>';
+                            </div>
+                        </div>';
 
     // Put the HTML for a right image and a left paragraph into the variable $imgRightParagLeft
     $imgRightParagLeft = '

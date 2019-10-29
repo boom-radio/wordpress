@@ -9,12 +9,31 @@
 
 get_header();
 ?>
-<div class="cell"></div>
-<h6 class="align centre" style="color: white;">This is index.php</h6>
+<!--Set the latest search query variable and delivers it to the title-->
+<div class="grid-container">
+    <div class="grid-x grid-padding-x grid-padding-y">
+        <div class="cell">
+            <h3 class="c-comments__title">
+                <?php
+                /* translators: 1 is number of comments  and 2 is post title*/
+                printf(
+                    esc_html__(
+                        'Search results for: "%1$s"',
+                        'boom_radio'
+                    ),
+                    get_search_query()
+                )
+                ?>
+            </h3>
+        </div>
+    </div>
+</div>
+
 <aside>
     <!--Addition of some Foundation classes used in the prototype-->
     <div class="grid-container">
         <div class="grid-x grid-padding-x grid-padding-y">
+            <div class="cell"></div>
             <div class="cell large-<?php echo is_active_sidebar('primary-sidebar') ? '8' : '12'; ?> shared">
                 <div class="grid-container">
                     <div class="grid-y grid-margin-y">

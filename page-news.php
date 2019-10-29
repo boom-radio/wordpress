@@ -15,7 +15,7 @@ get_header(); ?>
         <img src="<?php echo get_theme_file_uri('src/assets/img/wave_left.svg'); ?>" alt="wave left">
     </div>
     <div class="cell shrink">
-        <?php the_title('<h1>Not Archive News ', '</h1>'); ?>
+        <?php the_title('<h1>', '</h1>'); ?>
     </div>
     <div class="cell auto text-left">
         <img src="<?php echo get_theme_file_uri('src/assets/img/wave_right.svg'); ?>" alt="wave right">
