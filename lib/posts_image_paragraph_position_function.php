@@ -11,7 +11,7 @@ function posts_image_paragraph_position($postNumber)
     // Check if the post has thumbnail image (featured image)
     if (has_post_thumbnail()) :
         // If there is a thumbnail get the URL and set it to the variable $featuredImgUrl
-        $featuredImgUrl = get_the_post_thumbnail_url(get_the_ID(), 'large');
+        $featuredImgUrl = get_the_post_thumbnail_url(get_the_ID(), 'card');
         // Clean the URL and set the result into $thumbnail 
         $thumbnail = esc_url($featuredImgUrl);
     endif;

@@ -58,9 +58,13 @@ get_header(); ?>
 
                 <div <?php post_class('cell'); ?>>
                     <div class="card">
-                        <?php if (has_post_thumbnail()) : ?>
-                            <img class="single-card" src="<?php the_post_thumbnail_url(); ?>" />
-                        <?php endif; ?>
+                        <!--Set thumbnail image and default if no image-->
+                        <?php if (has_post_thumbnail()) {
+                                    the_post_thumbnail('card');
+                                } else {
+                                    echo '<img src="' . get_bloginfo("template_url") . '/src/assets/images/img-default.png" />';
+                                }
+                                ?>
                         <div class="card-section">
                             <div class="bio">
                                 <h5 class="section-title">
@@ -169,7 +173,7 @@ get_header(); ?>
                             </div>
                             <div class="cell medium-4">
                                 <?php if (has_post_thumbnail()) :
-                                            the_post_thumbnail('large', array('class' => 'img-right box-shadowed'));
+                                            the_post_thumbnail('card', array('class' => 'img-right box-shadowed'));
                                         endif; ?>
                             </div>
                         </div>
@@ -272,9 +276,12 @@ get_header(); ?>
                             <div <?php post_class('card'); ?>>
                                 <div class="cell"></div>
                                 <!--Check if a featured image has been uplaoded with the post-->
-                                <?php if (has_post_thumbnail()) : ?>
-                                    <img class="single-card" src="<?php the_post_thumbnail_url(); ?>" />
-                                <?php endif; ?>
+                                <?php if (has_post_thumbnail()) {
+                                            the_post_thumbnail('card');
+                                        } else {
+                                            echo '<img src="' . get_bloginfo("template_url") . '/src/assets/images/img-default.png" />';
+                                        }
+                                        ?>
 
                                 <div class="card-section">
                                     <div class="bio">

@@ -22,9 +22,9 @@ require_once('lib/posts_image_paragraph_position_function.php');
 require_once('lib/comment-callback.php');
 
 /*---JOHN R PLaceholder for final image stying---*/
-//function add_custom_sizes()
-//{
-    //Use true to initiate cropping
-  //  add_image_size('card-large', 600, 600, false);
-//}
-//add_action('after_setup_theme', 'add_custom_sizes');
+function add_custom_sizes()
+{
+  //Use true to initiate cropping
+  add_image_size('card', 400, 300, true);
+}
+add_action('after_setup_theme', 'add_custom_sizes');

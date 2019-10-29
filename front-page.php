@@ -75,7 +75,7 @@ get_header(); ?>
                             </div>
                             <div class="cell medium-4">
                                 <?php if (has_post_thumbnail()) :
-                                            the_post_thumbnail('large', array('class' => 'img-right box-shadowed'));
+                                            the_post_thumbnail('card', array('class' => 'img-right box-shadowed'));
                                         endif; ?>
                             </div>
                         </div>
@@ -95,6 +95,7 @@ get_header(); ?>
     </div>
 </div>
 <!------------------------End of Featured Artist Section-------------------------------->
+
 <!-----------------------Start of News Section------------------------------------------------------>
 <article class="grid-container">
     <!--Title for secton-->
@@ -145,9 +146,9 @@ get_header(); ?>
                     <div class="card">
 
                         <?php if (has_post_thumbnail()) {
-                                    the_post_thumbnail(array('large', 'class' => 'card-style'));
+                                    the_post_thumbnail('card');
                                 } else {
-                                    echo '<img src="' . get_bloginfo("template_url") . '/src/assets/img/img-default.png" class="attachment-card-style"/>';
+                                    echo '<img src="' . get_bloginfo("template_url") . '/src/assets/img/img-default.png"/>';
                                 }
                                 ?>
                         <div class="card-section">
@@ -221,7 +222,7 @@ get_header(); ?>
                 <div <?php post_class('cell'); ?>>
                     <div class="card">
                         <?php if (has_post_thumbnail()) {
-                                    the_post_thumbnail('card-style');
+                                    the_post_thumbnail('card');
                                 } else {
                                     echo '<img src="' . get_bloginfo("template_url") . '/src/assets/img/img-default.png"/>';
                                 }
@@ -298,7 +299,7 @@ get_header(); ?>
                     <div class="card">
 
                         <?php if (has_post_thumbnail()) {
-                                    the_post_thumbnail('card-style');
+                                    the_post_thumbnail('card');
                                 } else {
                                     echo '<img src="' . get_bloginfo("template_url") . '/src/assets/img/img-default.png"/>';
                                 }
@@ -390,7 +391,7 @@ get_header(); ?>
                         <div class="grid-x grid-padding-x grid-padding-y align-spaced align-middle">
                             <div class="cell medium-4">
                                 <?php if (has_post_thumbnail()) :
-                                            the_post_thumbnail('large', array('class' => 'img-right box-shadowed'));
+                                            the_post_thumbnail('card', array('class' => 'img-right box-shadowed'));
                                         endif; ?>
                             </div>
                             <div class="cell medium-6">
@@ -461,7 +462,7 @@ get_header(); ?>
 
                                         <!--Set thumbnail image and default if no image-->
                                         <?php if (has_post_thumbnail()) {
-                                                    the_post_thumbnail('large', array('class' => 'img-left box-shadowed'));
+                                                    the_post_thumbnail('card', array('class' => 'img-left box-shadowed'));
                                                 } else {
                                                     echo '<img src="' . get_bloginfo("template_url") . '/src/assets/images/img-default.png" />';
                                                 }
@@ -523,11 +524,11 @@ get_header(); ?>
                             $i = 1;
                             while ($the_query->have_posts() && $i < 2) : $the_query->the_post(); ?>
 
-                                <div <?php post_class('card align-center gradient-five-six'); ?>>
+                                <div <?php post_class('card'); ?>>
                                     <div class="cell"></div>
                                     <!--Check if a featured image has been uplaoded with the post-->
                                     <?php if (has_post_thumbnail()) : ?>
-                                        <?php the_post_thumbnail('card-style'); ?>
+                                        <?php the_post_thumbnail('card'); ?>
                                     <?php endif; ?>
 
                                     <div class="card-section">
