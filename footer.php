@@ -8,11 +8,12 @@
  * @since Boom Radio 1.0
  */ ?>
 
-<?php wp_footer(); ?>
+
 <!--Closing tag for off canvas div-->
 </div>
 
 </body>
+<?php wp_footer(); ?>
 <!-- BEGINNING OF FOOTER -->
 <footer class="grid-container">
     <div class="grid-x grid-margin-y align-center">

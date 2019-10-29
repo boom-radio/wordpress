@@ -18,7 +18,7 @@ get_header(); ?>
             */-->
         <div class="cell"></div>
         <div class="cell large-<?php echo is_active_sidebar('primary-sidebar') ? '8' : '12'; ?> shared">
-            <div class="grid-container">
+            <div class="grid-container-fluid">
                 <div class="grid-x grid-margin-x grid-margin-y align-center">
 
                     <?php
@@ -53,14 +53,15 @@ get_header(); ?>
                                     comments_template();
                                 endif; ?>
                         </div>
+                        <div class="grid-x grid-margin-x grid-margin-y">-->
+                            <div class="cell ">
+                                <?php echo boom_radio_the_post_navigation();
+                                    ?>
+                            </div>
+                        </div>
                     <?php endwhile; ?>
                     <!--Start of Navigation section-->
-                    <div class="grid-x grid-margin-x grid-margin-y">
-                        <div class="cell">
-                            <?php echo boom_radio_the_post_navigation();
-                            ?>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
