@@ -465,6 +465,7 @@ iframe {
 
 .card {
   border: 0 !important;
+  background: #535156;
   /*------------To style schedule card class images--------------
     img {
         @include box-shadow;
