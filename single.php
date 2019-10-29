@@ -9,7 +9,7 @@
  */
 
 get_header(); ?>
-<h5>The is single</h5>
+<h3>The is single.php</h3>
 <div class="grid-container">
     <div class="grid-x grid-margin-x grid-margin-y align-center">
         <!-- * Include the post format-specific template for the content. If you want to
