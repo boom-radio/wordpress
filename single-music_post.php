@@ -36,10 +36,12 @@ get_header(); ?>
                             <div class="grid-container-fluid">
                                 <div class="grid-x grid-padding-x grid-padding-y">
                                     <div class="cell"></div>
-                                    <div class="cell text-justify">
+                                    <div class="cell large-6 shared text-justify">
                                         <?php if (has_post_thumbnail()) :
-                                                the_post_thumbnail('card');
+                                                the_post_thumbnail('card', array('class' => 'box-shadowed'));
                                             endif; ?>
+                                    </div>
+                                    <div class="cell auto">
                                         <?php the_title('<h2>', '</h2>') ?>
                                         <!--OR use the_content for full post, this can be split into template parts at the end;-->
                                         <?php the_content(); ?>

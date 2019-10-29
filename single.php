@@ -24,7 +24,7 @@ get_header(); ?>
                     <?php
                     // Start the loop.
                     while (have_posts()) : the_post(); ?>
-                        <div <?php post_class('cell small-12 medium-10 large-10'); ?>>
+                        <div <?php post_class('cell small-12 medium-10 large-9'); ?>>
                             <div class="card">
                                 <?php if (has_post_thumbnail()) {
                                         the_post_thumbnail('card_single');
