@@ -26,5 +26,6 @@ function add_custom_sizes()
 {
   //Use true to initiate cropping
   add_image_size('card', 400, 300, true);
+  add_image_size('card_single', 800, 400, true);
 }
 add_action('after_setup_theme', 'add_custom_sizes');

@@ -142,11 +142,13 @@
 
     <!--Addtion to start page styling-->
     <!-- BEGINNING OF MAIN BODY -->
-    <!-- Showing the music player in the body -->
+
+    <!-- REPLACED BY DYNAMIC SIDEBAR----
+    Showing the music player in the body
     <div class="grid-container show-for-small hide-for-large">
         <div class="grid-x grid-margin-y grid-padding-x grid-padding-y align-middle">
             <div class="cell gradiented-box gradient-five-six">
                 <iframe class="boomPlayer" src="https://tunein.com/embed/player/s195836/"></iframe>
             </div>
         </div>
-    </div>
+    </div>-->
