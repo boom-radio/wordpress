@@ -148,7 +148,7 @@ get_header(); ?>
                         <?php if (has_post_thumbnail()) {
                                     the_post_thumbnail('card');
                                 } else {
-                                    echo '<img style="height: 100%;" src="' . get_bloginfo("template_url") . '/src/assets/img/img-default.png"/>';
+                                    echo '<img style="height: ;" src="' . get_bloginfo("template_url") . '/src/assets/img/img-default.png"/>';
                                 }
                                 ?>
                         <div class="card-section">
@@ -528,7 +528,7 @@ get_header(); ?>
                                     <div class="cell"></div>
                                     <!--Check if a featured image has been uplaoded with the post-->
                                     <?php if (has_post_thumbnail()) : ?>
-                                        <?php the_post_thumbnail('card'); ?>
+                                        <?php the_post_thumbnail('card_single'); ?>
                                     <?php endif; ?>
 
                                     <div class="card-section">
