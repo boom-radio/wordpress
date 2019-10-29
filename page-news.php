@@ -128,9 +128,13 @@ get_header(); ?>
 
                 <div <?php post_class('cell'); ?>>
                     <div class="card">
-                        <?php if (has_post_thumbnail()) : ?>
-                            <img class="single-card" src="<?php the_post_thumbnail_url(); ?>" />
-                        <?php endif; ?>
+                        <!--Set thumbnail image and default if no image-->
+                        <?php if (has_post_thumbnail()) {
+                                    the_post_thumbnail('card');
+                                } else {
+                                    echo '<img src="' . get_bloginfo("template_url") . '/src/assets/images/img-default.png" />';
+                                }
+                                ?>
                         <div class="card-section">
                             <div class="bio">
                                 <h5 class="section-title">

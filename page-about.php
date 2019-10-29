@@ -95,7 +95,7 @@ get_header(); ?>
                     <div class="grid-container-fluid gradiented-box gradient-five-six">
                         <div class="grid-x grid-padding-x grid-padding-y align-spaced align-middle">
                             <div class="cell medium-4">
-                                <?php echo '<img src="' . get_bloginfo("template_url") . '/src/assets/images/img-default.png" />'; ?>
+                                <?php echo '<img class="img-left box-shadowed"src="' . get_bloginfo("template_url") . '/src/assets/img/img-default.png" />'; ?>
                                 <!--<img class="img-left box-shadowed" src="src/assets/images/img-default.png" alt="Show image">-->
                             </div>
                             <div class="cell medium-6">

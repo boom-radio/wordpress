@@ -205,7 +205,6 @@ $box-shadow: 5px 5px 0 rgba($color-eight, 0.3);
 
 .card {
     border: 0 !important;
-
     /*------------To style schedule card class images--------------
     img {
         @include box-shadow;
@@ -222,7 +221,6 @@ $box-shadow: 5px 5px 0 rgba($color-eight, 0.3);
     color: $color-white;
     font-family: 'Quicksand-Regular', sans-serif;
     font-size: 0.8rem;
-
 }
 
 .bio {
@@ -232,6 +230,7 @@ $box-shadow: 5px 5px 0 rgba($color-eight, 0.3);
         padding-left: 0.5rem;
         margin-bottom: 0.5rem;
         font-size: 0.9rem;
+        min-height: 55px;
     }
 }
 
