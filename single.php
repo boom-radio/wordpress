@@ -32,12 +32,11 @@ get_header(); ?>
                                         echo '<img style="width: 100%;" src="' . get_bloginfo("template_url") . '/src/assets/img/img-default.png"/>';
                                     }
                                     ?>
-                                <div class="card-section">
+                                <div class="card-section card-single">
                                     <div class="bio">
                                         <h5 class="section-title">
                                             <?php the_title() ?>
                                         </h5>
-
                                         <?php the_content(); ?>
                                     </div>
                                 </div>

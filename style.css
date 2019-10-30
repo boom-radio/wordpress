@@ -480,6 +480,14 @@ iframe {
   font-family: 'Quicksand-Regular', sans-serif;
   font-size: 0.8rem; }
 
+.card-single div h5 {
+  font-size: 1.6rem; }
+
+.card-single div ul li {
+  padding-left: 0.5rem;
+  padding-bottom: 0.25rem;
+  font-size: 1.0rem; }
+
 .bio {
   width: 100%; }
   .bio p {
@@ -900,6 +908,9 @@ footer a {
   .feed,
   .twitter-feed iframe {
     width: 300px !important; }
+  /*Faecbook widget alignment to match other sm widgets on tablet only*/
+  .widget_simple_facebook_page_feed_widget div {
+    text-align: left !important; }
   .slide {
     background: #102126;
     width: calc(100% / 3);

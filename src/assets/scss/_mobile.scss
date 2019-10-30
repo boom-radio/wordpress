@@ -224,6 +224,18 @@ $box-shadow: 5px 5px 0 rgba($color-eight, 0.3);
     font-size: 0.8rem;
 }
 
+.card-single div {
+    h5 {
+        font-size: 1.6rem;
+    }
+
+    ul li {
+        padding-left: 0.5rem;
+        padding-bottom: 0.25rem;
+        font-size: 1.0rem;
+    }
+}
+
 .bio {
     width: 100%;
 

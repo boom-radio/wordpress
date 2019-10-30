@@ -1,17 +1,7 @@
 <!--Placeholder file - Main archive folder for the site-->
 <?php get_header(); ?>
-<h2>This is archive.php</h2>
-<!--Addition of classes-->
-<div class="grid-container">
-    <div class="grid-x grid-padding-y align-center">
-        <div class="cell">
-            <header>
-                <?php the_archive_title('<h1>', '</h1>'); ?>
-                <?php the_archive_description('<p>', '</p>'); ?>
-            </header>
-        </div>
-    </div>
-</div>
+<h3>This is archive.php</h3>
+
 
 <!--Loop for the archive with conditional for active sidebar-->
 <article class="grid-container">
@@ -47,6 +37,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="cell"></div>
                     </div>
                     <?php
                             // Increasing the value of the $postBackgroundColourCounter variable before the end of the WP loop to keep having a different post background colour
