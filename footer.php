@@ -43,7 +43,7 @@
     <div class="grid-x grid-margin-y align-center">
         <div class="cell shrink text-center">
             <ul class="menu text-center">
-                <li><a href="terms.html">Terms &amp; Conds</a></li>
+                <li><a href="<?php echo esc_url(get_permalink(get_page_by_title('General Terms'))); ?>"><?php esc_html_e('Terms &amp; Conds', 'boom_radio'); ?></a></li>
             </ul>
         </div>
     </div>
