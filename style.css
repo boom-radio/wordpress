@@ -849,12 +849,13 @@ a.boom-button {
     color: white; }
 
 .widget_text h5,
+.widget_tag_cloud h5,
 .widget_simple_facebook_page_feed_widget h5,
 .widget_meta h5,
 .widget_categories form .screen-reader-text h5 {
   color: #eb5b27;
   padding-left: 0;
-  padding-top: 0.5rem; }
+  padding-top: 0.75rem; }
 
 .widget_categories h5 {
   display: none; }

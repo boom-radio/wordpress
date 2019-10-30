@@ -533,13 +533,14 @@ a.boom-button {
 
 ///////////////////////////////////////////////////////BEGINNING WIDGET STYLES//////////////////////////////////////////////////////
 .widget_text,
+.widget_tag_cloud,
 .widget_simple_facebook_page_feed_widget,
 .widget_meta,
 .widget_categories form .screen-reader-text {
     h5 {
         color: $color-six;
         padding-left: 0;
-        padding-top: 0.5rem;
+        padding-top: 0.75rem;
     }
 }
 

@@ -57,17 +57,16 @@ get_header(); ?>
                         comments_template();
                     }
                     ?>
+                <div class="cell">
+                    <?php the_posts_pagination(array('mid_size' => 5)); ?>
+                </div>
             </div>
             <!--End the loop.-->
         <?php endwhile; ?>
-
-        <!--Previous/next post navigation.-->
-        <div class="grid-x grid-margin-x grid-margin-y">
-            <div class="cell">
-                <?php echo boom_radio_the_post_navigation();
-                ?>
-            </div>
+        <div class="cell">
+            <?php the_posts_pagination(array('mid_size' => 5)); ?>
         </div>
+
 
     </div>
 </div><!-- .content-area -->

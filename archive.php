@@ -1,6 +1,6 @@
 <!--Placeholder file - Main archive folder for the site-->
 <?php get_header(); ?>
-
+<h2>This is archive.php</h2>
 <!--Addition of classes-->
 <div class="grid-container">
     <div class="grid-x grid-padding-y align-center">

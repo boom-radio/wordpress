@@ -10,6 +10,7 @@
 get_header();
 ?>
 <!--Set the latest search query variable and delivers it to the title-->
+<h3>This is index.php</h3>
 <div class="grid-container">
     <div class="grid-x grid-padding-x grid-padding-y">
         <div class="cell">
