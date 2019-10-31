@@ -9,19 +9,9 @@
  */
 get_header(); ?>
 
-<!---Title with Wave -->
-<div class="grid-x grid-padding-y align-center align-middle">
-    <div class="cell auto text-right">
-        <img src="<?php echo get_theme_file_uri('src/assets/img/wave_left.svg'); ?>" alt="wave left">
-    </div>
-    <div class="cell shrink">
-        <?php the_title('<h1>', '</h1>'); ?>
-    </div>
-    <div class="cell auto text-left">
-        <img src="<?php echo get_theme_file_uri('src/assets/img/wave_right.svg'); ?>" alt="wave right">
-    </div>
-</div>
-<!--End Title with Wave-->
+<!--Title with waves and page title -->
+<?php get_template_part('template-parts/content/title', 'none'); ?>
+
 <div class="grid-container">
     <div class="grid-x grid-margin-x grid-margin-y align-center">
         <?php
@@ -84,20 +74,13 @@ get_header(); ?>
         <!-- End of the loop.-->
     </div>
 </div>
-<!---Title with Wave -->
-<div class="grid-x grid-padding-y align-center align-middle">
-    <div class="cell auto text-right">
-        <img src="<?php echo get_theme_file_uri('src/assets/img/wave_left.svg'); ?>" alt="wave left">
-    </div>
-    <div class="cell shrink">
-        <h3>Events</h3>
-    </div>
-    <div class="cell auto text-left">
-        <img src="<?php echo get_theme_file_uri('src/assets/img/wave_right.svg'); ?>" alt="wave right">
-    </div>
-</div>
-<!--END OF H3 WAVE-->
-<!--Start of news Section-->
+<!--End of News Section-->
+
+<!--Start of Events Section-->
+<?php get_template_part('template-parts/components/waveleft', 'none'); ?>
+<h3>Events</h3>
+<?php get_template_part('template-parts/components/waveright', 'none'); ?>
+
 <article class="grid-container" id="events">
     <div class="grid-x grid-margin-x grid-margin-y small-up-1 medium-up-2 large-up-3">
         <!--wp query arg set for card section-->

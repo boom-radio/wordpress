@@ -12,18 +12,8 @@ get_header(); ?>
 <!-----------CONTENT HERE---------------->
 <!-----------------------------Start of Artists Section---------------------------->
 <article class="grid-container">
-    <!--Title for secton-->
-    <div class="grid-x grid-padding-y align-center align-middle">
-        <div class="cell auto text-right">
-            <img src="<?php echo get_theme_file_uri('src/assets/img/wave_left.svg'); ?>" alt="wave left">
-        </div>
-        <div class="cell shrink">
-            <h1>Latest Music</h1>
-        </div>
-        <div class="cell auto text-left">
-            <img src="<?php echo get_theme_file_uri('src/assets/img/wave_right.svg'); ?>" alt="wave right">
-        </div>
-    </div>
+    <!--Title with waves and page title -->
+    <?php get_template_part('template-parts/content/title', 'none'); ?>
 
     <!--Start of card section for maximum of three Artist posts-->
     <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3">
@@ -115,17 +105,10 @@ get_header(); ?>
     <div class="grid-x grid-padding-x grid-padding-y align-center">
         <!-- Empty cell/s used  for spacing-->
         <div class="cell"></div>
-        <div class="grid-x grid-padding-y align-center align-middle">
-            <div class="cell auto text-right">
-                <img src="<?php echo get_theme_file_uri('src/assets/img/wave_left.svg'); ?>" alt="wave left">
-            </div>
-            <div class="cell shrink">
-                <h3>Featured Artist</h3>
-            </div>
-            <div class="cell auto text-left">
-                <img src="<?php echo get_theme_file_uri('src/assets/img/wave_right.svg'); ?>" alt="wave right">
-            </div>
-        </div>
+        <!---Title of the Second Section -->
+        <?php get_template_part('template-parts/components/waveleft', 'none'); ?>
+        <h3>Featured Artist</h3>
+        <?php get_template_part('template-parts/components/waveright', 'none'); ?>
         <!-- Empty cell/s used  for spacing-->
         <div class="cell"></div>
 
@@ -196,17 +179,10 @@ get_header(); ?>
 
 <!-----------------------------Start of Events Section------------------------------>
 <div class="grid-container" id="yoursong">
-    <div class="grid-x grid-padding-y align-center align-middle">
-        <div class="cell auto text-right">
-            <img src="<?php echo get_theme_file_uri('src/assets/img/wave_left.svg'); ?>" alt="wave left">
-        </div>
-        <div class="cell shrink">
-            <h3>Get in Touch</h3>
-        </div>
-        <div class="cell auto text-left">
-            <img src="<?php echo get_theme_file_uri('src/assets/img/wave_right.svg'); ?>" alt="wave right">
-        </div>
-    </div>
+    <!---Title of the Second Section -->
+    <?php get_template_part('template-parts/components/waveleft', 'none'); ?>
+    <h3>Get in Touch</h3>
+    <?php get_template_part('template-parts/components/waveright', 'none'); ?>
     <!-- Empty cell/s used  for spacing-->
     <div class="cell"></div>
 

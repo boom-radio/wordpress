@@ -10,22 +10,12 @@
 get_header(); ?>
 
 <!-----------CONTENT HERE---------------->
-<!---Title Section -->
-<div class="grid-x grid-padding-y align-center align-middle">
-    <div class="cell auto text-right">
-        <img src="<?php echo get_theme_file_uri('src/assets/img/wave_left.svg'); ?>" alt="wave left">
-    </div>
-    <div class="cell shrink">
-        <h1>What's On</h1>
-    </div>
-    <div class="cell auto text-left">
-        <img src="<?php echo get_theme_file_uri('src/assets/img/wave_right.svg'); ?>" alt="wave right">
-    </div>
-</div>
-<!--End of Title with Wave-->
+<!--Title with waves and page title -->
+<?php get_template_part('template-parts/content/title', 'none'); ?>
+
+<!-- TABS MULTI CONTENT : RADIO SHOWS - CATEGORY SHOWS-->
 <div class="grid-container">
     <div class="cell ">
-        <!-- TABS MULTI CONTENT : RADIO SHOWS-->
         <div class="md-tabs">
             <ul class="tabs" data-responsive-accordion-tabs="tabs small-accordion medium-tabs large-tabs" id="collapsing-tabs" data-allow-all-closed="true" data-multi-expand="true" data-deep-link="true">
                 <li class="tabs-title is-active"></span><a href="#big-breakfast"><i class="fas fa-microphone-alt"></i> BOOM's Big
@@ -176,21 +166,11 @@ get_header(); ?>
     </div>
 </div>
 <!-- END OF TABS-->
-<!-- CATEGORY SHOWS-->
 
 <!---Title of the Second Section -->
-<div class="grid-x grid-padding-y align-center align-middle" id="presenters">
-    <div class="cell auto text-right">
-        <img src="<?php echo get_theme_file_uri('src/assets/img/wave_left.svg'); ?>" alt="wave left">
-    </div>
-    <div class="cell shrink">
-        <h3>Presenters</h3>
-    </div>
-    <div class="cell auto text-left">
-        <img src="<?php echo get_theme_file_uri('src/assets/img/wave_right.svg'); ?>" alt="wave right">
-    </div>
-</div>
-<!--End of Title with Wave-->
+<?php get_template_part('template-parts/components/waveleft', 'none'); ?>
+<h3>Presenters</h3>
+<?php get_template_part('template-parts/components/waveright', 'none'); ?>
 
 <!--BEGINNING OF SLICK CAROUSEL SECTION-->
 <!--Slick carousel tester-->
