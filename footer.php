@@ -17,7 +17,7 @@
 <!-- BEGINNING OF FOOTER -->
 <footer class="grid-container">
     <!--Footer links and terms-->
-    <?php get_template_part('template-parts/footer/footer_icons', 'none'); ?>
+    <?php get_template_part('template-parts/footer/footericons', 'none'); ?>
 </footer>
 
 </html>

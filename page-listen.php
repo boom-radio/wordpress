@@ -60,6 +60,7 @@ get_header(); ?>
                                                         </a>
                                                     <?php endif; ?>
                                                     <?php the_content(); ?>
+                                                    <?php boom_radio_card_link(); ?>
                                                 </div>
                                             </div>
                                         </div>
