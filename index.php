@@ -33,7 +33,7 @@ get_header();
 </div>
 
 <aside>
-    <!--Addition of some Foundation classes used in the prototype-->
+    <!--Template Parts comment test-->
     <div class="grid-container">
         <div class="grid-x grid-padding-x grid-padding-y">
             <div class="cell"></div>
