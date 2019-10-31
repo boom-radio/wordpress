@@ -228,6 +228,6 @@ get_header(); ?>
     </div>
 </div>
 <!--END OF SLICK CAROUSEL SECTION - SHOW FOR LARGE-->
-</div>
+
 <?php
 get_footer();

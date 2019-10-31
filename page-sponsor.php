@@ -43,28 +43,7 @@ get_header(); ?>
             //Set variable for the loop to control amount of posts
             $i = 1;
             while ($the_query->have_posts() && $i < 13) : $the_query->the_post(); ?>
-
-                <div <?php post_class('cell'); ?>>
-                    <div class="card">
-                        <!--Set thumbnail image and default if no image-->
-                        <?php if (has_post_thumbnail()) {
-                                    the_post_thumbnail('card');
-                                } else {
-                                    echo '<img src="' . get_bloginfo("template_url") . '/src/assets/images/img-default.png" />';
-                                }
-                                ?>
-                        <div class="card-section">
-                            <div class="bio">
-                                <h5 class="section-title">
-                                    <?php the_title() ?>
-                                </h5>
-                                <?php the_excerpt(); ?>
-                            </div>
-                            <!--This is to attach the Orange boom button button, code in lib/helpers.php as an example of how we can resue sections of code across the site-->
-                            <?php boom_radio_card_link(); ?>
-                        </div>
-                    </div>
-                </div>
+                <?php get_template_part('template-parts/posts/cardpost', get_post_format()); ?>
             <?php $i++;
                 endwhile;
                 //Ensure global wp variable are set to default after custom query
