@@ -51,7 +51,6 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-
         <!-- Empty cell/s used  for spacing-->
         <div class="cell"></div>
     </div>
@@ -67,20 +66,12 @@ get_header(); ?>
             'post_type' => 'sponsors',
             'orderby' => 'post__in',
             //Set maximum to three
-            'posts_per_page'      => 12
-            //'post__in'            => get_option('sticky_posts'),
-            //'ignore_sticky_posts' => 1,
-            //'orderby'   => array(
-            //'date' => 'DESC',
-            //),
-            //'tax_query' => array(
-            //(
-            //  'taxonomy' => 'category_music',
-            // 'field'    => 'slug',
-            //Artists term id number in db
-            // 'terms' =>  'Artists'
-            // )
-            // )
+            'posts_per_page'      => 12,
+            'ignore_sticky_posts' => 1,
+            'orderby'   => array(
+                'date' => 'DESC',
+            ),
+
         );
         $the_query = new WP_Query($args); ?>
 
@@ -94,7 +85,7 @@ get_header(); ?>
                     <div class="card">
                         <!--Set thumbnail image and default if no image-->
                         <?php if (has_post_thumbnail()) {
-                                    the_post_thumbnail();
+                                    the_post_thumbnail('card');
                                 } else {
                                     echo '<img src="' . get_bloginfo("template_url") . '/src/assets/images/img-default.png" />';
                                 }
