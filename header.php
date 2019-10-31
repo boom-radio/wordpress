@@ -15,12 +15,7 @@
 <!-- OFF CANVAS CONTENT - Whole website & DIV Listen -->
 <div class="off-canvas-content" data-off-canvas-content>
     <!-- HEADER Content -->
-    <header class="grid-container-fluid">
-        <div class="grid-x">
-            <!-- Empty cell/s used  for spacing-->
-            <div class="cell"></div>
-        </div>
-    </header>
+    <?php get_template_part('template-parts/header/spacer', 'none'); ?>
     <!-- END HEADER Content -->
     <?php get_template_part('template-parts/navigation/main_navbar', 'none'); ?>
 
