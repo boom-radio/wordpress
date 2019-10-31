@@ -10,9 +10,9 @@
 get_header();
 ?>
 
-<h3>This is Template Part branch - index.php</h3>
+<h3>This is index.php</h3>
 <!--Set the latest search query variable and delivers it to the title-->
-<?php get_template_part('template-parts/search/results', get_post_format()); ?>
+<?php get_template_part('template-parts/components/results', get_post_format()); ?>
 
 <aside>
     <div class="grid-container">
@@ -31,48 +31,15 @@ get_header();
                                 while (have_posts()) : ?>
                                 <?php the_post(); ?>
                                 <?php if (is_singular()) { ?>
-                                    <div <?php post_class('cell'); ?>>
-                                        <div class="grid-container gradiented-box <?= posts_background_colour_function($postBackgroundColourCounter);  ?>">
-                                            <div class="grid-x grid-padding-x grid-padding-y">
-                                                <div class="cell">
-                                                    <div class="grid-container">
-                                                        <div class="grid-x grid-padding-x">
-                                                            <h2>
-                                                                <a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><?php the_title() ?></a>
-                                                            </h2>
-                                                            <!--OR use the_content for full post, this can be split into template parts at the end;-->
-                                                            <?php the_content(); ?>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cell"></div>
+                                    <!--Use set_query to give template parts access to variable-->
+                                    <?php set_query_var('postBackgroundColourCounter', $postBackgroundColourCounter); ?>
+                                    <!--Use the variable-->
+                                    <?php get_template_part('template-parts/posts/varboxsingle', get_post_format()); ?>
                                 <?php } else { ?>
-                                    <div <?php post_class('cell'); ?>>
-                                        <div class="grid-container gradiented-box <?= posts_background_colour_function($postBackgroundColourCounter);  ?>">
-                                            <div class="grid-x grid-padding-x grid-padding-y">
-
-                                                <div class="cell medium-8">
-                                                    <div class="grid-container">
-                                                        <div class="grid-x grid-padding-x">
-                                                            <h2>
-                                                                <a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><?php the_title() ?></a>
-                                                            </h2>
-                                                            <!--OR use the_content for full post, this can be split into template parts at the end;-->
-                                                            <?php the_excerpt(); ?>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="cell medium-4 centered">
-                                                    <!--This is to attach the White boom Radio button, code in lib/helpers.php as an example of how we can resue sections of code across the site-->
-                                                    <?php boom_radio_readmore_link(); ?>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cell"></div>
+                                    <!--Use set_query to give template parts access to variable-->
+                                    <?php set_query_var('postBackgroundColourCounter', $postBackgroundColourCounter); ?>
+                                    <!--Use the variable-->
+                                    <?php get_template_part('template-parts/posts/varbox', get_post_format()); ?>
                                 <?php } ?>
                                 <?php
                                         // Increasing the value of the $postBackgroundColourCounter variable before the end of the WP loop to keep having a different post background colour
