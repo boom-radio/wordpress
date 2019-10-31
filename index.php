@@ -9,31 +9,12 @@
 
 get_header();
 ?>
+
+<h3>This is Template Part branch - index.php</h3>
 <!--Set the latest search query variable and delivers it to the title-->
-<h3>This is index.php</h3>
-<div class="grid-container">
-    <div class="grid-x grid-padding-x grid-padding-y">
-        <?php if (!is_singular()) { ?>
-            <div class="cell">
-                <h3 class="c-comments__title">
-                    <?php
-                        /* translators: 1 is number of comments  and 2 is post title*/
-                        printf(
-                            esc_html__(
-                                'Search results for: "%1$s"',
-                                'boom_radio'
-                            ),
-                            get_search_query()
-                        )
-                        ?>
-                </h3>
-            </div>
-        <?php } ?>
-    </div>
-</div>
+<?php get_template_part('template-parts/search/results', get_post_format()); ?>
 
 <aside>
-    <!--Addition of some Foundation classes used in the prototype-->
     <div class="grid-container">
         <div class="grid-x grid-padding-x grid-padding-y">
             <div class="cell"></div>
