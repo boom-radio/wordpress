@@ -12,7 +12,7 @@ get_header();
 
 <h3>This is Template Part branch - index.php</h3>
 <!--Set the latest search query variable and delivers it to the title-->
-<?php get_template_part('template-parts/search/results', get_post_format()); ?>
+<?php get_template_part('template-parts/components/results', get_post_format()); ?>
 
 <aside>
     <div class="grid-container">

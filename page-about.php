@@ -9,8 +9,9 @@
  */
 get_header(); ?>
 
+<!--Title with waves and page title -->
 <?php get_template_part('template-parts/content/title', 'none'); ?>
-<!--End Title with Wave-->
+
 <div class="grid-container">
     <div class="grid-x grid-margin-x grid-margin-y align-center">
         <?php

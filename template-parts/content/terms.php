@@ -34,7 +34,7 @@
                                             <p>For more information click the button below</p>
                                         </div>
                                         <div class="cell">
-                                            <a href="terms.html" class="boom-button-white float-right">Read
+                                            <a href="<?php echo esc_url(get_permalink(get_page_by_title('General Terms'))); ?>" class="boom-button-white float-right">Read
                                                 More...
                                             </a>
                                         </div>
