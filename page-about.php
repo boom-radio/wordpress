@@ -41,7 +41,6 @@ get_header(); ?>
 
                 <!-- Empty cell/s used  for spacing-->
                 <div class="cell"></div>
-                <div class="cell"></div>
                 <?php
                         // Increasing the value of the $postBackgroundColourCounter variable before the end of the WP loop to keep having a different post background colour
                         $postBackgroundColourCounter++;
