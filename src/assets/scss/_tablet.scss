@@ -30,6 +30,11 @@
         text-align: left !important;
     }
 
+    /*Sets minimum height of excerpt for card*/
+    .card-section {
+        min-height: 13rem;
+    }
+
     /////////STYLES ON LISTEN PAGE////////////////////////////
     /////////TABS ON LISTEN PAGE
     .slide {

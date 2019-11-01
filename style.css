@@ -478,7 +478,8 @@ iframe {
   background-color: #535156;
   color: white;
   font-family: 'Quicksand-Regular', sans-serif;
-  font-size: 0.8rem; }
+  font-size: 0.8rem;
+  min-height: 13.25rem; }
 
 .card-single div h5 {
   font-size: 1.6rem; }
@@ -911,6 +912,9 @@ footer a {
   /*Faecbook widget alignment to match other sm widgets on tablet only*/
   .widget_simple_facebook_page_feed_widget div {
     text-align: left !important; }
+  /*Sets minimum height of excerpt for card*/
+  .card-section {
+    min-height: 13rem; }
   .slide {
     background: #102126;
     width: calc(100% / 3);
@@ -1000,7 +1004,9 @@ footer a {
   .img-left {
     left: 1rem; }
   .img-right {
-    right: 1rem; } }
+    right: 1rem; }
+  .card-section {
+    min-height: 11.5rem; } }
 
 .c-comments__title {
   margin: 1.5rem 0 0 0;
