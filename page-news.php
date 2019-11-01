@@ -28,7 +28,7 @@ get_header(); ?>
                 array(
                     'taxonomy' => 'category_news',
                     'field'    => 'slug',
-                    'terms' =>  'old-posts'
+                    'terms' => array('old-posts', 'events', 'breaking-news', 'music-news', 'cinema', 'sport', 'politics'),
                 )
             )
         );
