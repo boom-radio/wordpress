@@ -51,12 +51,14 @@ $color-black: rgba(0, 0, 0, 0.9);
 }
 
 // style x to close the off-canvas part
-.close-button{
+.close-button {
     font-size: 1em;
+
     &:hover {
-        color:white;
+        color: white;
     }
 }
+
 //Mobile logo styles
 #mobile-logo {
     width: 150px;
@@ -70,10 +72,11 @@ $color-black: rgba(0, 0, 0, 0.9);
     .is-accordion-submenu a {
         background: $color-eight;
     }
+
     .is-accordion-submenu-parent>a {
         position: relative;
     }
-    
+
     .is-accordion-submenu-parent>a::after {
         display: block;
         width: 0;
@@ -88,13 +91,14 @@ $color-black: rgba(0, 0, 0, 0.9);
         margin-top: -3px;
         right: 1rem;
     }
-    .is-accordion-submenu-parent[aria-expanded='true'] > a::after {
+
+    .is-accordion-submenu-parent[aria-expanded='true']>a::after {
         -webkit-transform: rotate(180deg);
-            -ms-transform: rotate(180deg);
-                transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
         -webkit-transform-origin: 50% 50%;
-            -ms-transform-origin: 50% 50%;
-                transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
     }
 
     // creates classes for nested elements, sub-item-*
@@ -122,11 +126,13 @@ $color-black: rgba(0, 0, 0, 0.9);
 }
 
 //Navigation on single post
-.post-navigation{
-    width:100vw;
-    .nav-links{
+.post-navigation {
+    min-width: 28rem;
+
+    .nav-links {
         display: flex;
         justify-content: space-around;
+        align-content: center;
     }
 }
 

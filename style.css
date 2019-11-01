@@ -282,10 +282,11 @@ html * {
   padding: 1rem 1rem; }
 
 .post-navigation {
-  width: 100vw; }
+  min-width: 28rem; }
   .post-navigation .nav-links {
     display: flex;
-    justify-content: space-around; }
+    justify-content: space-around;
+    align-content: center; }
 
 /*Folder to allow us to build screen reader styling*/
 /*For any spans with text*/
