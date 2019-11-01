@@ -1,9 +1,6 @@
-<?php
-
-if (post_password_required()) {
-    return;
-}
-?>
+<?php if (post_password_required()) { ?>
+    <?php return; ?>
+<?php } ?>
 
 <div class="grid-container">
     <div class="grid-x grid-margin-x grid-margin-y">

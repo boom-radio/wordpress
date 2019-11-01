@@ -44,12 +44,13 @@ get_header(); ?>
         <!--Start of the Loop-->
         <?php if ($the_query->have_posts()) :
             //Set variable for the loop to control amount of posts
-            $i = 1;
-            while ($the_query->have_posts() && $i < 13) : $the_query->the_post(); ?>
+            ?>
+            <?php $i = 1; ?>
+            <?php while ($the_query->have_posts() && $i < 13) : $the_query->the_post(); ?>
                 <?php get_template_part('template-parts/posts/cardpost', get_post_format()); ?>
-            <?php $i++;
-                endwhile;
-                //Ensure global wp variable are set to default after custom query
+                <?php $i++; ?>
+            <?php endwhile; ?>
+            <?php //Ensure global wp variable are set to default after custom query
                 wp_reset_postdata(); ?>
 
         <?php else : ?>
@@ -99,13 +100,14 @@ get_header(); ?>
         <!--Start of the Loop-->
         <?php if ($the_query->have_posts()) :
             //Set variable for the loop to control amount of posts
-            $i = 1;
-            while ($the_query->have_posts() && $i < 2) : $the_query->the_post(); ?>
+            ?>
+            <?php $i = 1; ?>
+            <?php while ($the_query->have_posts() && $i < 2) : $the_query->the_post(); ?>
                 <?php get_template_part('template-parts/posts/orangebox', get_post_format()); ?>
                 <div class="cell"></div>
                 <div class="cell"></div>
-            <?php endwhile;
-                wp_reset_postdata(); ?>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
 
         <?php else : ?>
             <p style="color: #FFF;"><?php _e('Sorry, no posts matched your criteria.'); ?></p>
@@ -168,11 +170,12 @@ get_header(); ?>
                     <!--Start of the Loop-->
                     <?php if ($the_query->have_posts()) :
                         //Set variable for the loop to control amount of posts
-                        $i = 1;
-                        while ($the_query->have_posts() && $i < 2) : $the_query->the_post(); ?>
+                        ?>
+                        <?php $i = 1; ?>
+                        <?php while ($the_query->have_posts() && $i < 2) : $the_query->the_post(); ?>
                             <?php get_template_part('template-parts/posts/cardpost', get_post_format()); ?>
-                        <?php endwhile;
-                            wp_reset_postdata(); ?>
+                        <?php endwhile; ?>
+                        <?php wp_reset_postdata(); ?>
 
                     <?php else : ?>
                         <p style="color: #FFF;"><?php _e('Sorry, no posts matched your criteria.'); ?></p>

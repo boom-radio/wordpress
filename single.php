@@ -8,7 +8,7 @@
  * @since Boom Radio 1.0
  */
 get_header(); ?>
-<h3>The is single.php</h3>
+<!--Single post page-->
 <div class="grid-container">
     <div class="grid-x grid-margin-x grid-margin-y align-center">
         <div class="cell"></div>

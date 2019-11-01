@@ -25,7 +25,8 @@ get_header();
                             <!--The $postBackgroundColourCounter is the variable used in the posts background function and needs to be set to 0 before the beginning of WP loop-->
                             <?php $postBackgroundColourCounter = null;
                                 //The $postNumber Is used into the function to swap image and paragraph left/right
-                                $postNumber = null; ?>
+                                ?>
+                            <?php $postNumber = null; ?>
                             <?php
                                 // Start of the Loop
                                 while (have_posts()) : ?>
@@ -43,8 +44,8 @@ get_header();
                                 <?php } ?>
                                 <?php
                                         // Increasing the value of the $postBackgroundColourCounter variable before the end of the WP loop to keep having a different post background colour
-                                        $postBackgroundColourCounter++;
-                                        // Increasing the $postNumber variable every loop to swap image and paragraphs left/right
+                                        $postBackgroundColourCounter++; ?>
+                                <?php // Increasing the $postNumber variable every loop to swap image and paragraphs left/right
                                         $postNumber++; ?>
                             <?php endwhile;
                                 ?>

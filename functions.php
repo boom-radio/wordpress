@@ -21,7 +21,7 @@ require_once('lib/posts_image_paragraph_position_function.php');
 //Function to control html output of comments section
 require_once('lib/comment-callback.php');
 
-/*---JOHN R Custom sizes for card sections & gradient boxes stying, boolean true initiates cropping of images---*/
+/*--- Custom sizes for card sections & gradient boxes stying, boolean true initiates cropping of images---*/
 function add_custom_sizes()
 {
   //Use true to initiate cropping

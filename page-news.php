@@ -38,14 +38,14 @@ get_header(); ?>
         <?php $the_query = new WP_Query($args); ?>
 
         <!--Start of the Loop-->
-        <?php if ($the_query->have_posts()) :
-            //The $postBackgroundColourCounter is the variable used in the posts background function and needs to be set to 0 before the beginning of WP loop
-            $postBackgroundColourCounter = null;
-            //The $postNumber Is used into the function to swap image and paragraph left/right
-            $postNumber = null;
-            //Set varibale for the loop to control amount of posts
-            $i = 1;
-            while ($the_query->have_posts() && $i < 13) : $the_query->the_post(); ?>
+        <?php if ($the_query->have_posts()) : ?>
+            <?php //The $postBackgroundColourCounter is the variable used in the posts background function and needs to be set to 0 before the beginning of WP loop
+                $postBackgroundColourCounter = null; ?>
+            <?php //The $postNumber Is used into the function to swap image and paragraph left/right
+                $postNumber = null; ?>
+            <?php //Set varibale for the loop to control amount of posts
+                $i = 1; ?>
+            <?php while ($the_query->have_posts() && $i < 13) : $the_query->the_post(); ?>
                 <div <?php post_class('cell'); ?>>
                     <!-- Gradiented container ????????????????????????????????????????????????????????????????????????????????????????????? -->
                     <div class="grid-container-fluid gradiented-box <?= posts_background_colour_function($postBackgroundColourCounter);  ?>">
@@ -108,14 +108,14 @@ get_header(); ?>
         <?php $the_query = new WP_Query($args); ?>
 
         <!--Start of the Loop-->
-        <?php if ($the_query->have_posts()) :
-            //Set variable for the loop to control amount of posts
-            $i = 1;
-            while ($the_query->have_posts() && $i < 7) : $the_query->the_post(); ?>
+        <?php if ($the_query->have_posts()) : ?>
+            <?php //Set variable for the loop to control amount of posts
+                $i = 1; ?>
+            <?php while ($the_query->have_posts() && $i < 7) : $the_query->the_post(); ?>
                 <?php get_template_part('template-parts/posts/cardpost', get_post_format()); ?>
-            <?php $i++;
-                endwhile;
-                //Ensure global wp variable are set to default after custom query
+                <?php $i++; ?>
+            <?php endwhile; ?>
+            <?php //Ensure global wp variable are set to default after custom query
                 wp_reset_postdata(); ?>
 
         <?php else : ?>
