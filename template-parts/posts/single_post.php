@@ -3,7 +3,7 @@
         <?php if (has_post_thumbnail()) {
             the_post_thumbnail('card_single');
         } else {
-            echo '<img style="width: 100%;" src="' . get_bloginfo("template_url") . '/src/assets/img/img-default.png"/>';
+            echo '<img style="width: 100%;" src="' . esc_url(get_bloginfo("template_url")) . '/src/assets/img/img-default.png"/>';
         }
         ?>
         <div class="card-section card-single">

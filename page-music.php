@@ -72,7 +72,7 @@ get_header(); ?>
         <!-- Empty cell/s used  for spacing-->
         <div class="cell"></div>
 
-        <!--wp query arg set for events - term id number 6 -->
+        <!--wp query arg set for events-->
         <?php
         $args = array(
             'post_type' => 'music_post',
@@ -95,7 +95,9 @@ get_header(); ?>
 
         <!--Start of the Loop-->
         <?php if ($the_query->have_posts()) :
-            while ($the_query->have_posts()) : $the_query->the_post(); ?>
+            //Set variable for the loop to control amount of posts
+            $i = 1;
+            while ($the_query->have_posts() && $i < 2) : $the_query->the_post(); ?>
                 <?php get_template_part('template-parts/posts/orangebox', get_post_format()); ?>
                 <div class="cell"></div>
                 <div class="cell"></div>
@@ -161,7 +163,9 @@ get_header(); ?>
 
                     <!--Start of the Loop-->
                     <?php if ($the_query->have_posts()) :
-                        while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                        //Set variable for the loop to control amount of posts
+                        $i = 1;
+                        while ($the_query->have_posts() && $i < 2) : $the_query->the_post(); ?>
                             <?php get_template_part('template-parts/posts/cardpost', get_post_format()); ?>
                         <?php endwhile;
                             wp_reset_postdata(); ?>

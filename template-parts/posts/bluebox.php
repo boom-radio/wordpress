@@ -5,7 +5,7 @@
                 <div class="grid-x grid-margin-x grid-margin-y grid-padding-x grid-padding-y">
                     <div class="cell text-justify">
                         <h2>
-                            <a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><?php the_title() ?></a>
+                            <a href="<?php esc_url(the_permalink()) ?>" title="<?php esc_attr_e(the_title_attribute()) ?>"><?php esc_html_e(the_title()) ?></a>
                         </h2>
                         <!--OR use the_content for full post, this can be split into template parts at the end;-->
                         <?php the_excerpt(); ?>

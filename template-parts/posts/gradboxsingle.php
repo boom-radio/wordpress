@@ -16,7 +16,7 @@
                             endif; ?>
                         </div>
                         <div class="cell auto">
-                            <?php the_title('<h2>', '</h2>') ?>
+                            <?php esc_html_e(the_title('<h2>', '</h2>')); ?>
                             <!--OR use the_content for full post, this can be split into template parts at the end;-->
                             <?php the_content(); ?>
                         </div>

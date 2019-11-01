@@ -5,7 +5,7 @@
         <?php if (has_post_thumbnail()) {
             the_post_thumbnail('card', array('class' => 'img-left box-shadowed'));
         } else {
-            echo '<img src="' . get_bloginfo("template_url") . '/src/assets/images/img-default.png" />';
+            echo '<img src="' . esc_url(get_bloginfo("template_url")) . '/src/assets/images/img-default.png" />';
         }
         ?>
     </div>

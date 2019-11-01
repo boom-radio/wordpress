@@ -6,7 +6,7 @@
 
     <div class="card-section">
         <div class="bio">
-            <h5 class="section-title"><?php the_title(); ?></h5>
+            <h5 class="section-title"><?php esc_attr_e(the_title()); ?></h5>
             <div class="cell">
                 <?php the_content(); ?>
             </div>

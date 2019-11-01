@@ -24,7 +24,7 @@
                                     <div class="grid-container">
                                         <div class="grid-x grid-padding-x">
                                             <h2>
-                                                <a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><?php the_title() ?></a>
+                                                <a href="<?php esc_url(the_permalink()) ?>" title="<?php esc_attr_e(the_title_attribute()) ?>"><?php esc_html_e(the_title()) ?></a>
                                             </h2>
                                             <!--OR use the_content for full post, this can be split into template parts at the end;-->
                                             <?php the_excerpt(); ?>
@@ -60,11 +60,3 @@
     </div>
 </article>
 <?php get_footer(); ?>
-
-<!-- .page-header
-//------For use when building this page-------
-// if ( is_category() || is_archive() ) {
-// the_excerpt();
-//} else {
-// the_content();
-//} // -->

@@ -214,11 +214,11 @@ get_header(); ?>
                                                     ?>
                             ">
                         <!-- insert selected post's title-->
-                        <h4><?php the_title(); ?></h4>
+                        <h4><?php esc_html_e(the_title()); ?></h4>
                         <?php if (has_post_thumbnail()) {
                                     the_post_thumbnail();
                                 } ?>
-                        <a href="<?php echo the_permalink(); ?>" class="boom-button-white float-right">Tell me more!</a>
+                        <a href="<?php echo esc_url(the_permalink()); ?>" class="boom-button-white float-right">Tell me more!</a>
                     </div>
                     <?php wp_reset_postdata(); ?>
                 <?php endwhile;

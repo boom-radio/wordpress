@@ -46,9 +46,9 @@ get_header();
                                         $postBackgroundColourCounter++;
                                         // Increasing the $postNumber variable every loop to swap image and paragraphs left/right
                                         $postNumber++; ?>
-                            <?php endwhile; // End of the loop. 
+                            <?php endwhile;
                                 ?>
-
+                            <!------------End of the loop.------------->
                             <div class="cell"></div>
                             <div class="cell">
                                 <?php the_posts_pagination(array('mid_size' => 5)); ?>

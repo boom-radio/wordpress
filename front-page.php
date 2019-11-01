@@ -45,7 +45,7 @@ get_header(); ?>
             <?php if ($the_query->have_posts()) :
                 //Set varibale for the loop to control amount of posts
                 $i = 1;
-                while ($the_query->have_posts() && $i < 3) : $the_query->the_post(); ?>
+                while ($the_query->have_posts() && $i < 2) : $the_query->the_post(); ?>
                     <!--Blue Gradient Box post-->
                     <?php get_template_part('template-parts/posts/bluebox', get_post_format()); ?>
 

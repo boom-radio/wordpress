@@ -6,7 +6,7 @@
 
         <div <?php post_class('cell'); ?>>
             <div class="cell"></div>
-            <?php the_title('<h2>', ':</h2>'); ?>
+            <?php esc_html_e(the_title('<h2>', ':</h2>')); ?>
             <?php the_content(); ?>
         </div>
     <?php endwhile;

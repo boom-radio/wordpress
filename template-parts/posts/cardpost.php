@@ -1,10 +1,9 @@
 <div <?php post_class('cell'); ?>>
     <div class="card">
-
         <?php if (has_post_thumbnail()) {
             the_post_thumbnail('card');
         } else {
-            echo '<img style="height: ;" src="' . get_bloginfo("template_url") . '/src/assets/img/img-default.png"/>';
+            echo '<img style="height: ;" src="' . esc_url(get_bloginfo("template_url")) . '/src/assets/img/img-default.png"/>';
         }
         ?>
         <div class="card-section">
