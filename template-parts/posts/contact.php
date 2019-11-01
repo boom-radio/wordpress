@@ -1,8 +1,8 @@
 <?php $the_query = new WP_Query($args); ?>
 
 <!--Start of the Loop-->
-<?php if ($the_query->have_posts()) :
-    while ($the_query->have_posts()) : $the_query->the_post(); ?>
+<?php if ($the_query->have_posts()) : ?>
+    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
         <div <?php post_class('cell'); ?>>
             <div class="cell"></div>

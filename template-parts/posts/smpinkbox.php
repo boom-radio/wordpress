@@ -2,12 +2,11 @@
     <div class="cell medium-5">
 
         <!--Set thumbnail image and default if no image-->
-        <?php if (has_post_thumbnail()) {
-            the_post_thumbnail('card', array('class' => 'img-left box-shadowed'));
-        } else {
-            echo '<img src="' . esc_url(get_bloginfo("template_url")) . '/src/assets/images/img-default.png" />';
-        }
-        ?>
+        <?php if (has_post_thumbnail()) { ?>
+            <?php the_post_thumbnail('card', array('class' => 'img-left box-shadowed')); ?>
+        <?php } else { ?>
+            <?php echo '<img src="' . esc_url(get_bloginfo("template_url")) . '/src/assets/images/img-default.png" />'; ?>
+        <?php } ?>
     </div>
     <div class="cell medium-7">
         <div class="grid-container-fluid">

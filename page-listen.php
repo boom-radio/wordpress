@@ -40,11 +40,11 @@ get_header(); ?>
                                 )
                             ),
                             'posts_per_page' => 10,
-                        );
+                        ); ?>
 
-                        //The Query
-                        $the_query = new WP_Query($args);
-                        ?>
+                        <!--The Query-->
+                        <?php $the_query = new WP_Query($args); ?>
+
                         <!-- The Loop -->
                         <?php if ($the_query->have_posts()) : ?>
                             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
@@ -86,10 +86,11 @@ get_header(); ?>
                                 )
                             ),
                             'posts_per_page' => 10,
-                        );
-                        //The Query
-                        $the_query = new WP_Query($args);
-                        ?>
+                        ); ?>
+
+                        <!--The Query-->
+                        <?php $the_query = new WP_Query($args); ?>
+
                         <!-- The Loop -->
                         <?php if ($the_query->have_posts()) : ?>
                             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
@@ -130,11 +131,11 @@ get_header(); ?>
                                 )
                             ),
                             'posts_per_page' => -1,
-                        );
+                        ); ?>
 
-                        //The Query
-                        $the_query = new WP_Query($args);
-                        ?>
+                        <!--The Query-->
+                        <?php $the_query = new WP_Query($args); ?>
+
                         <!-- The Loop -->
                         <?php if ($the_query->have_posts()) : ?>
                             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
@@ -182,10 +183,11 @@ get_header(); ?>
             $args = array(
                 'post_type' => 'presenter',
                 'posts_per_page' => -1,
-            );
-            //The Query
-            $the_query = new WP_Query($args);
-            ?>
+            ); ?>
+
+            <!--The Query-->
+            <?php $the_query = new WP_Query($args); ?>
+
             <!-- The Loop -->
             <?php if ($the_query->have_posts()) : ?>
                 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>

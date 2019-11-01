@@ -19,6 +19,7 @@ get_header(); ?>
     <div class="grid-container">
         <div class="grid-x grid-padding-x grid-padding-y">
             <div class="cell large-<?php echo is_active_sidebar('primary-sidebar') ? '8' : '12'; ?> shared">
+                <!--------------------- Contact info section ---------------------------->
                 <div class="grid-container">
                     <div class="grid-x info-container grid-padding-x grid-margin-x grid-margin-y gradiented-box gradient-five-six small-up-1 medium-up-1 large-up-2">
 
@@ -118,11 +119,12 @@ get_header(); ?>
                         <?php set_query_var('args', $args); ?>
                         <?php get_template_part('template-parts/posts/contact', get_post_format()); ?>
                         <!------------------------- End of the Phone List loop.-------------------------->
-
                         <div class="cell"></div>
                     </div>
                 </div>
+                <!--------------------- Contact Form & Map section - --------------------------->
                 <div class="grid-container" id="yoursong">
+                    <div class="cell"></div>
                     <!---Title of the Second Section -->
                     <?php get_template_part('template-parts/components/waveleft', 'none'); ?>
                     <h3>Send us an Email</h3>

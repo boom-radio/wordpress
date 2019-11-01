@@ -36,8 +36,10 @@ get_header(); ?>
                     'terms' =>  'Artists'
                 )
             )
-        );
-        $the_query = new WP_Query($args); ?>
+        ); ?>
+
+        <!--The Query-->
+        <?php $the_query = new WP_Query($args); ?>
 
         <!--Start of the Loop-->
         <?php if ($the_query->have_posts()) :
@@ -89,9 +91,10 @@ get_header(); ?>
                     'terms' =>  'featured-artist'
                 )
             )
-        );
+        ); ?>
 
-        $the_query = new WP_Query($args); ?>
+        <!--The Query-->
+        <?php $the_query = new WP_Query($args); ?>
 
         <!--Start of the Loop-->
         <?php if ($the_query->have_posts()) :
@@ -157,9 +160,10 @@ get_header(); ?>
                                 'terms' =>  'event'
                             )
                         )
-                    );
+                    ); ?>
 
-                    $the_query = new WP_Query($args); ?>
+                    <!--The Query-->
+                    <?php $the_query = new WP_Query($args); ?>
 
                     <!--Start of the Loop-->
                     <?php if ($the_query->have_posts()) :

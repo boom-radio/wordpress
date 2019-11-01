@@ -35,8 +35,10 @@ get_header(); ?>
                 'date' => 'DESC',
             ),
 
-        );
-        $the_query = new WP_Query($args); ?>
+        ); ?>
+
+        <!--The Query-->
+        <?php $the_query = new WP_Query($args); ?>
 
         <!--Start of the Loop-->
         <?php if ($the_query->have_posts()) :

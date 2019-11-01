@@ -12,6 +12,7 @@ get_header(); ?>
 <!--Title with waves and page title -->
 <?php get_template_part('template-parts/content/title', 'none'); ?>
 
+<!---------------------- Start of News Loop ----------------------->
 <div class="grid-container">
     <div class="grid-x grid-margin-x grid-margin-y align-center">
         <?php
@@ -31,9 +32,10 @@ get_header(); ?>
                     'terms' => array('old-posts', 'events', 'breaking-news', 'music-news', 'cinema', 'sport', 'politics'),
                 )
             )
-        );
+        ); ?>
 
-        $the_query = new WP_Query($args); ?>
+        <!--The Query-->
+        <?php $the_query = new WP_Query($args); ?>
 
         <!--Start of the Loop-->
         <?php if ($the_query->have_posts()) :
@@ -76,7 +78,7 @@ get_header(); ?>
 </div>
 <!--End of News Section-->
 
-<!--Start of Events Section-->
+<!------------------------Start of Events Section ------------------->
 <?php get_template_part('template-parts/components/waveleft', 'none'); ?>
 <h3>Events</h3>
 <?php get_template_part('template-parts/components/waveright', 'none'); ?>
@@ -100,8 +102,10 @@ get_header(); ?>
                     'terms' =>  'event'
                 )
             )
-        );
-        $the_query = new WP_Query($args); ?>
+        ); ?>
+
+        <!--The Query-->
+        <?php $the_query = new WP_Query($args); ?>
 
         <!--Start of the Loop-->
         <?php if ($the_query->have_posts()) :

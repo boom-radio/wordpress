@@ -1,11 +1,10 @@
 <div <?php post_class('cell'); ?>>
     <div class="card">
-        <?php if (has_post_thumbnail()) {
-            the_post_thumbnail('card');
-        } else {
-            echo '<img src="' . esc_url(get_bloginfo("template_url")) . '/src/assets/img/img-default.png"/>';
-        }
-        ?>
+        <?php if (has_post_thumbnail()) { ?>
+            <?php the_post_thumbnail('card'); ?>
+        <?php } else { ?>
+            <?php echo '<img src="' . esc_url(get_bloginfo("template_url")) . '/src/assets/img/img-default.png"/>'; ?>
+        <?php } ?>
         <div class="card-section">
             <div class="bio">
                 <h5 class="section-title">

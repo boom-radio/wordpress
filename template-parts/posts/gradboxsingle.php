@@ -1,8 +1,8 @@
 <div <?php post_class('cell'); ?>>
     <?php //render random gradient background
-    $list = array('gradient-one-two', 'gradient-three-four', 'gradient-five-six');
-    $i = array_rand($list);
-    $gradient = $list[$i];
+    $list = array('gradient-one-two', 'gradient-three-four', 'gradient-five-six'); ?>
+    <?php $i = array_rand($list); ?>
+    <?php $gradient = $list[$i]; ?>
     ?>
     <div class="grid-container-fluid gradiented-box <?php echo $gradient ?>">
         <div class="grid-x grid-padding-x grid-padding-y align-spaced align-middle">
@@ -11,9 +11,9 @@
                     <div class="grid-x grid-padding-x grid-padding-y">
                         <div class="cell"></div>
                         <div class="cell large-6 shared text-justify">
-                            <?php if (has_post_thumbnail()) :
-                                the_post_thumbnail('card', array('class' => 'box-shadowed'));
-                            endif; ?>
+                            <?php if (has_post_thumbnail()) : ?>
+                                <?php the_post_thumbnail('card', array('class' => 'box-shadowed')); ?>
+                            <?php endif; ?>
                         </div>
                         <div class="cell auto">
                             <?php esc_html_e(the_title('<h2>', '</h2>')); ?>
@@ -27,9 +27,9 @@
         </div>
     </div>
     <?php
-    if (comments_open() || get_comments_number()) {
-        comments_template();
-    }
-    ?>
+    // If comments are open or we have at least one comment, load up the comment template.
+    if (comments_open() || get_comments_number()) : ?>
+        <?php comments_template(); ?>
+    <?php endif; ?>
 </div>
 <!--End the loop.-->

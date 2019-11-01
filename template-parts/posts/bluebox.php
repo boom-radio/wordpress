@@ -18,9 +18,9 @@
             </div>
         </div>
         <div class="cell medium-4">
-            <?php if (has_post_thumbnail()) :
-                the_post_thumbnail('card', array('class' => 'img-right box-shadowed'));
-            endif; ?>
+            <?php if (has_post_thumbnail()) : ?>
+                <?php the_post_thumbnail('card', array('class' => 'img-right box-shadowed')); ?>
+            <?php endif; ?>
         </div>
     </div>
 </div>

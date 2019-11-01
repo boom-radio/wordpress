@@ -18,9 +18,10 @@ get_header(); ?>
         $args = array(
             'post_type' => 'about',
             'orderby' => 'post__in'
-        );
+        ); ?>
 
-        $the_query = new WP_Query($args); ?>
+        <!--The Query-->
+        <?php $the_query = new WP_Query($args); ?>
 
         <!--Start of the Loop-->
         <?php if ($the_query->have_posts()) :
