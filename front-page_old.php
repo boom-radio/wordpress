@@ -245,79 +245,39 @@ get_header(); ?>
         <div class="cell"></div>
 
         <!---------------------------------Social section------------------------------->
-        <div class="cell">
-            <article class="grid-container">
-                <div class="grid-x grid-margin-x">
-                    <!------------------------ Start of Events loop.---------------------------->
-                    <div class="cell large-8 shared" style="margin-bottom: 1rem">
-                        <div class="grid-container-fluid gradiented-box gradient-one-two">
-                            <?php
-                            $args = array(
-                                'post_type' => 'music_post',
-                                'posts_per_page'      => 1,
-                                'post__in'            => get_option('sticky_posts'),
-                                'ignore_sticky_posts' => 1,
-                                'orderby'   => array(
-                                    'date' => 'DESC',
-                                ),
-                                'tax_query' => array(
-                                    array(
-                                        'taxonomy' => 'category_music',
-                                        'field'    => 'slug',
-                                        'terms' =>  'event'
-                                    )
-                                )
-                            );
 
-                            $the_query = new WP_Query($args); ?>
-
-                            <?php if ($the_query->have_posts()) :
-                                //Set varibale for the loop to control amount of posts
-                                $i = 1;
-                                while ($the_query->have_posts() && $i < 2) : $the_query->the_post(); ?>
-
-                                    <!--Card style post-->
-                                    <?php get_template_part('template-parts/posts/smpinkbox', get_post_format()); ?>
-                                <?php $i++;
-                                    endwhile;
-                                    wp_reset_postdata(); ?>
-
-                            <?php else : ?>
-                                <p style="color: #FFF;"><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-                            <?php endif; ?>
-                        </div>
-                    </div>
-                    <!------------------------ End of Events loop.---------------------------->
-
-                    <!--Create space between cells in card section
-                    <div class="cell show-for-small show-for-medium hide-for-large"><br></div>-->
-
-                    <!------------------------ Start of Social Schedule loop.---------------------------->
-                    <div class="cell auto">
+        <article class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell large-8 shared" style="margin-bottom: 1rem">
+                    <div class="grid-container-fluid gradiented-box gradient-one-two">
+                        <!------------------------ Start of Events loop.---------------------------->
                         <?php
                         $args = array(
-                            'post_type' => 'schedule',
+                            'post_type' => 'music_post',
                             'posts_per_page'      => 1,
                             'post__in'            => get_option('sticky_posts'),
                             'ignore_sticky_posts' => 1,
+                            'orderby'   => array(
+                                'date' => 'DESC',
+                            ),
                             'tax_query' => array(
                                 array(
-                                    'taxonomy' => 'category_schedule',
-                                    'field' => 'slug',
-                                    'terms' => 'big-breakfast'
+                                    'taxonomy' => 'category_music',
+                                    'field'    => 'slug',
+                                    'terms' =>  'event'
                                 )
                             )
                         );
 
                         $the_query = new WP_Query($args); ?>
 
-
                         <?php if ($the_query->have_posts()) :
-                            //Set variable for the loop to control amount of posts
+                            //Set varibale for the loop to control amount of posts
                             $i = 1;
                             while ($the_query->have_posts() && $i < 2) : $the_query->the_post(); ?>
+
                                 <!--Card style post-->
-                                <?php get_template_part('template-parts/posts/cardsingle', get_post_format()); ?>
+                                <?php get_template_part('template-parts/posts/smpinkbox', get_post_format()); ?>
                             <?php $i++;
                                 endwhile;
                                 wp_reset_postdata(); ?>
@@ -326,11 +286,54 @@ get_header(); ?>
                             <p style="color: #FFF;"><?php _e('Sorry, no posts matched your criteria.'); ?></p>
                         <?php endif; ?>
                     </div>
-                    <!------------------------ End of Social Schedule loop.---------------------------->
                 </div>
-            </article>
+                <!------------------------ End of Events loop.---------------------------->
+            </div>
+    </div>
+
+    <!--Create space between cells in card section
+                <div class="cell show-for-small show-for-medium hide-for-large"><br></div>-->
+
+    <div class="cell auto">
+        <div class="cell">
+            <!------------------------ Start of Social Schedule loop.---------------------------->
+            <?php
+            $args = array(
+                'post_type' => 'schedule',
+                'posts_per_page'      => 1,
+                'post__in'            => get_option('sticky_posts'),
+                'ignore_sticky_posts' => 1,
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'category_schedule',
+                        'field' => 'slug',
+                        'terms' => 'big-breakfast'
+                    )
+                )
+            );
+
+            $the_query = new WP_Query($args); ?>
+
+
+            <?php if ($the_query->have_posts()) :
+                //Set variable for the loop to control amount of posts
+                $i = 1;
+                while ($the_query->have_posts() && $i < 2) : $the_query->the_post(); ?>
+                    <!--Card style post-->
+                    <?php get_template_part('template-parts/posts/cardsingle', get_post_format()); ?>
+                <?php $i++;
+                    endwhile;
+                    wp_reset_postdata(); ?>
+
+            <?php else : ?>
+                <p style="color: #FFF;"><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+            <?php endif; ?>
+            <!------------------------ End of Social Schedule loop.---------------------------->
         </div>
     </div>
+</div>
+</article>
+</div>
 </div>
 <!-------------------------End of Social section------------------------------->
 <?php
