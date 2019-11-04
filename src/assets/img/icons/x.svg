@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg enable-background="new 0 0 25 25" version="1.1" viewBox="0 0 25 25" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#EB5B27;}
+	.st2{fill:none;stroke:#EB5B27;stroke-width:1.6077;stroke-linecap:round;stroke-miterlimit:3.2154;}
+</style>
+<g transform="translate(-37 -615.45)">
+	<g transform="translate(37 615.45)">
+		<path class="st0" d="m21.3 3.7c4.9 4.9 4.9 12.8 0 17.7s-12.8 4.9-17.7 0-4.9-12.8 0-17.7 12.9-4.9 17.7 0z"/>
+		<path class="st1" d="m20.2 4.8c-2.1-2.1-4.8-3.2-7.7-3.2s-5.6 1.1-7.7 3.2-3.2 4.8-3.2 7.7 1.1 5.6 3.2 7.7 4.8 3.2 7.7 3.2 5.6-1.1 7.7-3.2 3.2-4.8 3.2-7.7-1.1-5.6-3.2-7.7m1.1-1.1c4.9 4.9 4.9 12.8 0 17.7s-12.8 4.9-17.7 0-4.9-12.8 0-17.7 12.9-4.9 17.7 0z"/>
+	</g>
+	<line class="st2" x1="45.5" x2="53.5" y1="624.5" y2="632.4"/>
+	<line class="st2" x1="53.5" x2="45.5" y1="624.5" y2="632.4"/>
+</g>
+</svg>
