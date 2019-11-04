@@ -13,7 +13,7 @@
                                         <button type="button" data-toggle="offCanvas"><img src="<?php echo esc_url(get_theme_file_uri('src/assets/img/icons/+.svg')); ?>" alt="plus button"></button>
                                     </div>
                                     <div class="cell small-10 text-center">
-                                        <img id="mobile-logo" src="<?php echo esc_url(get_theme_file_uri('src/assets/img/boom_logo_orange.svg')); ?>" alt="Boom Radio logo">
+                                        <a href="<?php echo get_option("siteurl"); ?>"><img id="logo" src="<?php echo get_theme_file_uri('src/assets/img/boom_logo_orange.svg'); ?>" alt="Boom Radio logo"></a>
                                     </div>
                                     <!-- Empty cell/s used  for spacing  THIS CELL IS NEEDED TO CENTER THE logo -->
                                     <div class="cell small-1"></div>
@@ -46,11 +46,15 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="cell shrink nav-search show-for-large">
-                                        <?php get_search_form(true); ?>
-                                        <!--<div class="cell show-for-large shrink">
-                                                 <iframe class="boomPlayer" src="https://tunein.com/embed/player/s195836/"></iframe>
-                                        </div>-->
+                                    <div class="cell large-4 show-for-large">
+                                        <div class="grid-container-fluid">
+                                            <div class="grid-x grid-margin-x align-justify align-middle">
+                                                <?php get_search_form(true); ?>
+                                                <div class="cell shrink">
+                                                    <iframe class="boomPlayer" src="https://tunein.com/embed/player/s195836/"></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -64,3 +68,7 @@
 </div>
 <!--</div>-->
 <!-- END NAVIGATION BAR Content -->
+
+<!-- GET THE PLAYER FOR MOBILE DEVICES -->
+<?php get_template_part('template-parts/components/mobileplayer', 'none'); ?>
+<!-- END OF GET THE PLAYER FOR MOBILE DEVICES -->
