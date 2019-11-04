@@ -43,7 +43,7 @@ h4 {
 }
 
 h5 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     padding: 0.5em;
 }
 
@@ -54,7 +54,7 @@ p {
 a {
     @include title-font;
     color: $color-white;
-    font-size: 1.1em;
+    font-size: 1rem;
 
     &:hover {
         color: $color-six;
@@ -223,6 +223,10 @@ $box-shadow: 5px 5px 0 rgba($color-eight, 0.3);
     font-family: 'Quicksand-Regular', sans-serif;
     font-size: 0.8rem;
     min-height: 13.25rem;
+
+    .bio div h2 {
+        padding-left: 0.5rem;
+    }
 }
 
 .card-single div {
@@ -243,7 +247,7 @@ $box-shadow: 5px 5px 0 rgba($color-eight, 0.3);
     p {
         padding-left: 0.5rem;
         margin-bottom: 0.5rem;
-        font-size: 0.9rem;
+        font-size: 1rem;
         min-height: 55px;
     }
 }
