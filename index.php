@@ -18,7 +18,7 @@ get_header();
     <div class="grid-container">
         <div class="grid-x grid-padding-x grid-padding-y">
             <div class="cell"></div>
-            <div class="cell large-<?php echo is_active_sidebar('primary-sidebar') ? '8' : '12'; ?> shared">
+            <div class="cell large-<?php echo is_active_sidebar('primary-sidebar') ? '9' : '12'; ?> shared">
                 <div class="grid-container">
                     <div class="grid-y grid-margin-y">
                         <?php if (have_posts()) { ?>
