@@ -21,6 +21,17 @@ if (!function_exists('boom_radio_card_link')) {
     }
 }
 
+//Function for Front Page Schedule Section
+if (!function_exists('boom_radio_card_show')) {
+    function boom_radio_card_show()
+    {
+        //echo '<div class="cell">';
+        echo '<a class="boom-button float-right" href="' . esc_url(get_permalink()) . '" title="' . esc_html__(the_title_attribute(['echo' => false])) . '">More Shows...';
+        echo '</a>';
+        //echo '</div>';
+    }
+}
+
 /**
  * Filter the except length to 20 words.
  *
