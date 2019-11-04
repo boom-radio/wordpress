@@ -18,7 +18,7 @@ get_header(); ?>
     <!--Addition of some Foundation classes used in the prototype-->
     <div class="grid-container">
         <div class="grid-x grid-padding-x grid-padding-y">
-            <div class="cell large-<?php echo is_active_sidebar('primary-sidebar') ? '8' : '12'; ?> shared">
+            <div class="cell large-<?php echo is_active_sidebar('primary-sidebar') ? '9' : '12'; ?> shared">
                 <!--------------------- Contact info section ---------------------------->
                 <div class="grid-container">
                     <div class="grid-x info-container grid-padding-x grid-margin-x grid-margin-y gradiented-box gradient-five-six small-up-1 medium-up-1 large-up-2">

@@ -8,7 +8,7 @@
         <div class="card-section">
             <div class="bio">
                 <h5 class="section-title">
-                    <?php the_title() ?>
+                    <?php the_title(); ?>
                 </h5>
                 <?php the_excerpt(); ?>
             </div>

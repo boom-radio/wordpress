@@ -21,7 +21,7 @@
                                 <a class="small-social-button button gradiented-box gradient-five-six " href="<?php echo esc_url(get_post_meta($post->ID, 'mbp_insta', true)); ?>" target="_blank" title="Follow on Instgram"> <i class="fab fa-instagram fa-1x"></i> Follow</a>
                             <?php
                             } else { ?>
-                                // don't display Insta button
+                                <!--don't display Insta button-->
                             <?php } ?>
                             <!-- check if the custom field created with metabox is not empty before displaying the button-->
                             <?php
@@ -30,7 +30,7 @@
                                 <a class="small-social-button button gradiented-box gradient-one-two " href="mailto:<?php echo esc_url(get_post_meta($post->ID, 'mbp_email', true)); ?>?Subject=Hello%20from%20Boom%20Radio%20website" title="Write an Email"><i class="fas fa-envelope fa-1x"></i> Write an Email</a>
                             <?php
                             } else { ?>
-                                // don't display Email button
+                                <!--don't display Email button-->
                             <?php }
                             ?>
                         </div>

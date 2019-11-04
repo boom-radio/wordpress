@@ -8,6 +8,7 @@
  * @since boom_radio 1.0
  */
 get_header(); ?>
+
 <!-----------------------CONTENT HERE-------------------------------------->
 <!-----------------------Start of Artist of the Month Section------------------------------------------>
 <div class="grid-container">
@@ -204,7 +205,6 @@ get_header(); ?>
 
         <!-- Empty cell/s used  for spacing-->
         <div class="cell"></div>
-
         <!---Title of the Second Section -->
         <?php get_template_part('template-parts/components/waveleft', 'none'); ?>
         <h3>Competition</h3>
@@ -228,7 +228,7 @@ get_header(); ?>
             $the_query = new WP_Query($args); ?>
 
             <?php if ($the_query->have_posts()) : ?>
-                //Set varibale for the loop to control amount of posts to one
+                <!--Set varibale for the loop to control amount of posts to one-->
                 <?php $i = 1; ?>
                 <?php while ($the_query->have_posts() && $i < 2) : $the_query->the_post(); ?>
                     <!--Orange Gradient Box post-->
@@ -252,6 +252,7 @@ get_header(); ?>
                 <div class="grid-x grid-margin-x">
                     <!------------------------ Start of Events loop.---------------------------->
                     <div class="cell large-8 shared" style="margin-bottom: 1rem">
+                        <h3 class="text-center">Events</h3>
                         <div class="grid-container-fluid gradiented-box gradient-one-two">
                             <?php
                             $args = array(
@@ -272,12 +273,10 @@ get_header(); ?>
                             ); ?>
 
                             <?php $the_query = new WP_Query($args); ?>
-
                             <?php if ($the_query->have_posts()) : ?>
                                 <!--Set varibale for the loop to control amount of posts-->
                                 <?php $i = 1; ?>
                                 <?php while ($the_query->have_posts() && $i < 2) : $the_query->the_post(); ?>
-
                                     <!--Card style post-->
                                     <?php get_template_part('template-parts/posts/smpinkbox', get_post_format()); ?>
                                     <?php $i++; ?>
@@ -296,6 +295,7 @@ get_header(); ?>
 
                     <!------------------------ Start of Social Schedule loop.---------------------------->
                     <div class="cell auto">
+                        <h3 class="text-center">Shows</h3>
                         <?php
                         $args = array(
                             'post_type' => 'schedule',
@@ -315,11 +315,12 @@ get_header(); ?>
 
 
                         <?php if ($the_query->have_posts()) : ?>
-                            <!--Set variable for the loop to control amount of posts-->
+                            <!--Robbo Set variable for the loop to control amount of posts-->
                             <?php $i = 1; ?>
                             <?php while ($the_query->have_posts() && $i < 2) : $the_query->the_post(); ?>
+
                                 <!--Card style post-->
-                                <?php get_template_part('template-parts/posts/cardsingle', get_post_format()); ?>
+                                <?php get_template_part('template-parts/posts/cardshow', get_post_format()); ?>
                                 <?php $i++; ?>
                             <?php endwhile; ?>
                             <?php wp_reset_postdata(); ?>

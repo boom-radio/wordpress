@@ -131,63 +131,74 @@ get_header(); ?>
     <!-------------------Social split cell section------------------------->
     <article class="grid-container">
         <div class="grid-x grid-margin-x">
-            <div class="cell large-8 shared">
-                <!--Music upload message-->
-                <?php get_template_part('template-parts/content/musiclink', 'none'); ?>
+            <!--<div class="cell large-8 shared">-->
+            <div class="cell shared">
+                <div class="cell shared">
+                    <!--Music upload message-->
+                    <?php get_template_part('template-parts/content/musiclink', 'none'); ?>
 
-                <!--Contact form-->
-                <?php get_template_part('template-parts/components/contactform', get_post_format()); ?>
-            </div>
-
-            <!--Create space between cells in card section-->
-            <div class="cell show-for-small show-for-medium hide-for-large"><br></div>
-
-            <!--------------------Single Events post section------------------------->
-            <div class="cell auto">
-                <div class="cell">
-                    <!-- Start of the loop-->
-                    <?php
-                    $args = array(
-                        'post_type' => 'music_post',
-                        'posts_per_page'      => 1,
-                        'post__in'            => get_option('sticky_posts'),
-                        'ignore_sticky_posts' => 1,
-                        'orderby'   => array(
-                            'date' => 'DESC',
-                        ),
-                        'tax_query' => array(
-                            array(
-                                'taxonomy' => 'category_music',
-                                'field'    => 'slug',
-                                'terms' =>  'event'
-                            )
-                        )
-                    ); ?>
-
-                    <!--The Query-->
-                    <?php $the_query = new WP_Query($args); ?>
-
-                    <!--Start of the Loop-->
-                    <?php if ($the_query->have_posts()) :
-                        //Set variable for the loop to control amount of posts
-                        ?>
-                        <?php $i = 1; ?>
-                        <?php while ($the_query->have_posts() && $i < 2) : $the_query->the_post(); ?>
-                            <?php get_template_part('template-parts/posts/cardpost', get_post_format()); ?>
-                        <?php endwhile; ?>
-                        <?php wp_reset_postdata(); ?>
-
-                    <?php else : ?>
-                        <p style="color: #FFF;"><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-                    <?php endif; ?>
-                    <!-- End of the loop.-->
+                    <!--Contact form-->
+                    <?php get_template_part('template-parts/components/contactform', get_post_format()); ?>
                 </div>
+
+                <!--Create space between cells in card section-->
+                <div class="cell show-for-small show-for-medium hide-for-large"><br></div>
+
+                <!--------------------Single Events post section------------------------->
+                <!--<div class="cell auto">
+                <div class="cell">-->
+                <!-- Start of the loop-->
+                <?php
+                //$args = array(
+                //'post_type' => 'music_post',
+                //'posts_per_page'      => 1,
+                //'post__in'            => get_option('sticky_posts'),
+                //'ignore_sticky_posts' => 1,
+                //'orderby'   => array(
+                //'date' => 'DESC',
+                //),
+                //'tax_query' => array(
+                //array(
+                //'taxonomy' => 'category_music',
+                // 'field'    => 'slug',
+                // 'terms' =>  'event'
+                //)
+                //)
+                //); 
+                ?>
+
+                <!--The Query-->
+                <?php //$the_query = new WP_Query($args); 
+                ?>
+
+                <!--Start of the Loop-->
+                <?php //if ($the_query->have_posts()) :
+                //Set variable for the loop to control amount of posts
+                ?>
+                <?php //$i = 1; 
+                ?>
+                <?php //while ($the_query->have_posts() && $i < 2) : $the_query->the_post(); 
+                ?>
+                <?php //get_template_part('template-parts/posts/cardpost', get_post_format()); 
+                ?>
+                <?php //endwhile; 
+                ?>
+                <?php //wp_reset_postdata(); 
+                ?>
+
+                <?php //else : 
+                ?>
+                <!--<p style="color: #FFF;"><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+            <?php //endif; 
+            ?>
+            <!-- End of the loop.-->
+                <!--</div>
             </div>
         </div>
     </article>
-</div>
-<!-----------------------------End of Events Section-------------------------------->
-<div class="cell"></div>
+</div>-->
+                <!-----------------------------End of Events Section-------------------------------->
+                <div class="cell"></div>
 
-<?php
-get_footer();
+                <?php
+                get_footer();
