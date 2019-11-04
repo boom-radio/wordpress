@@ -1,6 +1,10 @@
 @import "config";
 
 ///////////////////////////////////////////////////////NEGINNING GENERAL STYLES////////////////////////////////////////////////////// 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: $color-eight;
     font-family: 'Quicksand-Regular', sans-serif;

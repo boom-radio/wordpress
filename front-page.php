@@ -12,8 +12,8 @@ get_header(); ?>
 <!-----------------------CONTENT HERE-------------------------------------->
 <!-----------------------Start of Artist of the Month Section------------------------------------------>
 <div class="grid-container">
-    <div class="grid-container" id=artist>
-        <div class="grid-x grid-padding-x grid-padding-y align-center">
+    <div class="grid-container" id="artist">
+        <div class="grid-x grid-padding-x grid-padding-y align-center content">
             <!---Title of the Second Section -->
             <?php get_template_part('template-parts/components/waveleft', 'none'); ?>
             <h1>Artist of the Month</h1>

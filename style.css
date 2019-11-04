@@ -335,6 +335,9 @@ html * {
   src: url(//fonts.googleapis.com/css?family=Quicksand); }
 
 /*Styling for button 'glint' effect*/
+html {
+  scroll-behavior: smooth; }
+
 body {
   background: #102126;
   font-family: 'Quicksand-Regular', sans-serif; }
