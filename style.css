@@ -419,7 +419,7 @@ iframe {
 .boomPlayer {
   width: 100%;
   height: 100px;
-  margin: 0; }
+  margin: 6.5px 0 3px; }
 
 .instagram-media,
 #facebook {
@@ -528,6 +528,8 @@ div .accordion-item {
 
 div .tabs-panel {
   padding: 0; }
+  div .tabs-panel p {
+    color: rgba(255, 255, 255, 0.7); }
 
 .md-tabs,
 .tabs-content {
@@ -562,16 +564,16 @@ div.md-tabs {
         outline: none; }
   div.md-tabs > .accordion > .is-active.accordion-item > a.accordion-title {
     border-bottom: 4px solid #102126;
-    color: black; }
+    color: #102126; }
   div.md-tabs > .accordion > .accordion-item > .accordion-content {
     display: none;
     border: 0px;
     background-color: #fefefe;
-    color: #0a0a0a; }
+    color: rgba(255, 255, 255, 0.7); }
 
-div.md-tabs > .accordion > .accordion-item > .accordion-title:focus {
+div.md-tabs > .accordion > .accordion-item > .accordion-title:focus, .accordion-title:hover {
   background-color: #3aa9e1;
-  color: #fcab62;
+  color: #102126;
   outline: none; }
 
 .md-tabs > .tabs > .tabs-title.is-active > a:hover {
@@ -584,6 +586,9 @@ div.md-tabs > .accordion > .accordion-item > .accordion-title:focus {
 
 .presenter p {
   padding-bottom: 15px; }
+
+.blockquote p {
+  color: #eb5b27 !important; }
 
 /*.contact {
     a {
@@ -618,6 +623,46 @@ div.md-tabs > .accordion > .accordion-item > .accordion-title:focus {
 .info-container li {
   padding: 5px; }
 
+.wpforms-field-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Quicksand-Regular', sans-serif; }
+
+.wpforms-required-label {
+  color: #eb5b27 !important; }
+
+.wpforms-field-select {
+  font-family: "Fjalla One", sans-serif !important;
+  font-size: 0.9rem; }
+
+.wpforms-submit {
+  z-index: 1;
+  position: relative;
+  overflow: hidden; }
+  .wpforms-submit::after {
+    content: '';
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: -50%;
+    bottom: -300%;
+    width: 5em;
+    left: 10%;
+    transform: translateX(-400%) rotate(35deg); }
+  .wpforms-submit:hover {
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.4) inset;
+    background-color: transparent;
+    cursor: pointer;
+    color: white; }
+  .wpforms-submit:hover::after {
+    transition: transform 0.45s ease-in-out;
+    transform: translateX(170%) rotate(5deg); }
+  .wpforms-submit:active, .wpforms-submit:focus {
+    color: white; }
+
+.wpforms-error {
+  color: #eb5b27 !important;
+  padding-top: 5px !important; }
+
 #copyright {
   color: white;
   font-size: 0.75rem;
@@ -640,9 +685,10 @@ a.boom-button {
     z-index: -1;
     background-color: rgba(255, 255, 255, 0.2);
     position: absolute;
-    top: -300%;
-    bottom: -90%;
+    top: -50%;
+    bottom: -300%;
     width: 5em;
+    left: 10%;
     transform: translateX(-400%) rotate(35deg); }
   a.boom-button:hover {
     box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.4) inset;
@@ -651,7 +697,9 @@ a.boom-button {
     color: white; }
   a.boom-button:hover::after {
     transition: transform 0.45s ease-in-out;
-    transform: translateX(200%) rotate(35deg); }
+    transform: translateX(170%) rotate(5deg); }
+  a.boom-button:active, a.boom-button:focus {
+    color: white; }
 
 .animation-container {
   width: 100%;
@@ -748,9 +796,10 @@ a.boom-button {
     z-index: -1;
     background-color: rgba(255, 255, 255, 0.2);
     position: absolute;
-    top: -300%;
-    bottom: -90%;
+    top: -50%;
+    bottom: -300%;
     width: 5em;
+    left: 10%;
     transform: translateX(-400%) rotate(35deg); }
   .boom-button-white:hover {
     box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.4) inset;
@@ -759,7 +808,9 @@ a.boom-button {
     color: white; }
   .boom-button-white:hover::after {
     transition: transform 0.45s ease-in-out;
-    transform: translateX(200%) rotate(35deg); }
+    transform: translateX(170%) rotate(5deg); }
+  .boom-button-white:active, .boom-button-white:focus {
+    color: white; }
 
 .social-button {
   width: 95vw;
@@ -772,9 +823,10 @@ a.boom-button {
     z-index: -1;
     background-color: rgba(255, 255, 255, 0.2);
     position: absolute;
-    top: -300%;
-    bottom: -90%;
+    top: -50%;
+    bottom: -300%;
     width: 5em;
+    left: 10%;
     transform: translateX(-400%) rotate(35deg); }
   .social-button:hover {
     box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.4) inset;
@@ -783,7 +835,9 @@ a.boom-button {
     color: white; }
   .social-button:hover::after {
     transition: transform 0.45s ease-in-out;
-    transform: translateX(200%) rotate(35deg); }
+    transform: translateX(170%) rotate(5deg); }
+  .social-button:active, .social-button:focus {
+    color: white; }
 
 .small-social-button {
   margin: 5px;
@@ -795,9 +849,10 @@ a.boom-button {
     z-index: -1;
     background-color: rgba(255, 255, 255, 0.2);
     position: absolute;
-    top: -300%;
-    bottom: -90%;
+    top: -50%;
+    bottom: -300%;
     width: 5em;
+    left: 10%;
     transform: translateX(-400%) rotate(35deg); }
   .small-social-button:hover {
     box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.4) inset;
@@ -806,7 +861,9 @@ a.boom-button {
     color: white; }
   .small-social-button:hover::after {
     transition: transform 0.45s ease-in-out;
-    transform: translateX(200%) rotate(35deg); }
+    transform: translateX(170%) rotate(5deg); }
+  .small-social-button:active, .small-social-button:focus {
+    color: white; }
 
 #wpforms-submit-27551 {
   border-radius: 0.7rem;
@@ -814,7 +871,30 @@ a.boom-button {
   margin-bottom: 1rem;
   border: solid 2px white;
   color: white;
-  background-color: transparent; }
+  background-color: transparent;
+  z-index: 1;
+  position: relative;
+  overflow: hidden; }
+  #wpforms-submit-27551::after {
+    content: '';
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: -50%;
+    bottom: -300%;
+    width: 5em;
+    left: 10%;
+    transform: translateX(-400%) rotate(35deg); }
+  #wpforms-submit-27551:hover {
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.4) inset;
+    background-color: transparent;
+    cursor: pointer;
+    color: white; }
+  #wpforms-submit-27551:hover::after {
+    transition: transform 0.45s ease-in-out;
+    transform: translateX(170%) rotate(5deg); }
+  #wpforms-submit-27551:active, #wpforms-submit-27551:focus {
+    color: white; }
 
 #wpforms-27551-field_1,
 #wpforms-27551-field_0 {
@@ -860,7 +940,7 @@ a.boom-button {
     background-image: url(src/assets/img/arrow-slider.png);
     background-repeat: no-repeat; }
   .responsive .slick-dots li button::before {
-    font-size: 2rem;
+    font-size: 0.5rem;
     color: white; }
 
 .widget_text h5,
@@ -978,10 +1058,7 @@ footer a {
       margin-left: 20px; }
   /*Bigger  go to top button on tablet and desktop*/
   .top-link {
-    margin: 0 3em 3em 0;
-    /*Sets the icon size*/ }
-    .top-link i {
-      font-size: 2.5rem; } }
+    margin: 0 3em 3em 0; } }
 
 .clearfloat {
   font-size: 0px;
@@ -1018,11 +1095,17 @@ footer a {
   .img-right {
     right: 1rem; }
   .card-section {
-    min-height: 11.5rem; } }
+    min-height: 11.5rem; }
+  .slide {
+    height: 3px; } }
+
+.c-comments p {
+  font-size: 0.9rem; }
 
 .c-comments__title {
   margin: 1.5rem 0 0 0;
-  padding: 0.5rem 0.5rem 1rem 0; }
+  padding: 0.5rem 0.5rem 1rem 0;
+  font-size: 1.3rem !important; }
 
 .c-comments__list {
   list-style: none;
@@ -1031,23 +1114,27 @@ footer a {
     font-size: 100%;
     list-style: none; }
 
+.c-comments :target:before {
+  height: 20px; }
+
 .c-comment {
-  background-color: white;
-  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.05);
+  background-color: #EAEBEB;
+  box-shadow: 4px -4px 8px 0px rgba(0, 0, 0, 0.05);
   padding: rem-calc(20);
   position: relative; }
   .c-comment--child {
-    box-shadow: none;
-    border: 1px solid lightgrey; }
+    box-shadow: none; }
     .c-comment--child .c-comment__avatar {
-      width: 50px;
-      height: 50px;
+      width: 30px;
+      height: 30px;
       margin-right: rem-calc(15px); }
+    .c-comment--child article {
+      box-shadow: 4px -4px 8px 0px rgba(0, 0, 0, 0.05); }
   .c-comment .comment-respond {
     padding: 0.5rem;
     margin-bottom: 0.5rem; }
     .c-comment .comment-respond .comment-form .logged-in-as a {
-      color: black; }
+      color: #102126; }
     .c-comment .comment-respond .comment-form .logged-in-as a:hover {
       color: #3aa9e1; }
     .c-comment .comment-respond .comment-form .logged-in-as a:nth-child(2) {
@@ -1055,6 +1142,8 @@ footer a {
       margin-left: 0.5rem; }
     .c-comment .comment-respond .comment-form .logged-in-as a:hover {
       color: #eb5b27; }
+    .c-comment .comment-respond .comment-form .comment-form-comment label {
+      color: #102126; }
   .c-comment__reply-link {
     text-align: right; }
     .c-comment__reply-link a {
@@ -1071,32 +1160,35 @@ footer a {
     margin: 0.25rem;
     color: #3aa9e1;
     display: inline-block;
-    border-bottom: none; }
+    border-bottom: none;
+    font-size: 0.9rem; }
   .c-comment__body {
     display: flex; }
   .c-comment__avatar {
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
     margin: 0.5rem; }
   .c-comment__content {
     flex: 1;
     margin: 0.5rem; }
     .c-comment__content p {
-      color: black;
+      color: #102126;
       margin: 0.50rem 0.25rem 0.25rem 0.25rem; }
   .c-comment__author {
-    color: #000000;
+    color: #102126;
     font-weight: 600;
     font-size: rem-calc(20);
-    margin: 0.25rem; }
+    margin: 0.25rem;
+    font-family: "Fjalla One", sans-serif !important; }
     .c-comment__author a {
       color: inherit;
       border-bottom: none; }
 
 .comment-respond {
-  margin-top: 2rem; }
+  margin-top: 1rem; }
   .comment-respond .comment-reply-title {
-    padding: 0; }
+    padding: 0;
+    font-size: 1.3rem !important; }
     .comment-respond .comment-reply-title #cancel-comment-reply-link {
       color: #3aa9e1;
       font-size: 0.75em;
@@ -1112,17 +1204,42 @@ footer a {
   .comment-respond .comment-form .comment-form-url label {
     padding: 0.5rem 0 0.5rem 0; }
   .comment-respond .comment-form .form-submit {
-    margin-top: 0.75rem; }
+    margin-top: 0.75rem;
+    border-radius: 0.7rem;
+    padding: .5rem 1.5rem;
+    margin-bottom: 1rem;
+    border: solid 2px white;
+    background-color: transparent;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    display: inline-block; }
+    .comment-respond .comment-form .form-submit::after {
+      content: '';
+      z-index: -1;
+      background-color: rgba(255, 255, 255, 0.2);
+      position: absolute;
+      top: -50%;
+      bottom: -300%;
+      width: 5em;
+      left: 10%;
+      transform: translateX(-400%) rotate(35deg); }
+    .comment-respond .comment-form .form-submit:hover {
+      box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.4) inset;
+      background-color: transparent;
+      cursor: pointer;
+      color: white; }
+    .comment-respond .comment-form .form-submit:hover::after {
+      transition: transform 0.45s ease-in-out;
+      transform: translateX(170%) rotate(5deg); }
+    .comment-respond .comment-form .form-submit:active, .comment-respond .comment-form .form-submit:focus {
+      color: white; }
     .comment-respond .comment-form .form-submit input {
-      border-radius: 0.7rem;
-      padding: .5rem 1.5rem;
-      margin-bottom: 1rem;
-      border: solid 2px #535156;
-      color: #535156;
+      padding: 0;
+      margin-bottom: 0;
+      border: none;
+      color: white;
       background-color: transparent; }
-    .comment-respond .comment-form .form-submit input:hover {
-      border: solid 2px #3aa9e1;
-      color: #3aa9e1; }
 
 .top-link {
   transition: all 0.75s ease-in-out;
