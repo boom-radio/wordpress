@@ -1,11 +1,6 @@
 $(document).foundation();
 
 //BEGINNING OF JS FOR SCROLLING-STICKY TOP BAR
-// When the user scrolls the page, execute myFunction
-window.onscroll = function () {
-  myFunction();
-};
-
 // Get the header
 var navbar = document.getElementById("topBarContainer");
 
@@ -20,6 +15,13 @@ function myFunction() {
     navbar.classList.remove("sticky-navbar");
   }
 }
+
+// When the user scrolls the page, execute myFunction
+//I (ALEX) HAVE COMMENTED THE FOLLOWING EVENT LISTENER BECAUSE I ACHIEVIED THE STICKY NAV WITH JUST CSS (position: sticky;);
+//Please keep this code in case we need to switch back.
+//window.onscroll = function () {
+//  myFunction();
+//};
 //END OF JS FOR SCROLLING-STICKY TOP BAR
 
 //BEGINNING EXPLOSION ANIMATION FOR LOGO

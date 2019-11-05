@@ -1,5 +1,5 @@
 <!-- NAVIGATION BAR Content -->
-<div class="grid-container-fluid">
+<div class="grid-container-fluid sticky-nav">
     <div class="grid-x">
         <div class="cell">
             <div id="topBarContainer" class="top-bar-container">
