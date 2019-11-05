@@ -19,7 +19,7 @@ get_header(); ?>
 
 <!--Addition of some Foundation classes used in the prototype-->
 <div class="grid-container">
-    <div class="grid-x grid-padding-x align-center">
+    <div class="grid-x grid-padding-x grid-margin-x align-center">
         <div class="cell large-<?php echo is_active_sidebar('primary-sidebar') ? '9' : '12'; ?> shared">
             <!--------------------- Contact Form ------------------------------------>
             <!--Contact form-->

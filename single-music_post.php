@@ -20,9 +20,8 @@ get_header(); ?>
             <div class="grid-x grid-margin-x grid-margin-y align-center">
                 <!-- empty cell for spacing -->
                 <div class="cell"></div>
-                <?php
-                // Start the loop.
-                while (have_posts()) : the_post(); ?>
+                <!-- start the loop -->
+                <?php while (have_posts()) : the_post(); ?>
                     <?php get_template_part('template-parts/posts/gradboxsingle', get_post_format()); ?>
                 <?php endwhile; ?>
                 <?php get_template_part('template-parts/navigation/single_nav', get_post_format()); ?>

@@ -46,9 +46,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="cell shrink show-for-large">
+                                    <div class="shrink show-for-large">
                                         <div class="grid-container-fluid">
-                                            <div class="grid-x grid-margin-x align-justify align-middle">
+                                            <div class="grid-x align-justify align-middle">
                                                 <div class="cell shrink">
                                                     <iframe class="boomPlayer" src="https://tunein.com/embed/player/s195836/"></iframe>
                                                 </div>

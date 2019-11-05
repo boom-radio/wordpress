@@ -56,7 +56,6 @@ get_header(); ?>
             <p style="color: #FFF;"><?php _e('Sorry, no posts matched your criteria.'); ?></p>
         <?php endif; ?>
         <!-- End of the loop.-->
-        =
         <?php get_template_part('template-parts/content/terms', 'none'); ?>
     </div>
 </div>
