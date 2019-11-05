@@ -8,7 +8,9 @@
  * @since boom_radio 1.0
  */
 get_header(); ?>
-<h3>This is about</h3>
+<!--<h3>This is page-about</h3>-->
+<!--- Go to top button -->
+<?php get_template_part('template-parts/components/gototop', 'none'); ?>
 <!--Title with waves and page title -->
 <?php get_template_part('template-parts/content/title', 'none'); ?>
 

@@ -1,20 +1,22 @@
 .top-link {
-    transition: all .25s ease-in-out;
+    transition: all 0.75s ease-in-out;
     position: fixed;
     bottom: 0;
     right: 0;
     display: inline-flex;
-
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    margin: 0 3em 3em 0;
+    /*Remove margin for mobile only - replace in tablet/desktop
+    margin: 0 3em 3em 0;*/
     border-radius: 50%;
     padding: .25em;
-    width: 80px;
-    height: 80px;
-    background-color: $color-five;
+    /*Dimension for size of the circle around icon*/
+    width: 70px;
+    height: 70px;
+    /*background-color: $color-eight;*/
 
+    /*Styling for classess aplied by JS*/
     &.show {
         visibility: visible;
         opacity: 1;
@@ -25,18 +27,28 @@
         opacity: 0;
     }
 
-    object svg {
-        fill: #000;
-        width: 24px;
-        height: 12px;
+    /*Sets styling of circle round the icon*/
+    &:hover {
+        background-color: $color-nine;
     }
 
-    &:hover {
-        background-color: $color-six;
+    /*Ensures site styling does change colour of icon after use*/
+    &:after {
+        color: $color-white;
+    }
 
-        /*svg {
-            fill: $color-six;
-        }*/
+    &:focus {
+        color: $color-white;
+    }
+
+    /*Sets the icon size*/
+    i {
+        font-size: 2rem;
+    }
+
+    /*Icon can transition fo othe config colours*/
+    i:hover {
+        color: $color-six;
     }
 }
 
@@ -57,7 +69,8 @@
         display: block;
         top: 5px;
         left: 5px;
-        z-index: 100000; // Above WP toolbar
+        /*Keeps icon underneath WP toolbar, navbar and a anchor links*/
+        z-index: 100000;
         clip-path: none;
         background-color: $color-white;
         padding: 15px 23px 14px;

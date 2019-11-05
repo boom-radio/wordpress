@@ -10,7 +10,9 @@
 get_header();
 ?>
 
-<h3>This is index.php</h3>
+<!--<h3>This is index.php</h3>-->
+<!--- Go to top button -->
+<?php get_template_part('template-parts/components/gototop', 'none'); ?>
 <!--Set the latest search query variable and delivers it to the title-->
 <?php get_template_part('template-parts/components/results', get_post_format()); ?>
 
