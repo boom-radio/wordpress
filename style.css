@@ -212,10 +212,12 @@ html * {
 .title-bar {
   background: #0a0a0a; }
 
-.sticky-navbar {
-  position: fixed;
-  top: 0;
+.sticky-nav {
   width: 100%;
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 0;
   z-index: 100; }
 
 .close-button {
@@ -335,6 +337,9 @@ html * {
   src: url(//fonts.googleapis.com/css?family=Quicksand); }
 
 /*Styling for button 'glint' effect*/
+html {
+  scroll-behavior: smooth; }
+
 body {
   background: #102126;
   font-family: 'Quicksand-Regular', sans-serif; }
