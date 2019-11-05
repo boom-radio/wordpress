@@ -430,7 +430,9 @@ iframe {
 .boomPlayer {
   width: 100%;
   height: 100px;
-  margin: 6.5px 0 3px; }
+  margin: 0px auto;
+  border-radius: 5px;
+  opacity: 85%; }
 
 .instagram-media,
 #facebook {
@@ -674,6 +676,9 @@ div.md-tabs > .accordion > .accordion-item > .accordion-title:focus, .accordion-
   color: #eb5b27 !important;
   padding-top: 5px !important; }
 
+.wpforms-container textarea {
+  max-width: 60%; }
+
 #copyright {
   color: white;
   font-size: 0.75rem;
@@ -906,10 +911,6 @@ a.boom-button {
     transform: translateX(170%) rotate(5deg); }
   #wpforms-submit-27551:active, #wpforms-submit-27551:focus {
     color: white; }
-
-#wpforms-27551-field_1,
-#wpforms-27551-field_0 {
-  max-width: 100%; }
 
 .title-bar > .title-bar-left > div > div > form > input:hover,
 .search-input:hover {
@@ -1265,9 +1266,10 @@ footer a {
   border-radius: 50%;
   padding: .25em;
   /*Dimension for size of the circle around icon*/
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   /*background-color: $color-eight;*/
+  z-index: 100000;
   /*Styling for classess aplied by JS*/
   /*Sets styling of circle round the icon*/
   /*Ensures site styling does change colour of icon after use*/
