@@ -8,6 +8,14 @@
  * @since boom_radio 1.0
  */
 get_header(); ?>
+<h3>This is front page</h3>
+<!--Top of page button-->
+<a class="top-link hide" href="" id="js-top">
+    <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+
+    <span class="screen-reader-text">Back to top</span>
+</a>
+<!--End of Top of page button-->
 
 <!-----------------------CONTENT HERE-------------------------------------->
 <!-----------------------Start of Artist of the Month Section------------------------------------------>

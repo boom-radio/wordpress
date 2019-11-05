@@ -8,7 +8,7 @@
  * @since boom_radio 1.0
  */
 get_header(); ?>
-
+<h3>This is music</h3>
 <!-----------------------------Start of Artists Section---------------------------->
 <article class="grid-container">
     <!--Title with waves and page title -->

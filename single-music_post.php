@@ -9,7 +9,7 @@
  */
 
 get_header(); ?>
-<h3>The is single-music_post.php.php</h3>
+<h3>The is single-music_post.php</h3>
 <div class="grid-container">
     <div class="grid-x grid-margin-x grid-margin-y align-center">
         <!-- empty cell for spacing -->
