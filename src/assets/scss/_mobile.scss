@@ -320,7 +320,6 @@ div {
         /*to correct the space created by the fixer header height*/
     }
 }
-
 .accordion-content {
     padding: 0;
 }
@@ -378,6 +377,70 @@ div.md-tabs>.accordion>.accordion-item>.accordion-title:focus, .accordion-title:
 .md-tabs>.tabs>.tabs-title.is-active>a:hover {
     color: $color-white;
 }
+//to ensure all the sizes of the devices have the same design, for accordeon and tabs 
+.md-tabs {
+    background-color: $color-five;
+    text-align: center;
+
+    > {
+
+        .tabs {
+            margin: 0;
+            border: 0;
+            background: transparent;
+            list-style-type: none;
+            display: table;
+            width: 100%;
+
+            .cell {
+                padding: 5px;
+            }
+
+            >.tabs-title {
+                display: table-cell;
+                width: calc(100% / 3);
+                text-align: center;
+                display: inline-block;
+
+                &.is-active {
+                    >a {
+                        color: $color-white;
+                        @include gradient-three-four;
+                        outline: none;
+                    }
+
+                    &:nth-of-type(1)~.slide {
+                        left: calc((100% / 3) * 0);
+                    }
+
+                    &:nth-of-type(2)~.slide {
+                        left: calc((100% / 3) * 1);
+                    }
+
+                    &:nth-of-type(3)~.slide {
+                        left: calc((100% / 3) * 2);
+                    }
+                }
+
+                >a {
+                    color: $color-white;
+                    font-size: 16px;
+
+                    &:hover {
+                        color: $color-four;
+                        background-color: transparent;
+                    }
+
+                    &:focus {
+                        @include gradient-three-four;
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 .presenter {
     .wp-block-image img {

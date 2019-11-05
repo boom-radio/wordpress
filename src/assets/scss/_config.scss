@@ -40,7 +40,7 @@ $color-nav: rgba(10, 10, 10, 1); //#0a0a0a
 
 //Set media query mixins
 @mixin mediaSm {
-  @media screen and (max-width: 668px) {
+  @media screen and (max-width: 667px) {
     @content;
   }
 }
