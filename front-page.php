@@ -96,7 +96,7 @@ get_header(); ?>
                     'taxonomy' => 'category_news',
                     'field'    => 'slug',
                     //Album term id number in db
-                    'terms' =>  'sport'
+                    'terms' =>  array('sport', 'music news', 'politics', 'old posts', 'cinema')
                 )
             )
         ); ?>
