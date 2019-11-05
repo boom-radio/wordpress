@@ -11,11 +11,13 @@
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'side-menu',
-                        'menu_class' => 'menu vertical text-center'
-                    ));
+                        'menu_class' => 'multilevel-accordion-menu vertical menu text-center',
+                        'container_atts' => 'data-accordion-menu',
+                        'add_ul_class'  => 'your-class-name1 your-class-name-2'
+                        ));
                     ?>
                     <button class="close-button" aria-label="Close alert" type="button" data-close>
-                        <span aria-hidden="true">x</span>
+                        <img src="<?php echo esc_url(get_theme_file_uri('src/assets/img/icons/x.svg')); ?>" alt="close button" width="25px"></button>
                     </button>
                 </div>
                 <!-- Empty cell/s used  for spacing-->
