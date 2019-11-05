@@ -421,6 +421,12 @@ iframe {
 .list-group-item {
   margin-bottom: 1.5rem; }
 
+.wpforms-field-description {
+  color: white; }
+
+.contact-sidebar {
+  text-align: center; }
+
 .boomPlayer {
   width: 100%;
   height: 100px;
@@ -920,9 +926,6 @@ footer a {
   .feed,
   .twitter-feed iframe {
     width: 300px !important; }
-  /*Faecbook widget alignment to match other sm widgets on tablet only*/
-  .widget_simple_facebook_page_feed_widget div {
-    text-align: left !important; }
   /*Sets minimum height of excerpt for card*/
   .card-section {
     min-height: 13rem; }
@@ -1023,7 +1026,9 @@ footer a {
   .img-right {
     right: 1rem; }
   .card-section {
-    min-height: 11.5rem; } }
+    min-height: 11.5rem; }
+  .contact-sidebar {
+    text-align: left; } }
 
 .c-comments__title {
   margin: 1.5rem 0 0 0;

@@ -1,5 +1,5 @@
     <!-- Empty cell/s used  for spacing-->
-    <div class="cell"></div>
+    <!-- <div class="cell"></div> -->
     <!--------------------Start of Contact Form---------------->
     <div class="grid-container-fluid">
         <div class="grid-x grid-padding-x align-center">
