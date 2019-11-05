@@ -281,7 +281,13 @@ html * {
     border-color: white transparent transparent; }
 
 .multilevel-accordion-menu .menu > li:not(.menu-text) > a {
-  padding: 1rem 1rem; }
+  padding: 1rem 1rem !important; }
+
+.accordion-menu a {
+  padding: 1rem 1rem !important; }
+
+.accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
+  border-color: white transparent transparent; }
 
 .post-navigation {
   min-width: 28rem; }
