@@ -1,5 +1,5 @@
 <!-- NAVIGATION BAR Content -->
-<div class="grid-container-fluid">
+<div class="grid-container-fluid sticky-nav">
     <div class="grid-x">
         <div class="cell">
             <div id="topBarContainer" class="top-bar-container">
@@ -46,10 +46,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="cell large-4 show-for-large">
+                                    <div class="cell shrink show-for-large">
                                         <div class="grid-container-fluid">
                                             <div class="grid-x grid-margin-x align-justify align-middle">
-                                                <?php get_search_form(true); ?>
                                                 <div class="cell shrink">
                                                     <iframe class="boomPlayer" src="https://tunein.com/embed/player/s195836/"></iframe>
                                                 </div>

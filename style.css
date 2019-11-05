@@ -212,10 +212,12 @@ html * {
 .title-bar {
   background: #0a0a0a; }
 
-.sticky-navbar {
-  position: fixed;
-  top: 0;
+.sticky-nav {
   width: 100%;
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 0;
   z-index: 100; }
 
 .close-button {
@@ -335,6 +337,9 @@ html * {
   src: url(//fonts.googleapis.com/css?family=Quicksand); }
 
 /*Styling for button 'glint' effect*/
+html {
+  scroll-behavior: smooth; }
+
 body {
   background: #102126;
   font-family: 'Quicksand-Regular', sans-serif; }
@@ -415,6 +420,12 @@ iframe {
 
 .list-group-item {
   margin-bottom: 1.5rem; }
+
+.wpforms-field-description {
+  color: white; }
+
+.contact-sidebar {
+  text-align: center; }
 
 .boomPlayer {
   width: 100%;
@@ -995,9 +1006,6 @@ footer a {
   .feed,
   .twitter-feed iframe {
     width: 300px !important; }
-  /*Faecbook widget alignment to match other sm widgets on tablet only*/
-  .widget_simple_facebook_page_feed_widget div {
-    text-align: left !important; }
   /*Sets minimum height of excerpt for card*/
   .card-section {
     min-height: 13rem; }
@@ -1097,7 +1105,9 @@ footer a {
   .card-section {
     min-height: 11.5rem; }
   .slide {
-    height: 3px; } }
+    height: 3px; }
+  .contact-sidebar {
+    text-align: left; } }
 
 .c-comments p {
   font-size: 0.9rem; }

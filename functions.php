@@ -5,6 +5,8 @@
 require_once('lib/theme-support.php');
 require_once('lib/helpers.php');
 require_once('lib/enqueue-assets.php');
+//Login page stylesheet
+require_once('lib/login-style.php');
 require_once('lib/sidebars.php');
 require_once('lib/menus.php');
 require_once('lib/remove_posts.php');
