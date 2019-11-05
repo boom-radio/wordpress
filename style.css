@@ -465,6 +465,9 @@ iframe {
 .gradient-five-six {
   background-image: linear-gradient(to right, #fcab62, #eb5b27); }
 
+.grad-title {
+  font-size: 1.4rem; }
+
 .box-shadowed {
   -webkit-box-shadow: 5px 5px 0 rgba(16, 33, 38, 0.3);
   -moz-box-shadow: 5px 5px 0 rgba(16, 33, 38, 0.3);
@@ -975,7 +978,13 @@ footer a {
     float: right;
     max-width: 50%; }
     .presenter .wp-block-image img {
-      margin-left: 20px; } }
+      margin-left: 20px; }
+  /*Bigger  go to top button on tablet and desktop*/
+  .top-link {
+    margin: 0 3em 3em 0;
+    /*Sets the icon size*/ }
+    .top-link i {
+      font-size: 2.5rem; } }
 
 .clearfloat {
   font-size: 0px;
@@ -1119,6 +1128,73 @@ footer a {
     .comment-respond .comment-form .form-submit input:hover {
       border: solid 2px #3aa9e1;
       color: #3aa9e1; }
+
+.top-link {
+  transition: all 0.75s ease-in-out;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  /*Remove margin for mobile only - replace in tablet/desktop
+    margin: 0 3em 3em 0;*/
+  border-radius: 50%;
+  padding: .25em;
+  /*Dimension for size of the circle around icon*/
+  width: 70px;
+  height: 70px;
+  /*background-color: $color-eight;*/
+  /*Styling for classess aplied by JS*/
+  /*Sets styling of circle round the icon*/
+  /*Ensures site styling does change colour of icon after use*/
+  /*Sets the icon size*/
+  /*Icon can transition fo othe config colours*/ }
+  .top-link.show {
+    visibility: visible;
+    opacity: 1; }
+  .top-link.hide {
+    visibility: hidden;
+    opacity: 0; }
+  .top-link:hover {
+    background-color: #535156; }
+  .top-link:after {
+    color: white; }
+  .top-link:focus {
+    color: white; }
+  .top-link i {
+    font-size: 2rem; }
+  .top-link i:hover {
+    color: #eb5b27; }
+
+.screen-reader-text {
+  position: absolute;
+  clip-path: inset(50%);
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  word-wrap: normal !important;
+  clip: rect(1px, 1px, 1px, 1px); }
+  .screen-reader-text:focus {
+    display: block;
+    top: 5px;
+    left: 5px;
+    /*Keeps icon underneath WP toolbar, navbar and a anchor links*/
+    z-index: 100000;
+    clip-path: none;
+    background-color: white;
+    padding: 15px 23px 14px;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    line-height: normal;
+    color: #444;
+    font-size: 1em;
+    clip: auto !important; }
 
 /*@import '../../../node_modules/slick-carousel/slick/slick.scss';
 @import '../../../node_modules/slick-carousel/slick/slick-theme.scss';*/

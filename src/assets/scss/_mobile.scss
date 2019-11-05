@@ -206,6 +206,10 @@ iframe {
     @include gradient-five-six;
 }
 
+.grad-title {
+    font-size: 1.4rem;
+}
+
 //--------------------Setting variables for box shadows on about page boxes--------------------
 $box-shadow: 5px 5px 0 rgba($color-eight, 0.3);
 

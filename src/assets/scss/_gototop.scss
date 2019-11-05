@@ -1,0 +1,85 @@
+.top-link {
+    transition: all 0.75s ease-in-out;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    /*Remove margin for mobile only - replace in tablet/desktop
+    margin: 0 3em 3em 0;*/
+    border-radius: 50%;
+    padding: .25em;
+    /*Dimension for size of the circle around icon*/
+    width: 70px;
+    height: 70px;
+    /*background-color: $color-eight;*/
+
+    /*Styling for classess aplied by JS*/
+    &.show {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &.hide {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    /*Sets styling of circle round the icon*/
+    &:hover {
+        background-color: $color-nine;
+    }
+
+    /*Ensures site styling does change colour of icon after use*/
+    &:after {
+        color: $color-white;
+    }
+
+    &:focus {
+        color: $color-white;
+    }
+
+    /*Sets the icon size*/
+    i {
+        font-size: 2rem;
+    }
+
+    /*Icon can transition fo othe config colours*/
+    i:hover {
+        color: $color-six;
+    }
+}
+
+// Text meant only for screen readers.
+.screen-reader-text {
+    position: absolute;
+    clip-path: inset(50%);
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    word-wrap: normal !important;
+    clip: rect(1px, 1px, 1px, 1px);
+
+    &:focus {
+        display: block;
+        top: 5px;
+        left: 5px;
+        /*Keeps icon underneath WP toolbar, navbar and a anchor links*/
+        z-index: 100000;
+        clip-path: none;
+        background-color: $color-white;
+        padding: 15px 23px 14px;
+        width: auto;
+        height: auto;
+        text-decoration: none;
+        line-height: normal;
+        color: #444;
+        font-size: 1em;
+        clip: auto !important;
+    }
+}
