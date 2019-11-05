@@ -109,6 +109,16 @@ iframe {
     margin-bottom: 1.5rem;
 }
 
+//Setting color white for field's descriptions on WP-forms (originally dark grey)
+.wpforms-field-description {
+    color: $color-white;
+}
+
+//Centering text in the contact page sidebar on mobile and tablets
+.contact-sidebar {
+    text-align: center;
+}
+
 ///////////////////////////////////////////////////////END GENERALSTYLES////////////////////////////////////////////////////// 
 
 ///////////////////////////////////////////////////////BEGINNING BODY STYLES////////////////////////////////////////////////////// 
