@@ -96,7 +96,7 @@ get_header(); ?>
                     'taxonomy' => 'category_news',
                     'field'    => 'slug',
                     //Album term id number in db
-                    'terms' =>  'old-posts'
+                    'terms' =>  'sport'
                 )
             )
         ); ?>
@@ -136,7 +136,7 @@ get_header(); ?>
                     'taxonomy' => 'category_music',
                     'field'    => 'slug',
                     //Artists term id number in db
-                    'terms' =>  'Artists'
+                    'terms' =>  'album'
                 )
             )
         );
@@ -159,11 +159,11 @@ get_header(); ?>
         <?php endif; ?>
         <!------------------End Last post Music--------------------------->
 
-        <!--------------------- Start Last post Events--------------------------->
+        <!--------------------- Start Last post News - Breaking news--------------------------->
         <?php
         $args = array(
             //
-            'post_type' => 'music_post',
+            'post_type' => '',
             //Set maximum to three
             'post__in'            => get_option('sticky_posts'),
             'ignore_sticky_posts' => 1,
@@ -172,10 +172,10 @@ get_header(); ?>
             ),
             'tax_query' => array(
                 array(
-                    'taxonomy' => 'category_music',
+                    'taxonomy' => 'category_news',
                     'field'    => 'slug',
                     //Album term id number in db
-                    'terms' =>  'event'
+                    'terms' =>  'breaking news'
                 )
             )
         );
@@ -196,7 +196,7 @@ get_header(); ?>
         <?php else : ?>
             <p style="color: #FFF;"><?php _e('Sorry, no posts matched your criteria.'); ?></p>
         <?php endif; ?>
-        <!------------------End Last post Events--------------------------->
+        <!------------------End Last post News - Breaking News--------------------------->
     </div>
 </article>
 <div class="cell"></div>
@@ -259,7 +259,7 @@ get_header(); ?>
                         <div class="grid-container-fluid gradiented-box gradient-one-two">
                             <?php
                             $args = array(
-                                'post_type' => 'music_post',
+                                'post_type' => 'news',
                                 'posts_per_page'      => 1,
                                 'post__in'            => get_option('sticky_posts'),
                                 'ignore_sticky_posts' => 1,
@@ -268,9 +268,9 @@ get_header(); ?>
                                 ),
                                 'tax_query' => array(
                                     array(
-                                        'taxonomy' => 'category_music',
+                                        'taxonomy' => 'category_news',
                                         'field'    => 'slug',
-                                        'terms' =>  'event'
+                                        'terms' =>  'events'
                                     )
                                 )
                             ); ?>
