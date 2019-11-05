@@ -17,3 +17,15 @@ if (!function_exists('boom_radio_sidebar_widgets')) {
 }
 
 add_action('widgets_init', 'boom_radio_sidebar_widgets');
+
+//Function to get the post/page title and where the function is used, to create a class (pageTitle-whereUsed)
+//Variable $pageTitleString is filled by the "get_the_title() WP function
+function check_page_title_to_return_a_class($pageTitleString, $functionUsedWhere)
+{
+    //The following line of code breaks the string ($pageTitleString) into smaller strings (tokens -> $token)
+    $token = strtok($pageTitleString, " ");
+    //Lowercasing the strings created by the strtok function above
+    $pageTitleClass = strtolower($token);
+    //Echoing the constructed class
+    echo $pageTitleClass . '-' . $functionUsedWhere;
+}

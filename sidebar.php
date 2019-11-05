@@ -7,6 +7,6 @@
  * @subpackage boom_radio
  * @since Boom Radio 1.0
  */ ?>
-<div class="cell auto">
+<aside class="cell auto <?php check_page_title_to_return_a_class( get_the_title(), 'sidebar' ); ?>">
     <?php dynamic_sidebar('primary-sidebar') ?>
-</div>
+</aside>
