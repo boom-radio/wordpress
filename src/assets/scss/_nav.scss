@@ -43,12 +43,23 @@ $color-black: rgba(0, 0, 0, 0.9);
 
 }
 
-.sticky-navbar {
-    position: fixed;
-    top: 0;
+.sticky-nav {
     width: 100%;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
     z-index: 100;
 }
+
+//The following class is applied by JS to fix the top menu to the top, however I (Alex) have commented it because I achieved the same thing
+//just with css (class above, sticky-nav). You will find that the JS code in app.js is commented too.
+//Youtube tutorial followed: https://youtu.be/wWzaqAa9bf0
+// .sticky-navbar {
+//     position: fixed;
+//     top: 0;
+//     width: 100%;
+//     z-index: 100;
+// }
 
 // style x to close the off-canvas part
 .close-button {
@@ -62,6 +73,10 @@ $color-black: rgba(0, 0, 0, 0.9);
 //Mobile logo styles
 #mobile-logo {
     width: 150px;
+}
+
+#logo{
+    margin-right: 15px;
 }
 
 
@@ -120,9 +135,16 @@ $color-black: rgba(0, 0, 0, 0.9);
     }
 
     // padding for each list item
-    .menu>li:not(.menu-text)>a {
-        padding: 1rem 1rem;
+    .menu>li:not(.menu-text)>a{
+        padding: 1rem 1rem!important;
     }
+}
+.accordion-menu a{
+    padding: 1rem 1rem!important;
+}
+// arrow to open drop-down
+.accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after{
+    border-color:$color-white transparent transparent;
 }
 
 //Navigation on single post

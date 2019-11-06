@@ -5,6 +5,8 @@
 require_once('lib/theme-support.php');
 require_once('lib/helpers.php');
 require_once('lib/enqueue-assets.php');
+//Login page stylesheet
+require_once('lib/login-style.php');
 require_once('lib/sidebars.php');
 require_once('lib/menus.php');
 require_once('lib/remove_posts.php');
@@ -20,6 +22,8 @@ require_once('lib/posts_background_colour_function.php');
 require_once('lib/posts_image_paragraph_position_function.php');
 //Function to control html output of comments section
 require_once('lib/comment-callback.php');
+//Function to add class to drop-down menu in overlay
+require_once('lib/F6_drill_menu_walker.php');
 
 /*--- Custom sizes for card sections & gradient boxes stying, boolean true initiates cropping of images---*/
 function add_custom_sizes()

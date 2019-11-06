@@ -1,0 +1,91 @@
+/*Set the fonts*/
+@font-face {
+  font-family: "Fjalla One", sans-serif;
+  src: url(//fonts.googleapis.com/css?family=Fjalla+One);
+}
+
+@font-face {
+  font-family: "Quicksand-Regular", sans-serif;
+  src: url(//fonts.googleapis.com/css?family=Quicksand);
+}
+
+/*Set background image*/
+body.login {
+  background-image: url("../src/assets/img/perth_cbd.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-family: "Quicksand-Regular", sans-serif !important;
+}
+
+/*Set logo*/
+#login h1 a {
+  background-image: url("../src/assets/img/boom_favicon.svg");
+  background-size: 75px;
+}
+
+.login form {
+  padding: 20px;
+}
+
+/*Login form background*/
+#login {
+  background: #fff;
+  margin: 50px auto;
+  padding: 3rem 1rem;
+  width: 300px;
+  font-family: "Quicksand-Regular", sans-serif !important;
+}
+
+/*Form label styling*/
+.login label {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.login form .forgetmenot {
+  float: none;
+}
+
+/*Centre from links*/
+.login #backtoblog,
+.login #nav {
+  text-align: center;
+}
+
+#nav:hover,
+#backtoblog:hover {
+  color: #eb5b27;
+}
+
+#login form p.submit {
+  margin-top: 15px;
+}
+
+/*Control submit button styling*/
+.login.wp-core-ui .button-primary {
+  background: white;
+  border: 2px solid #eb5b27;
+  border-radius: 5px;
+  box-shadow: none;
+  color: black;
+  text-shadow: none;
+  float: none;
+  clear: both;
+  display: block;
+  width: 100%;
+  padding: 7px;
+  height: auto;
+  font-size: 15px;
+}
+
+.button-primary:hover {
+  color: white;
+  background: #eb5b27;
+}
+
+/*Error message border*/
+.login #login_error {
+  border-left-color: #eb5b27;
+}

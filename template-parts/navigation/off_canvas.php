@@ -12,8 +12,11 @@
                     wp_nav_menu(array(
                         'theme_location' => 'side-menu',
                         'menu_class' => 'multilevel-accordion-menu vertical menu text-center',
-                        'container_atts' => 'data-accordion-menu',
-                        'add_ul_class'  => 'your-class-name1 your-class-name-2'
+                        'container'      => false,
+                        'items_wrap'     => '<ul id="%1$s" class="%2$s" data-responsive-menu="drilldown medium-accordion">%3$s</ul>',
+                        //Recommend setting this to false, but if you need a fallback...
+                        'fallback_cb'    => 'false',
+                        'walker'         => new F6_drill_menu_walker()
                         ));
                     ?>
                     <button class="close-button" aria-label="Close alert" type="button" data-close>
