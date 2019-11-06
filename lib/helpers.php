@@ -55,21 +55,21 @@ add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 999);
  */
 
 //Excerpt link conditional loop for single post permalink formatting and styling
-// if (!function_exists('wpdocs_excerpt_more')) {
-//     function wpdocs_excerpt_more($more)
-//     {
-//         if (!is_single()) {
-//             $more = sprintf(
-//                 '<a class="read-more" href="%1$s">%2$s</a>',
-//                 get_permalink(get_the_ID()),
-//                 __('...more', 'boom_radio')
-//             );
-//         }
+if (!function_exists('wpdocs_excerpt_more')) {
+    function wpdocs_excerpt_more($more)
+    {
+        if (!is_single()) {
+            $more = sprintf(
+                '<a class="read-more" href="%1$s">%2$s</a>',
+                get_permalink(get_the_ID()),
+                __('', 'boom_radio')
+            );
+        }
 
-//         return $more;
-//     }
-// }
-//removed this function because we have already read more button
+        return $more;
+    }
+}
+
 
 add_filter('excerpt_more', 'wpdocs_excerpt_more');
 
