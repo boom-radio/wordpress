@@ -215,7 +215,7 @@ html * {
 .sticky-nav {
   width: 100%;
   position: -webkit-sticky;
-  /* Safari */
+  /*Safari*/
   position: sticky;
   top: 0;
   z-index: 100; }
@@ -1299,7 +1299,7 @@ footer a {
       background-color: transparent; }
 
 .top-link {
-  transition: all 0.75s ease-in-out;
+  transition: all 0.2s ease-in-out;
   position: fixed;
   bottom: 0;
   right: 0;
