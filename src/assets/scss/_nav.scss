@@ -75,6 +75,10 @@ $color-black: rgba(0, 0, 0, 0.9);
     width: 150px;
 }
 
+#logo{
+    margin-right: 15px;
+}
+
 
 //Dropdown styles
 .multilevel-accordion-menu {
@@ -131,9 +135,16 @@ $color-black: rgba(0, 0, 0, 0.9);
     }
 
     // padding for each list item
-    .menu>li:not(.menu-text)>a {
-        padding: 1rem 1rem;
+    .menu>li:not(.menu-text)>a{
+        padding: 1rem 1rem!important;
     }
+}
+.accordion-menu a{
+    padding: 1rem 1rem!important;
+}
+// arrow to open drop-down
+.accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after{
+    border-color:$color-white transparent transparent;
 }
 
 //Navigation on single post
