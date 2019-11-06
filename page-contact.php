@@ -132,6 +132,11 @@ get_header(); ?>
             </div>
             <!-------------------End of empty grid for spacing between contact details and map---------------------------->
 
+            <!---Title of the Second Section -->
+            <?php get_template_part('template-parts/components/waveleft', 'none'); ?>
+            <h3>Send us an Email</h3>
+            <?php get_template_part('template-parts/components/waveright', 'none'); ?>
+            
             <!--------------------- Contact Form ------------------------------------>
             <!--Contact form-->
             <?php get_template_part('template-parts/components/contactform', get_post_format()); ?>
