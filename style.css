@@ -14,6 +14,11 @@ Tags: responsive translation ready
    License: none (public domain)
 */
 /*Removed for accessibility guidleines iframe,*/
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 html,
 body,
 div,
@@ -162,8 +167,7 @@ html * {
   src: url(//fonts.googleapis.com/css?family=Fjalla+One); }
 
 @font-face {
-  font-family: 'Quicksand-Regular', sans-serif;
-  src: url(//fonts.googleapis.com/css?family=Quicksand); }
+  font-family: 'Raleway', sans-serif; }
 
 /*Styling for button 'glint' effect*/
 .clearfloat {
@@ -182,8 +186,7 @@ html * {
   src: url(//fonts.googleapis.com/css?family=Fjalla+One); }
 
 @font-face {
-  font-family: 'Quicksand-Regular', sans-serif;
-  src: url(//fonts.googleapis.com/css?family=Quicksand); }
+  font-family: 'Raleway', sans-serif; }
 
 /*Styling for button 'glint' effect*/
 .off-canvas {
@@ -342,8 +345,7 @@ html * {
   src: url(//fonts.googleapis.com/css?family=Fjalla+One); }
 
 @font-face {
-  font-family: 'Quicksand-Regular', sans-serif;
-  src: url(//fonts.googleapis.com/css?family=Quicksand); }
+  font-family: 'Raleway', sans-serif; }
 
 /*Styling for button 'glint' effect*/
 html {
@@ -351,7 +353,7 @@ html {
 
 body {
   background: #102126;
-  font-family: 'Quicksand-Regular', sans-serif; }
+  font-family: 'Raleway', sans-serif; }
 
 h1,
 h2,
@@ -388,8 +390,10 @@ h5 {
   font-size: 1.2rem;
   padding: 0.5em; }
 
-p {
-  font-size: 1rem; }
+p, li {
+  font-size: 1rem;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.4rem; }
 
 a {
   font-family: 'Fjalla One', sans-serif !important;
@@ -399,6 +403,8 @@ a {
     color: #eb5b27; }
   a i:hover {
     color: white; }
+  a:active, a:focus {
+    color: #3aa9e1; }
 
 .test {
   border: 1px solid blue; }
@@ -439,9 +445,7 @@ iframe {
 .boomPlayer {
   width: 100%;
   height: 100px;
-  margin: 0px auto;
-  border-radius: 5px;
-  opacity: 85%; }
+  margin: 0px auto; }
 
 .instagram-media,
 #facebook {
@@ -503,7 +507,7 @@ iframe {
 .card-section {
   background-color: #535156;
   color: white;
-  font-family: 'Quicksand-Regular', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 0.8rem;
   min-height: 13.25rem; }
   .card-section .bio div h2 {
@@ -523,7 +527,7 @@ iframe {
     padding-left: 0.5rem;
     margin-bottom: 0.5rem;
     font-size: 1rem;
-    min-height: 55px; }
+    min-height: 90px; }
 
 .list-group {
   list-style: disc;
@@ -684,7 +688,7 @@ div.md-tabs > .accordion > .accordion-item > .accordion-title:focus, .accordion-
 
 .wpforms-field-description {
   color: rgba(255, 255, 255, 0.7);
-  font-family: 'Quicksand-Regular', sans-serif; }
+  font-family: 'Raleway', sans-serif; }
 
 .wpforms-required-label {
   color: #eb5b27 !important; }
@@ -1013,10 +1017,12 @@ a.boom-button {
 .widget_categories h5 {
   display: none; }
 
-footer a {
+footer {
   color: #eb5b27; }
-  footer a:hover {
-    color: white; }
+  footer a {
+    color: #eb5b27; }
+    footer a:hover {
+      color: white; }
 
 .clearfloat {
   font-size: 0px;
@@ -1034,8 +1040,7 @@ footer a {
   src: url(//fonts.googleapis.com/css?family=Fjalla+One); }
 
 @font-face {
-  font-family: 'Quicksand-Regular', sans-serif;
-  src: url(//fonts.googleapis.com/css?family=Quicksand); }
+  font-family: 'Raleway', sans-serif; }
 
 /*Styling for button 'glint' effect*/
 @media screen and (min-width: 668px) {
@@ -1044,6 +1049,8 @@ footer a {
     display: block;
     height: 133px;
     /* fixed header height*/ }
+  .boomPlayer {
+    border-radius: 5px; }
   .attachment-card-style {
     display: block; }
   .icons {
@@ -1131,8 +1138,7 @@ footer a {
   src: url(//fonts.googleapis.com/css?family=Fjalla+One); }
 
 @font-face {
-  font-family: 'Quicksand-Regular', sans-serif;
-  src: url(//fonts.googleapis.com/css?family=Quicksand); }
+  font-family: 'Raleway', sans-serif; }
 
 /*Styling for button 'glint' effect*/
 @media screen and (min-width: 1024px) {
@@ -1140,7 +1146,7 @@ footer a {
     background-image: url(src/assets/img/BackHeader.png);
     height: 150px; }
   #logo {
-    width: 200px; }
+    width: 180px; }
   .img-left,
   .img-right {
     position: relative;

@@ -30,8 +30,8 @@ $color-nav: rgba(10, 10, 10, 1); //#0a0a0a
 }
 
 @font-face {
-  font-family: 'Quicksand-Regular', sans-serif;
-  src: url(//fonts.googleapis.com/css?family=Quicksand);
+font-family: 'Raleway', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 }
 
 @mixin title-font {

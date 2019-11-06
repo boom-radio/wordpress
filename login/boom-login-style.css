@@ -1,15 +1,11 @@
-/*Set the fonts
+/*Set the fonts*/
+
 @font-face {
   font-family: "Fjalla One", sans-serif;
-  src: url(//fonts.googleapis.com/css?family=Fjalla+One);
+  /* src: url('https://fonts.googleapis.com/css?family=Fjalla+One'); */
+  src: url('../src/assets/fonts/FjallaOne-Regular.ttf');
 }
 
-@font-face {
-  font-family: "Quicksand-Regular", sans-serif;
-  src: url(//fonts.googleapis.com/css?family=Quicksand);
-}
-
-@import url(//fonts.googleapis.com/css?family=Quicksand);*/
 
 /*Set background image*/
 body.login {
@@ -17,8 +13,9 @@ body.login {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-size: cover;
-  font-family: "Fjalla One", sans-serif;
+  background-size: cover;  
+  padding-top:50px;
+  box-sizing: border-box;
 }
 
 /*Set logo*/
@@ -34,10 +31,11 @@ body.login {
 /*Login form background*/
 #login {
   background: #fff;
-  margin: 50px auto;
+  margin: auto;
   padding: 1rem 1rem;
   width: 320px;
-  font-family: "Quicksand-Regular", sans-serif !important;
+  border-radius: 5px;
+  font-family: "Fjalla One", sans-serif;
 }
 
 /*Form label styling*/

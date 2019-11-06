@@ -23,9 +23,15 @@
     </div>
 </div>
 <div class="grid-x grid-margin-y align-center">
-    <div class="cell shrink text-center">
-        <ul class="menu text-center">
-            <li><a href="<?php echo esc_url(get_permalink(get_page_by_title('General Terms'))); ?>"><?php esc_html_e('Terms &amp; Conds', 'boom_radio'); ?></a></li>
+    <div class="row align-center align-middle">
+        <ul class="menu text-center cell shrink align-middle">
+            <li>
+                <a href="<?php echo esc_url(get_permalink(get_page_by_title('General Terms'))); ?>"><?php esc_html_e('Terms &amp; Conds', 'boom_radio'); ?></a>
+            </li>
+            <li class="site-title">&#x25CF;</li>
+            <li>
+                <a href="<?php echo esc_url( wp_login_url() ); ?>" alt="<?php esc_attr_e( 'Login', 'textdomain' ); ?>"><?php _e( 'Login', 'textdomain' ); ?></a>
+            </li>
         </ul>
     </div>
 </div>

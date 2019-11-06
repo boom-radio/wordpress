@@ -7,7 +7,7 @@ html {
 
 body {
     background: $color-eight;
-    font-family: 'Quicksand-Regular', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 h1,
@@ -51,8 +51,10 @@ h5 {
     padding: 0.5em;
 }
 
-p {
+p, li {
     font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.4rem;
 }
 
 a {
@@ -66,6 +68,9 @@ a {
 
     i:hover {
         color: $color-white;
+    }
+    &:active, &:focus{
+        color:$color-four;
     }
 }
 
@@ -127,8 +132,6 @@ iframe {
     width: 100%;
     height: 100px;
     margin: 0px auto;
-    border-radius:5px;
-    opacity: 85%;
 }
 
 //Instagram & Facebook feed styles on contact.html
@@ -240,7 +243,7 @@ $box-shadow: 5px 5px 0 rgba($color-eight, 0.3);
 .card-section {
     background-color: $color-nine;
     color: $color-white;
-    font-family: 'Quicksand-Regular', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 0.8rem;
     min-height: 13.25rem;
 
@@ -268,7 +271,7 @@ $box-shadow: 5px 5px 0 rgba($color-eight, 0.3);
         padding-left: 0.5rem;
         margin-bottom: 0.5rem;
         font-size: 1rem;
-        min-height: 55px;
+        min-height: 90px;
     }
 }
 
@@ -502,7 +505,7 @@ div.md-tabs>.accordion>.accordion-item>.accordion-title:focus, .accordion-title:
 
 .wpforms-field-description{
     color:rgba($color-white, 0.7);
-    font-family: 'Quicksand-Regular', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 .wpforms-required-label{
     color:$color-six!important;
@@ -683,6 +686,7 @@ a.boom-button {
 
 ///////////////////////////////////////////////////////BEGINNNING FOOTER STYLES/////////////////////////////////////////////// 
 footer {
+    color: $color-six;
     a {
         color: $color-six;
 
