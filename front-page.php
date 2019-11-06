@@ -11,70 +11,13 @@ get_header(); ?>
 <!-----------------------CONTENT HERE-------------------------------------->
 <!--<h3>This is front page</h3>-->
 <!--- Go to top button -->
-<?php get_template_part('template-parts/components/gototop', 'none'); ?>
-
-<!-----------------------Start of Artist of the Month Section------------------------------------------>
-<div class="grid-container">
-    <div class="grid-container" id="artist">
-        <div class="grid-x grid-padding-x grid-padding-y align-center content">
-            <!---Title of the Second Section -->
-            <?php get_template_part('template-parts/components/waveleft', 'none'); ?>
-            <h1>Artist of the Month</h1>
-            <?php get_template_part('template-parts/components/waveright', 'none'); ?>
-            <!-- Empty cell/s used  for spacing-->
-            <div class="cell"></div>
-
-            <!--wp query arg set for featured artist terms-->
-            <?php
-            $args = array(
-                'post_type' => 'music_post',
-                'posts_per_page'      => 1,
-                'post__in'            => get_option('sticky_posts'),
-                'ignore_sticky_posts' => 1,
-                'orderby'   => array(
-                    'date' => 'DESC',
-                ),
-                'tax_query' => array(
-                    array(
-                        'taxonomy' => 'category_music',
-                        'field'    => 'slug',
-                        'terms' =>  'featured-artist'
-                    )
-                )
-            ); ?>
-
-            <?php $the_query = new WP_Query($args); ?>
-
-            <!--Start of the Loop-->
-            <?php if ($the_query->have_posts()) :
-                //Set varibale for the loop to control amount of posts
-                ?>
-                <?php $i = 1; ?>
-                <?php while ($the_query->have_posts() && $i < 2) : $the_query->the_post(); ?>
-                    <!--Blue Gradient Box post-->
-                    <?php get_template_part('template-parts/posts/bluebox', get_post_format()); ?>
-
-                    <!--Add one to variable and reset global $post-->
-                    <?php $i++; ?>
-                <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>
-
-            <?php else : ?>
-                <p style="color: #FFF;"><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-            <?php endif; ?>
-            <!-- End of the loop.-->
-            <div class="cell"></div>
-            <div class="cell"></div>
-        </div>
-    </div>
-</div>
-<!------------------------End of Featured Artist Section-------------------------------->
-
+<?php get_template_part('template-parts/components/gototop', 'none');
+?>
 <!-----------------------Start of News Section------------------------------------------------------>
 <article class="grid-container">
     <!---Title of the Second Section -->
     <?php get_template_part('template-parts/components/waveleft', 'none'); ?>
-    <h3>News</h3>
+    <h1>News</h1>
     <?php get_template_part('template-parts/components/waveright', 'none'); ?>
 
     <!--Start of card section for maximum of three Artist posts-->
@@ -199,9 +142,65 @@ get_header(); ?>
         <!------------------End Last post News - Breaking News--------------------------->
     </div>
 </article>
-<div class="cell"></div>
 <!-----------------------End of News Section------------------------------------------------------>
 
+<!-----------------------Start of Artist of the Month Section------------------------------------------>
+<div class="grid-container">
+    <div class="grid-container" id="artist">
+        <div class="grid-x grid-padding-x grid-padding-y align-center content">
+            <div class="cell"></div>
+            <!---Title of the Second Section -->
+            <?php get_template_part('template-parts/components/waveleft', 'none'); ?>
+            <h3>Artist of the Month</h3>
+            <?php get_template_part('template-parts/components/waveright', 'none'); ?>
+            <!-- Empty cell/s used  for spacing-->
+            <div class="cell"></div>
+
+            <!--wp query arg set for featured artist terms-->
+            <?php
+            $args = array(
+                'post_type' => 'music_post',
+                'posts_per_page'      => 1,
+                'post__in'            => get_option('sticky_posts'),
+                'ignore_sticky_posts' => 1,
+                'orderby'   => array(
+                    'date' => 'DESC',
+                ),
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'category_music',
+                        'field'    => 'slug',
+                        'terms' =>  'featured-artist'
+                    )
+                )
+            ); ?>
+
+            <?php $the_query = new WP_Query($args); ?>
+
+            <!--Start of the Loop-->
+            <?php if ($the_query->have_posts()) :
+                //Set varibale for the loop to control amount of posts
+                ?>
+                <?php $i = 1; ?>
+                <?php while ($the_query->have_posts() && $i < 2) : $the_query->the_post(); ?>
+                    <!--Blue Gradient Box post-->
+                    <?php get_template_part('template-parts/posts/bluebox', get_post_format()); ?>
+
+                    <!--Add one to variable and reset global $post-->
+                    <?php $i++; ?>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+
+            <?php else : ?>
+                <p style="color: #FFF;"><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+            <?php endif; ?>
+            <!-- End of the loop.-->
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+    </div>
+</div>
+<!------------------------End of Featured Artist Section-------------------------------->
 <!------------------------Start of Social Section------------------------------>
 <div class="grid-container">
     <div class="grid-x grid-margin-x grid-margin-y align-center">
