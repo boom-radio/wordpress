@@ -19,7 +19,7 @@ get_header(); ?>
 <div class="grid-container">
     <div class="cell ">
         <div class="md-tabs">
-            <ul class="tabs" data-responsive-accordion-tabs="tabs small-accordion medium-tabs large-tabs" id="collapsing-tabs" data-allow-all-closed="true" data-multi-expand="true" data-deep-link="true">
+            <ul class="tabs" data-responsive-accordion-tabs="tabs small-accordion medium-tabs large-tabs" id="collapsing-tabs" data-allow-all-closed="true" data-multi-expand="false" data-deep-link="true">
                 <li class="tabs-title is-active"></span><a href="#big-breakfast"><i class="fas fa-microphone-alt"></i> BOOM's Big
                         Breakfast</a></li>
                 <li class="tabs-title"></span><a href="#drive-home"><i class="fas fa-microphone-alt"></i> The Drive Home</a>
@@ -120,7 +120,7 @@ get_header(); ?>
                         <?php endif; ?>
                     </div>
                 </div>
-                <div class="tabs-panel" id="speciality-show ">
+                <div class="tabs-panel" id="speciality-show">
                     <div class="grid-x grid-padding-x small-up-1 medium-up-2 large-up-4">
                         <?php
                         $args = array(

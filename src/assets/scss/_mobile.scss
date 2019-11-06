@@ -126,7 +126,9 @@ iframe {
 .boomPlayer {
     width: 100%;
     height: 100px;
-    margin: 0;
+    margin: 0px auto;
+    border-radius:5px;
+    opacity: 85%;
 }
 
 //Instagram & Facebook feed styles on contact.html
@@ -303,6 +305,9 @@ div {
 
     .tabs-panel {
         padding: 0;
+        p{
+            color:rgba($color-white, 0.7);
+        }
     }
 }
 
@@ -315,7 +320,6 @@ div {
         /*to correct the space created by the fixer header height*/
     }
 }
-
 .accordion-content {
     padding: 0;
 }
@@ -352,27 +356,91 @@ div.md-tabs {
     >.accordion> {
         .is-active.accordion-item>a.accordion-title {
             border-bottom: 4px solid $color-eight;
-            color: $color-black;
+            color: $color-eight;
         }
 
         .accordion-item>.accordion-content {
             display: none;
             border: 0px;
             background-color: #fefefe;
-            color: #0a0a0a;
+            color:rgba($color-white, 0.7);
         }
     }
 }
 
-div.md-tabs>.accordion>.accordion-item>.accordion-title:focus {
+div.md-tabs>.accordion>.accordion-item>.accordion-title:focus, .accordion-title:hover {
     background-color: $color-four;
-    color: $color-five;
+    color: $color-eight;
     outline: none;
 }
 
 .md-tabs>.tabs>.tabs-title.is-active>a:hover {
     color: $color-white;
 }
+//to ensure all the sizes of the devices have the same design, for accordeon and tabs 
+.md-tabs {
+    background-color: $color-five;
+    text-align: center;
+
+    > {
+
+        .tabs {
+            margin: 0;
+            border: 0;
+            background: transparent;
+            list-style-type: none;
+            display: table;
+            width: 100%;
+
+            .cell {
+                padding: 5px;
+            }
+
+            >.tabs-title {
+                display: table-cell;
+                width: calc(100% / 3);
+                text-align: center;
+                display: inline-block;
+
+                &.is-active {
+                    >a {
+                        color: $color-white;
+                        @include gradient-three-four;
+                        outline: none;
+                    }
+
+                    &:nth-of-type(1)~.slide {
+                        left: calc((100% / 3) * 0);
+                    }
+
+                    &:nth-of-type(2)~.slide {
+                        left: calc((100% / 3) * 1);
+                    }
+
+                    &:nth-of-type(3)~.slide {
+                        left: calc((100% / 3) * 2);
+                    }
+                }
+
+                >a {
+                    color: $color-white;
+                    font-size: 16px;
+
+                    &:hover {
+                        color: $color-four;
+                        background-color: transparent;
+                    }
+
+                    &:focus {
+                        @include gradient-three-four;
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 .presenter {
     .wp-block-image img {
@@ -383,7 +451,9 @@ div.md-tabs>.accordion>.accordion-item>.accordion-title:focus {
         padding-bottom: 15px;
     }
 }
-
+.blockquote p{
+    color:$color-six!important;
+}
 /*.contact {
     a {
         font-family: inherit !important;
@@ -430,6 +500,29 @@ div.md-tabs>.accordion>.accordion-item>.accordion-title:focus {
     padding: 5px;
 }
 
+.wpforms-field-description{
+    color:rgba($color-white, 0.7);
+    font-family: 'Quicksand-Regular', sans-serif;
+}
+.wpforms-required-label{
+    color:$color-six!important;
+}
+.wpforms-field-select{
+    font-family: 'Fjalla One', sans-serif!important;
+    font-size: 0.9rem;
+}
+.wpforms-submit{
+    @include button-hover;
+}
+.wpforms-error{
+    color:$color-six!important;
+    padding-top:5px!important;
+}
+
+
+.wpforms-container textarea{
+    max-width: 60%;
+}
 ///////////////////////////////////////////////////////END CONTACT STYLES////////////////////////////////////////////////////// 
 
 #copyright {
@@ -489,12 +582,13 @@ a.boom-button {
     border: solid 2px $color-white;
     color: $color-white;
     background-color: transparent;
+    @include button-hover;
 }
 
-#wpforms-27551-field_1,
-#wpforms-27551-field_0 {
-    max-width: 100%;
-}
+// #wpforms-27551-field_1,
+// #wpforms-27551-field_0 {
+//     max-width: 100%;
+// }
 
 //----------------------------Search form------------------------------
 .title-bar>.title-bar-left>div>div>form>input:hover,
@@ -559,7 +653,7 @@ a.boom-button {
     }
 
     .slick-dots li button::before {
-        font-size: 2rem;
+        font-size: 0.5rem;
         color: white;
     }
 }

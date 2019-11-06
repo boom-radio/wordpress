@@ -1,10 +1,13 @@
 ///////////////////////////////////////////////////////START COMMENT STYLES////////////////////////////////////////////////////// 
 //------------------Comment list including children-------------------------
 .c-comments {
+    p{
+        font-size:0.9rem;
+    }
     &__title {
         margin: 1.5rem 0 0 0;
         padding: 0.5rem 0.5rem 1rem 0;
-
+        font-size:1.3rem!important;
     }
 
     &__list {
@@ -16,12 +19,15 @@
             list-style: none;
         }
     }
+    :target:before {
+        height: 20px;
+    }
 }
 
 .c-comment {
-    background-color: $color-white;
+    background-color: #EAEBEB;
     //border: 1px solid $color-six;
-    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 4px -4px 8px 0px rgba(0, 0, 0, 0.05);
     padding: rem-calc(20);
     position: relative;
     $p: &;
@@ -29,12 +35,16 @@
     &--child {
         box-shadow: none;
         //border-color: $color-six;
-        border: 1px solid lightgrey;
+        //border: 1px solid lightgrey;
 
         #{$p}__avatar {
-            width: 50px;
-            height: 50px;
+            width: 30px;
+            height: 30px;
             margin-right: rem-calc(15px);
+        }
+        article{
+            box-shadow: 4px -4px 8px 0px rgba(0, 0, 0, 0.05);
+
         }
     }
 
@@ -45,7 +55,7 @@
         .comment-form {
 
             .logged-in-as a {
-                color: $color-black;
+                color: $color-eight;
             }
 
             .logged-in-as a:hover {
@@ -59,6 +69,9 @@
 
             .logged-in-as a:hover {
                 color: $color-six;
+            }
+            .comment-form-comment label{
+                color: $color-eight;
             }
         }
     }
@@ -91,6 +104,7 @@
         display: inline-block;
         //font-size: rem-calc(14);
         border-bottom: none;
+        font-size: 0.9rem;
     }
 
     &__body {
@@ -98,8 +112,8 @@
     }
 
     &__avatar {
-        width: 75px;
-        height: 75px;
+        width: 50px;
+        height: 50px;
         margin: 0.5rem;
     }
 
@@ -108,16 +122,17 @@
         margin: 0.5rem;
 
         p {
-            color: $color-black;
+            color: $color-eight;
             margin: 0.50rem 0.25rem 0.25rem 0.25rem;
         }
     }
 
     &__author {
-        color: #000000;
+        color: $color-eight;
         font-weight: 600;
         font-size: rem-calc(20);
         margin: 0.25rem;
+        font-family: 'Fjalla One', sans-serif!important;
 
         a {
             color: inherit;
@@ -128,10 +143,11 @@
 
 //--------------Comment response box and input-----------------
 .comment-respond {
-    margin-top: 2rem;
+    margin-top: 1rem;
 
     .comment-reply-title {
         padding: 0;
+        font-size:1.3rem!important;
 
         #cancel-comment-reply-link {
             color: $color-four;
@@ -167,23 +183,30 @@
 
         .form-submit {
             margin-top: 0.75rem;
+            border-radius: 0.7rem;
+            padding: .5rem 1.5rem;
+            margin-bottom: 1rem;
+            border: solid 2px $color-white;
+            background-color: transparent;
+            @include button-hover;
+            display: inline-block;
 
             input {
-                border-radius: 0.7rem;
-                padding: .5rem 1.5rem;
-                margin-bottom: 1rem;
-                border: solid 2px $color-nine;
-                color: $color-nine;
+            //     border-radius: 0.7rem;
+                padding: 0;
+                margin-bottom: 0;
+                border: none;
+                color: $color-white;
                 background-color: transparent;
-                //@include button-hover;
             }
 
-            input:hover {
-                border: solid 2px $color-four;
-                color: $color-four;
-            }
+            // input:hover {
+            //     border: solid 2px $color-white;
+            //     color: $color-white;
+            // }
         }
     }
+
 
 }
 

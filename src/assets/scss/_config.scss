@@ -8,7 +8,7 @@ $color-four: rgba(58, 169, 225, 1); //#3AA9E1
 $color-five: rgba(252, 171, 98, 1); //#FCAB62
 $color-six: rgba(235, 91, 39, 1); //#EB5B27
 $color-eight: rgba(16, 33, 38, 1); //#0A1417
-$color-nine: rgba(83, 81, 86, 1);
+$color-nine: rgba(83, 81, 86, 1); //#535156
 $color-nav: rgba(10, 10, 10, 1); //#0a0a0a
 
 .clearfloat {
@@ -40,7 +40,7 @@ $color-nav: rgba(10, 10, 10, 1); //#0a0a0a
 
 //Set media query mixins
 @mixin mediaSm {
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 667px) {
     @content;
   }
 }
@@ -248,9 +248,10 @@ $transform-scale: 0;
     z-index: -1;
     background-color: hsla(0, 0%, 100%, 0.2);
     position: absolute;
-    top: -300%;
-    bottom: -90%;
+    top: -50%;
+    bottom: -300%;
     width: 5em;
+    left:10%;
     transform: translateX(-400%) rotate(35deg);
   }
 
@@ -263,7 +264,11 @@ $transform-scale: 0;
 
   &:hover::after {
     transition: transform 0.45s ease-in-out;
-    transform: translateX(200%) rotate(35deg);
+    transform: translateX(170%) rotate(5deg);
+  }
+
+  &:active, &:focus{
+    color:$color-white;
   }
 
 }
