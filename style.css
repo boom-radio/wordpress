@@ -1017,12 +1017,10 @@ a.boom-button {
 .widget_categories h5 {
   display: none; }
 
-footer {
+footer a {
   color: #eb5b27; }
-  footer a {
-    color: #eb5b27; }
-    footer a:hover {
-      color: white; }
+  footer a:hover {
+    color: white; }
 
 .clearfloat {
   font-size: 0px;
