@@ -21,9 +21,6 @@ get_header(); ?>
 <div class="grid-container">
     <div class="grid-x grid-padding-x align-center">
         <div class="cell large-<?php echo is_active_sidebar('primary-sidebar') ? '9' : '12'; ?> shared">
-            <!--------------------- Contact Form ------------------------------------>
-            <!--Contact form-->
-            <?php get_template_part('template-parts/components/contactform', get_post_format()); ?>
 
             <!--------------------- Contact info section ---------------------------->
             <div class="grid-container-fluid">
@@ -134,6 +131,10 @@ get_header(); ?>
                 </div>
             </div>
             <!-------------------End of empty grid for spacing between contact details and map---------------------------->
+
+            <!--------------------- Contact Form ------------------------------------>
+            <!--Contact form-->
+            <?php get_template_part('template-parts/components/contactform', get_post_format()); ?>
 
             <!--------------------------Dynamic map---------------------------------->
             <?php get_template_part('template-parts/components/map', get_post_format()); ?>
