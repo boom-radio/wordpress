@@ -28,7 +28,7 @@
             <li>
                 <a href="<?php echo esc_url(get_permalink(get_page_by_title('General Terms'))); ?>"><?php esc_html_e('Terms &amp; Conds', 'boom_radio'); ?></a>
             </li>
-            <li class="site-title">&#x25CF;</li>
+            <li class="section-title">&#x25CF;</li>
             <li>
                 <a href="<?php echo esc_url( wp_login_url() ); ?>" alt="<?php esc_attr_e( 'Login', 'textdomain' ); ?>"><?php _e( 'Login', 'textdomain' ); ?></a>
             </li>
