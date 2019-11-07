@@ -30,13 +30,13 @@
             </li>
             <li class="section-title">&#x25CF;</li>
             <li>
-                <a href="<?php echo esc_url( wp_login_url() ); ?>" alt="<?php esc_attr_e( 'Login', 'textdomain' ); ?>"><?php _e( 'Login', 'textdomain' ); ?></a>
+                <a href="<?php echo esc_url(wp_login_url()); ?>" alt="<?php esc_attr_e('Login', 'boom_radio'); ?>"><?php _e('Login', 'boom_radio'); ?></a>
             </li>
         </ul>
     </div>
 </div>
 <div class="grid-x grid-margin-y align-center">
     <div class="cell text-center">
-        <small id="copyright">&copy; Boomradio 2019</small>
+        <small id="copyright">&copy; Boom Radio 2019</small>
     </div>
 </div>
