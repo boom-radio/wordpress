@@ -383,15 +383,18 @@ h3 {
 h4 {
   font-size: 1.2em;
   padding: 0.5em;
-  color: #102126;
+  color: #0a0a0a;
   text-align: center; }
 
 h5 {
   font-size: 1.2rem;
   padding: 0.5em; }
 
-p,
-li {
+h6 {
+  color: #102126;
+  padding-bottom: 0.5rem; }
+
+p,li {
   font-size: 1rem;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.4rem; }
@@ -405,7 +408,7 @@ a {
   a i:hover {
     color: white; }
   a:active, a:focus {
-    color: #3aa9e1; }
+    color: #3fc5be; }
 
 .test {
   border: 1px solid blue; }
@@ -610,9 +613,8 @@ div.md-tabs {
     background-color: #fefefe;
     color: rgba(255, 255, 255, 0.7); }
 
-div.md-tabs > .accordion > .accordion-item > .accordion-title:focus,
-.accordion-title:hover {
-  background-color: #3aa9e1;
+div.md-tabs > .accordion > .accordion-item > .accordion-title:focus, .accordion-title:hover {
+  background-color: #3fc5be;
   color: #102126;
   outline: none; }
 

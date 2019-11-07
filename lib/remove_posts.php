@@ -9,3 +9,6 @@ if (!function_exists('post_remove')) {
 }
 
 add_action('admin_menu', 'post_remove');   //adding action for triggering function call
+
+//hide the admin bar on Site
+add_filter('show_admin_bar', '__return_false');

@@ -42,13 +42,18 @@ h3 {
 h4 {
     font-size: 1.2em;
     padding: 0.5em;
-    color: $color-eight;
+    color: $color-nav;
     text-align: center;
 }
 
 h5 {
     font-size: 1.2rem;
     padding: 0.5em;
+}
+
+h6{
+    color:$color-eight;
+    padding-bottom: 0.5rem;
 }
 
 p,
@@ -71,9 +76,8 @@ a {
         color: $color-white;
     }
 
-    &:active,
-    &:focus {
-        color: $color-four;
+    &:active, &:focus{
+        color:$color-three;
     }
 }
 
@@ -394,7 +398,7 @@ div.md-tabs {
 
 div.md-tabs>.accordion>.accordion-item>.accordion-title:focus,
 .accordion-title:hover {
-    background-color: $color-four;
+    background-color: $color-three;
     color: $color-eight;
     outline: none;
 }

@@ -10,10 +10,11 @@
                 <div class="grid-container-fluid">
                     <div class="grid-x grid-padding-x grid-padding-y">
                         <div class="cell"></div>
-                        <div class="cell auto">
-                            <?php if (has_post_thumbnail()) : ?>
-                                <?php the_post_thumbnail('card', array('class' => 'box-shadowed')); ?>
-                            <?php endif; ?>
+                        <div class="cell text-justify">
+                            <h2>
+                                <?php the_title() ?>
+                            </h2>
+                            <?php the_content(); ?>
                             <!-- check if the custom field created with metabox is not empty before displaying the button-->
                             <?php
                             $fb_custom_field = get_post_meta($post->ID, 'mbp_insta', true); ?>
@@ -33,13 +34,6 @@
                                 <!--don't display Email button-->
                             <?php }
                             ?>
-                        </div>
-                        <div class="cell large-6 shared text-justify">
-                            <h2>
-                                <?php the_title() ?>
-                            </h2>
-                            <!--OR use the_content for full post, this can be split into template parts at the end;-->
-                            <?php the_content(); ?>
                         </div>
 
                     </div>
