@@ -64,7 +64,7 @@ if (!function_exists('boom_radio_admin_assets')) {
     {
         //Google Fonts Stylesheet
         wp_enqueue_style('fjalla_font_stylesheet', '//fonts.googleapis.com/css?family=Fjalla+One', false, '1.0.0', 'all');
-        wp_enqueue_style('quicksand_font_stylesheet', '//fonts.googleapis.com/css?family=Quicksand', false, '1.0.0', 'all');
+        wp_enqueue_style('open_sans_font_stylesheet', '//fonts.googleapis.com/css?family=Open+Sans', false, '1.0.0', 'all');
 
         //Main theme stylesheet
         //wp_enqueue_style('boom_radio_stylesheet', get_template_directory_uri() . '/style.css', array(), '1.0.0', 'all');
