@@ -14,14 +14,11 @@ Tags: responsive translation ready
    License: none (public domain)
 */
 /*Removed for accessibility guidleines iframe,*/
-<<<<<<< HEAD
-=======
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
->>>>>>> f6795a5053aa1fdabfb04b965ddf53ac9ab1a4c5
 html,
 body,
 div,
@@ -169,19 +166,8 @@ html * {
   font-family: 'Fjalla One', sans-serif;
   src: url("https://fonts.googleapis.com/css?family=Fjalla+One"); }
 
-/*
 @font-face {
-  font-family: 'Raleway', sans-serif;
-  @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-
-}*/
-@font-face {
-<<<<<<< HEAD
-  font-family: 'Quicksand-Regular', sans-serif;
-  src: url("https://fonts.googleapis.com/css?family=Quicksand"); }
-=======
   font-family: 'Open Sans', sans-serif; }
->>>>>>> f6795a5053aa1fdabfb04b965ddf53ac9ab1a4c5
 
 /*Styling for button 'glint' effect*/
 .clearfloat {
@@ -199,23 +185,12 @@ html * {
   font-family: 'Fjalla One', sans-serif;
   src: url("https://fonts.googleapis.com/css?family=Fjalla+One"); }
 
-/*
 @font-face {
-  font-family: 'Raleway', sans-serif;
-  @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-
-}*/
-@font-face {
-<<<<<<< HEAD
-  font-family: 'Quicksand-Regular', sans-serif;
-  src: url("https://fonts.googleapis.com/css?family=Quicksand"); }
-=======
   font-family: 'Open Sans', sans-serif; }
->>>>>>> f6795a5053aa1fdabfb04b965ddf53ac9ab1a4c5
 
 /*Styling for button 'glint' effect*/
 .off-canvas {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9) !important;
   width: 100%; }
 
 .off-canvas.is-transition-overlap {
@@ -369,19 +344,8 @@ html * {
   font-family: 'Fjalla One', sans-serif;
   src: url("https://fonts.googleapis.com/css?family=Fjalla+One"); }
 
-/*
 @font-face {
-  font-family: 'Raleway', sans-serif;
-  @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-
-}*/
-@font-face {
-<<<<<<< HEAD
-  font-family: 'Quicksand-Regular', sans-serif;
-  src: url("https://fonts.googleapis.com/css?family=Quicksand"); }
-=======
   font-family: 'Open Sans', sans-serif; }
->>>>>>> f6795a5053aa1fdabfb04b965ddf53ac9ab1a4c5
 
 /*Styling for button 'glint' effect*/
 html {
@@ -389,11 +353,7 @@ html {
 
 body {
   background: #102126;
-<<<<<<< HEAD
-  font-family: 'Quicksand-Regular', sans-serif !important; }
-=======
   font-family: 'Open Sans', sans-serif; }
->>>>>>> f6795a5053aa1fdabfb04b965ddf53ac9ab1a4c5
 
 h1,
 h2,
@@ -433,11 +393,7 @@ h5 {
 p,
 li {
   font-size: 1rem;
-<<<<<<< HEAD
-  font-family: 'Quicksand-Regular', sans-serif;
-=======
   font-family: 'Open Sans', sans-serif;
->>>>>>> f6795a5053aa1fdabfb04b965ddf53ac9ab1a4c5
   line-height: 1.4rem; }
 
 a {
@@ -563,11 +519,7 @@ iframe {
 .card-section {
   background-color: #535156;
   color: white;
-<<<<<<< HEAD
-  font-family: 'Quicksand-Regular', sans-serif;
-=======
   font-family: 'Open Sans', sans-serif;
->>>>>>> f6795a5053aa1fdabfb04b965ddf53ac9ab1a4c5
   font-size: 0.8rem;
   min-height: 13.25rem; }
   .card-section .bio div h2 {
@@ -750,11 +702,7 @@ div.md-tabs > .accordion > .accordion-item > .accordion-title:focus,
 
 .wpforms-field-description {
   color: rgba(255, 255, 255, 0.7);
-<<<<<<< HEAD
-  font-family: 'Quicksand-Regular', sans-serif; }
-=======
   font-family: 'Open Sans', sans-serif; }
->>>>>>> f6795a5053aa1fdabfb04b965ddf53ac9ab1a4c5
 
 .wpforms-required-label {
   color: #eb5b27 !important; }
@@ -1108,19 +1056,8 @@ footer a {
   font-family: 'Fjalla One', sans-serif;
   src: url("https://fonts.googleapis.com/css?family=Fjalla+One"); }
 
-/*
 @font-face {
-  font-family: 'Raleway', sans-serif;
-  @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-
-}*/
-@font-face {
-<<<<<<< HEAD
-  font-family: 'Quicksand-Regular', sans-serif;
-  src: url("https://fonts.googleapis.com/css?family=Quicksand"); }
-=======
   font-family: 'Open Sans', sans-serif; }
->>>>>>> f6795a5053aa1fdabfb04b965ddf53ac9ab1a4c5
 
 /*Styling for button 'glint' effect*/
 @media screen and (min-width: 668px) {
@@ -1217,19 +1154,8 @@ footer a {
   font-family: 'Fjalla One', sans-serif;
   src: url("https://fonts.googleapis.com/css?family=Fjalla+One"); }
 
-/*
 @font-face {
-  font-family: 'Raleway', sans-serif;
-  @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-
-}*/
-@font-face {
-<<<<<<< HEAD
-  font-family: 'Quicksand-Regular', sans-serif;
-  src: url("https://fonts.googleapis.com/css?family=Quicksand"); }
-=======
   font-family: 'Open Sans', sans-serif; }
->>>>>>> f6795a5053aa1fdabfb04b965ddf53ac9ab1a4c5
 
 /*Styling for button 'glint' effect*/
 @media screen and (min-width: 1024px) {
