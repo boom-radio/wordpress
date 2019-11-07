@@ -7,7 +7,7 @@ html {
 
 body {
     background: $color-eight;
-    font-family: 'Quicksand-Regular', sans-serif !important;
+    font-family: 'Open Sans', sans-serif;
 }
 
 h1,
@@ -54,7 +54,7 @@ h5 {
 p,
 li {
     font-size: 1rem;
-    font-family: 'Quicksand-Regular', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.4rem;
 }
 
@@ -81,10 +81,15 @@ a {
     border: 1px solid blue;
 }
 
+.orange {
+    color: $color-six;
+}
+
 //--------------Site wide title controller-----------------
 .section-title {
     color: $color-six;
     padding: 0.5rem;
+    min-height: 55px;
 }
 
 //--------------Site wide contact form controller------------
@@ -256,7 +261,7 @@ $box-shadow: 5px 5px 0 rgba($color-eight, 0.3);
 .card-section {
     background-color: $color-nine;
     color: $color-white;
-    font-family: 'Quicksand-Regular', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 0.8rem;
     min-height: 13.25rem;
 
@@ -285,6 +290,7 @@ $box-shadow: 5px 5px 0 rgba($color-eight, 0.3);
         margin-bottom: 0.5rem;
         font-size: 1rem;
         min-height: 90px;
+        text-align: left;
     }
 }
 
@@ -524,7 +530,7 @@ div.md-tabs>.accordion>.accordion-item>.accordion-title:focus,
 
 .wpforms-field-description {
     color: rgba($color-white, 0.7);
-    font-family: 'Quicksand-Regular', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .wpforms-required-label {

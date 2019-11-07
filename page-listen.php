@@ -61,7 +61,7 @@ get_header(); ?>
                                                         <img src="<?php the_post_thumbnail_url('card'); ?>" class="gradiented-box" />
                                                         </a>
                                                     <?php endif; ?>
-                                                    <?php the_content(); ?>
+                                                    <?php the_excerpt(); ?>
                                                     <?php boom_radio_card_link(); ?>
                                                 </div>
                                             </div>
@@ -107,8 +107,8 @@ get_header(); ?>
                                                         <img src="<?php the_post_thumbnail_url('card'); ?>" class="gradiented-box" />
                                                         </a>
                                                     <?php endif; ?>
-                                                    <?php the_content(); ?>
-                                                </div>
+                                                    <?php the_excerpt(); ?>
+                                                    <?php boom_radio_card_link(); ?>                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -152,8 +152,8 @@ get_header(); ?>
                                                         <img src="<?php the_post_thumbnail_url('card'); ?>" class="gradiented-box" />
                                                         </a>
                                                     <?php endif; ?>
-                                                    <?php the_content(); ?>
-                                                </div>
+                                                    <?php the_excerpt(); ?>
+                                                    <?php boom_radio_card_link(); ?>                                                </div>
                                             </div>
                                         </div>
                                     </div>
