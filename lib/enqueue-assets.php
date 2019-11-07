@@ -7,8 +7,8 @@ if (!function_exists('boom_radio_assets')) {
     {
 
         //Google Fonts Stylesheet
-        wp_enqueue_style('fjalla_font_stylesheet', '//fonts.googleapis.com/css?family=Fjalla+One', false, '1.0.0', 'all');
-        wp_enqueue_style('quicksand_font_stylesheet', '//fonts.googleapis.com/css?family=Quicksand', false, '1.0.0', 'all');
+        wp_enqueue_style('fjalla_font_stylesheet', 'https://fonts.googleapis.com/css?family=Fjalla+One', false, '1.0.0', 'all');
+        wp_enqueue_style('quicksand_font_stylesheet', 'https://fonts.googleapis.com/css?family=Quicksand', false, '1.0.0', 'all');
 
         //Slick carousel stylesheets and slick theme
         wp_enqueue_style('boom_radio_slick', get_template_directory_uri() . '/src/assets/vendor/slick/slick.css', array(), '1.0.0', 'all');

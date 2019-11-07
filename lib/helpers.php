@@ -81,3 +81,50 @@ function is_post_type($type)
         return true;
     return false;
 }
+
+
+//Error message handler for comments
+if (!function_exists('boom_comment_error')) {
+    function boom_comment_error($message, $title = '', $args = array())
+    {
+        $errorTemplate = get_theme_root() . '/' . get_template() . '/commenterror.php';
+        $defaults = array('response' => 500);
+        $r = wp_parse_args($args, $defaults);
+
+        $have_gettext = function_exists('__');
+
+        if (function_exists('is_wp_error') && is_wp_error($message)) {
+            if (empty($title)) {
+                $error_data = $message->get_error_data();
+                if (is_array($error_data) && isset($error_data['title']))
+                    $title = $error_data['title'];
+            }
+            $errors = $message->get_error_messages();
+            switch (count($errors)) {
+                case 0:
+                    $message = '';
+                    break;
+                case 1:
+                    $message = "<p>{$errors[0]}</p>";
+                    break;
+                default:
+                    $message = "<ul>\n\t\t<li>" . join("</li>\n\t\t<li>", $errors) . "\n\t";
+                    break;
+            }
+        } elseif (is_string($message)) {
+            $message = "<p>$message</p>";
+        }
+
+        require_once($errorTemplate);
+        die();
+    }
+}
+
+if (!function_exists('get_boom_comment_error')) {
+    function get_boom_comment_error()
+    {
+        return 'boom_comment_error';
+    }
+}
+
+add_filter('wp_die_handler', 'get_boom_comment_error');

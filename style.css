@@ -14,11 +14,6 @@ Tags: responsive translation ready
    License: none (public domain)
 */
 /*Removed for accessibility guidleines iframe,*/
-@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 html,
 body,
 div,
@@ -164,10 +159,17 @@ html * {
 
 @font-face {
   font-family: 'Fjalla One', sans-serif;
-  src: url(//fonts.googleapis.com/css?family=Fjalla+One); }
+  src: url("https://fonts.googleapis.com/css?family=Fjalla+One"); }
 
+/*
 @font-face {
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Raleway', sans-serif;
+  @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+}*/
+@font-face {
+  font-family: 'Quicksand-Regular', sans-serif;
+  src: url("https://fonts.googleapis.com/css?family=Quicksand"); }
 
 /*Styling for button 'glint' effect*/
 .clearfloat {
@@ -183,10 +185,17 @@ html * {
 
 @font-face {
   font-family: 'Fjalla One', sans-serif;
-  src: url(//fonts.googleapis.com/css?family=Fjalla+One); }
+  src: url("https://fonts.googleapis.com/css?family=Fjalla+One"); }
 
+/*
 @font-face {
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Raleway', sans-serif;
+  @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+}*/
+@font-face {
+  font-family: 'Quicksand-Regular', sans-serif;
+  src: url("https://fonts.googleapis.com/css?family=Quicksand"); }
 
 /*Styling for button 'glint' effect*/
 .off-canvas {
@@ -342,10 +351,17 @@ html * {
 
 @font-face {
   font-family: 'Fjalla One', sans-serif;
-  src: url(//fonts.googleapis.com/css?family=Fjalla+One); }
+  src: url("https://fonts.googleapis.com/css?family=Fjalla+One"); }
 
+/*
 @font-face {
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Raleway', sans-serif;
+  @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+}*/
+@font-face {
+  font-family: 'Quicksand-Regular', sans-serif;
+  src: url("https://fonts.googleapis.com/css?family=Quicksand"); }
 
 /*Styling for button 'glint' effect*/
 html {
@@ -353,7 +369,7 @@ html {
 
 body {
   background: #102126;
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Quicksand-Regular', sans-serif !important; }
 
 h1,
 h2,
@@ -390,9 +406,10 @@ h5 {
   font-size: 1.2rem;
   padding: 0.5em; }
 
-p, li {
+p,
+li {
   font-size: 1rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Quicksand-Regular', sans-serif;
   line-height: 1.4rem; }
 
 a {
@@ -441,6 +458,13 @@ iframe {
 
 .contact-sidebar {
   text-align: center; }
+
+#wpforms-confirmation-27551 {
+  background-image: linear-gradient(to right, #3fc5be, #3aa9e1); }
+
+.wpforms-confirmation-container-full {
+  border: none !important;
+  border-radius: 5px; }
 
 .boomPlayer {
   width: 100%;
@@ -507,7 +531,7 @@ iframe {
 .card-section {
   background-color: #535156;
   color: white;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Quicksand-Regular', sans-serif;
   font-size: 0.8rem;
   min-height: 13.25rem; }
   .card-section .bio div h2 {
@@ -597,7 +621,8 @@ div.md-tabs {
     background-color: #fefefe;
     color: rgba(255, 255, 255, 0.7); }
 
-div.md-tabs > .accordion > .accordion-item > .accordion-title:focus, .accordion-title:hover {
+div.md-tabs > .accordion > .accordion-item > .accordion-title:focus,
+.accordion-title:hover {
   background-color: #3aa9e1;
   color: #102126;
   outline: none; }
@@ -688,13 +713,13 @@ div.md-tabs > .accordion > .accordion-item > .accordion-title:focus, .accordion-
 
 .wpforms-field-description {
   color: rgba(255, 255, 255, 0.7);
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Quicksand-Regular', sans-serif; }
 
 .wpforms-required-label {
   color: #eb5b27 !important; }
 
 .wpforms-field-select {
-  font-family: "Fjalla One", sans-serif !important;
+  font-family: 'Fjalla One', sans-serif !important;
   font-size: 0.9rem; }
 
 .wpforms-submit {
@@ -1017,6 +1042,11 @@ a.boom-button {
 .widget_categories h5 {
   display: none; }
 
+#tag_cloud-6 h5 {
+  visibility: hidden;
+  height: 0;
+  padding: 2px; }
+
 footer a {
   color: #eb5b27; }
   footer a:hover {
@@ -1035,10 +1065,17 @@ footer a {
 
 @font-face {
   font-family: 'Fjalla One', sans-serif;
-  src: url(//fonts.googleapis.com/css?family=Fjalla+One); }
+  src: url("https://fonts.googleapis.com/css?family=Fjalla+One"); }
 
+/*
 @font-face {
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Raleway', sans-serif;
+  @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+}*/
+@font-face {
+  font-family: 'Quicksand-Regular', sans-serif;
+  src: url("https://fonts.googleapis.com/css?family=Quicksand"); }
 
 /*Styling for button 'glint' effect*/
 @media screen and (min-width: 668px) {
@@ -1133,10 +1170,17 @@ footer a {
 
 @font-face {
   font-family: 'Fjalla One', sans-serif;
-  src: url(//fonts.googleapis.com/css?family=Fjalla+One); }
+  src: url("https://fonts.googleapis.com/css?family=Fjalla+One"); }
 
+/*
 @font-face {
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Raleway', sans-serif;
+  @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+}*/
+@font-face {
+  font-family: 'Quicksand-Regular', sans-serif;
+  src: url("https://fonts.googleapis.com/css?family=Quicksand"); }
 
 /*Styling for button 'glint' effect*/
 @media screen and (min-width: 1024px) {
@@ -1158,7 +1202,12 @@ footer a {
   .slide {
     height: 3px; }
   .contact-sidebar {
-    text-align: left; } }
+    text-align: left; }
+  .bio p {
+    font-size: 0.95rem; }
+  p,
+  li {
+    font-size: 0.95rem; } }
 
 .c-comments p {
   font-size: 0.9rem; }
@@ -1240,7 +1289,7 @@ footer a {
     font-weight: 600;
     font-size: rem-calc(20);
     margin: 0.25rem;
-    font-family: "Fjalla One", sans-serif !important; }
+    font-family: 'Fjalla One', sans-serif !important; }
     .c-comment__author a {
       color: inherit;
       border-bottom: none; }
@@ -1301,6 +1350,9 @@ footer a {
       border: none;
       color: white;
       background-color: transparent; }
+
+.comment-notes {
+  color: white; }
 
 .top-link {
   transition: all 0.2s ease-in-out;
@@ -1369,6 +1421,3 @@ footer a {
     color: #444;
     font-size: 1em;
     clip: auto !important; }
-
-/*@import '../../../node_modules/slick-carousel/slick/slick.scss';
-@import '../../../node_modules/slick-carousel/slick/slick-theme.scss';*/
