@@ -20,11 +20,11 @@ get_header(); ?>
 <!--Addition of some Foundation classes used in the prototype-->
 <div class="grid-container">
     <div class="grid-x grid-padding-x grid-margin-x align-center">
-        <div class="cell large-<?php echo is_active_sidebar('primary-sidebar') ? '9' : '12'; ?> shared">
+        <div class="cell">
 
             <!--------------------- Contact info section ---------------------------->
             <div class="grid-container-fluid">
-                <div class="grid-x grid-padding-x grid-margin-x grid-margin-y gradiented-box gradient-five-six small-up-1 medium-up-2 info-container">
+                <div class="grid-x grid-margin-x grid-margin-y gradiented-box gradient-five-six small-up-1 medium-up-2 info-container">
                     <!-------------------- Start of the Address loop---------------------------->
                     <?php
                     $args = array(
@@ -131,24 +131,24 @@ get_header(); ?>
                 </div>
             </div>
             <!-------------------End of empty grid for spacing between contact details and map---------------------------->
-
-            <!---Title of the Second Section -->
-            <?php get_template_part('template-parts/components/waveleft', 'none'); ?>
-            <h3>Send us an Email</h3>
-            <?php get_template_part('template-parts/components/waveright', 'none'); ?>
-            
-            <!--------------------- Contact Form ------------------------------------>
-            <!--Contact form-->
-            <?php get_template_part('template-parts/components/contactform', get_post_format()); ?>
-
-            <!--------------------------Dynamic map---------------------------------->
-            <?php get_template_part('template-parts/components/map', get_post_format()); ?>
+            <div class="grid-x ">
+                <div class="cell large-7">    
+                    <!---Title of the Second Section -->
+                    <div class="grid-x grid-padding-y align-center align-middle">
+                        <div class="cell shrink text-right">
+                            <img src="<?php echo esc_html__(get_theme_file_uri('src/assets/img/wave_left.svg')); ?>" alt="wave left" width="80px">
+                        </div>
+                        <div class="cell shrink">                    
+                            <h3>Send us an Email</h3>
+                    <?php get_template_part('template-parts/components/waveright', 'none'); ?>
+                    <!--------------------- Contact Form ------------------------------------>
+                    <!--Contact form-->
+                    <?php get_template_part('template-parts/components/contactform', get_post_format()); ?>
+                </div>  
+                <!--------------------------Dynamic map---------------------------------->
+                <div class="cell large-5"><?php get_template_part('template-parts/components/map', get_post_format()); ?></div>
+            </div>
         </div>
-
-        <?php if (is_active_sidebar('primary-sidebar')) { ?>
-            <?php get_sidebar(); ?>
-        <?php } ?>
-
     </div>
 </div>
 

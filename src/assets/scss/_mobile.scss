@@ -136,15 +136,6 @@ iframe {
     text-align: center;
 }
 
-//Styles for confirmation messages sent from forms
-#wpforms-confirmation-27551 {
-    @include gradient-three-four;
-}
-
-.wpforms-confirmation-container-full {
-    border: none !important;
-    border-radius: 5px;
-}
 
 ///////////////////////////////////////////////////////END GENERALSTYLES////////////////////////////////////////////////////// 
 
@@ -531,10 +522,13 @@ div.md-tabs>.accordion>.accordion-item>.accordion-title:focus,
 ///////////////////////////////////////////////////////END LISTEN STYLES////////////////////////////////////////////////////// 
 
 ///////////////////////////////////////////////////////BEGINNING CONTACT STYLES///////////////////////////////////////////////
-.info-container li {
+.info-container {
+    max-width:900px;
+    margin:auto;
+    li {
     padding: 5px;
 }
-
+}
 .wpforms-field-description {
     color: rgba($color-white, 0.7);
     font-family: 'Open Sans', sans-serif;
@@ -558,9 +552,28 @@ div.md-tabs>.accordion>.accordion-item>.accordion-title:focus,
     padding-top: 5px !important;
 }
 
+//Styles for confirmation messages sent from forms
+#wpforms-confirmation-27551 {
+    @include gradient-three-four;
+}
 
+.wpforms-confirmation-container-full {
+    border: none !important;
+    border-radius: 5px;
+}
+
+div.wpforms-container-full .wpforms-form input.wpforms-field-medium, div.wpforms-container-full .wpforms-form select.wpforms-field-medium, div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-medium{
+    max-width:85%!important;
+}
+div.wpforms-container-full .wpforms-form input.wpforms-field-small, div.wpforms-container-full .wpforms-form select.wpforms-field-small, div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-small{
+    max-width:28%;
+}
 .wpforms-container textarea {
-    max-width: 60%;
+    max-width: 85%;
+}
+
+.wpgmza_map, #wpgmza_map{
+    margin-top: 130px;
 }
 
 ///////////////////////////////////////////////////////END CONTACT STYLES////////////////////////////////////////////////////// 
