@@ -405,7 +405,7 @@ a {
   a i:hover {
     color: white; }
   a:active, a:focus {
-    color: #3aa9e1; }
+    color: #3fc5be; }
 
 .test {
   border: 1px solid blue; }
@@ -496,6 +496,8 @@ iframe {
 
 .gradient-five-six {
   background-image: linear-gradient(to right, #fcab62, #eb5b27); }
+  .gradient-five-six a:hover {
+    color: #102126; }
 
 .grad-title {
   font-size: 1.4rem; }
@@ -598,7 +600,7 @@ div.md-tabs {
       background-image: linear-gradient(to right, #3fc5be, #3aa9e1);
       color: white; }
       div.md-tabs > .accordion > .accordion-item > .accordion-title:hover {
-        background-color: #3aa9e1;
+        background-color: #3fc5be;
         color: #0a0a0a;
         outline: none; }
   div.md-tabs > .accordion > .is-active.accordion-item > a.accordion-title {
@@ -612,7 +614,6 @@ div.md-tabs {
 
 div.md-tabs > .accordion > .accordion-item > .accordion-title:focus,
 .accordion-title:hover {
-  background-color: #3aa9e1;
   color: #102126;
   outline: none; }
 
@@ -650,7 +651,7 @@ div.md-tabs > .accordion > .accordion-item > .accordion-title:focus,
         color: white;
         font-size: 16px; }
         .md-tabs > .tabs > .tabs-title > a:hover {
-          color: #3aa9e1;
+          color: #3fc5be;
           background-color: transparent; }
         .md-tabs > .tabs > .tabs-title > a:focus {
           background-image: linear-gradient(to right, #3fc5be, #3aa9e1);
@@ -1122,7 +1123,7 @@ footer a {
           color: white;
           font-size: 16px; }
           .md-tabs > .tabs > .tabs-title > a:hover {
-            color: #3aa9e1;
+            color: #3fc5be;
             background-color: transparent; }
           .md-tabs > .tabs > .tabs-title > a:focus {
             background-image: linear-gradient(to right, #3fc5be, #3aa9e1);

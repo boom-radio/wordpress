@@ -73,7 +73,7 @@ a {
 
     &:active,
     &:focus {
-        color: $color-four;
+        color: $color-three;
     }
 }
 
@@ -231,6 +231,9 @@ iframe {
 
 .gradient-five-six {
     @include gradient-five-six;
+    a:hover{
+        color:$color-eight;
+    }
 }
 
 .grad-title {
@@ -370,7 +373,7 @@ div.md-tabs {
             color: $color-white;
 
             &:hover {
-                background-color: $color-four;
+                background-color: $color-three;
                 color: $color-nav;
                 outline: none;
             }
@@ -394,7 +397,7 @@ div.md-tabs {
 
 div.md-tabs>.accordion>.accordion-item>.accordion-title:focus,
 .accordion-title:hover {
-    background-color: $color-four;
+    //background-color: $color-four;
     color: $color-eight;
     outline: none;
 }
@@ -453,8 +456,8 @@ div.md-tabs>.accordion>.accordion-item>.accordion-title:focus,
                     font-size: 16px;
 
                     &:hover {
-                        color: $color-four;
-                        background-color: transparent;
+                        color: $color-three;
+                        background-color: transparent; 
                     }
 
                     &:focus {
