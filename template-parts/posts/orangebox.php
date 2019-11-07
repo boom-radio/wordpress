@@ -11,7 +11,7 @@
             <div class="grid-container-fluid">
                 <div class="grid-x grid-margin-x grid-margin-y grid-padding-x grid-padding-y">
                     <div class="cell text-justify">
-                        <a class="grad-title" href="<?php esc_url(the_permalink()) ?>" title="<?php esc_attr_e(the_title_attribute()) ?>"><?php esc_html_e(the_title()) ?></a>
+                        <h2><a class="grad-title" href="<?php esc_url(the_permalink()) ?>" title="<?php esc_attr_e(the_title_attribute()) ?>"></h2><?php esc_html_e(the_title()) ?></a>
                         <!--OR use the_content for full post, this can be split into template parts at the end;-->
                         <?php the_excerpt(); ?>
                     </div>

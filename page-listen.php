@@ -59,8 +59,13 @@ get_header(); ?>
                                                 <div class="entry-content">
                                                     <?php if (has_post_thumbnail()) : ?>
                                                         <img src="<?php the_post_thumbnail_url('card'); ?>" class="gradiented-box" />
-                                                        </a>
                                                     <?php endif; ?>
+                                                    <!-- check if the custom field date created with metabox is not empty before displaying-->
+                                                    <?php $date_custom_field = get_post_meta($post->ID, 'mbs_date', true); ?>
+                                                    <?php if ($date_custom_field) { ?>
+                                                        <h5><?php echo get_post_meta($post->ID, 'mbs_date', true); ?></h5>
+                                                    <?php
+                                                    } else {} ?> <!--don't display Date-->
                                                     <?php the_excerpt(); ?>
                                                     <?php boom_radio_card_link(); ?>
                                                 </div>
@@ -105,10 +110,16 @@ get_header(); ?>
                                                 <div class="entry-content">
                                                     <?php if (has_post_thumbnail()) : ?>
                                                         <img src="<?php the_post_thumbnail_url('card'); ?>" class="gradiented-box" />
-                                                        </a>
                                                     <?php endif; ?>
+                                                    <!-- check if the custom field date created with metabox is not empty before displaying-->
+                                                    <?php $date_custom_field = get_post_meta($post->ID, 'mbs_date', true); ?>
+                                                    <?php if ($date_custom_field) { ?>
+                                                        <h5><?php echo get_post_meta($post->ID, 'mbs_date', true); ?></h5>
+                                                    <?php
+                                                    } else {} ?> <!--don't display Date-->
                                                     <?php the_excerpt(); ?>
-                                                    <?php boom_radio_card_link(); ?>                                                </div>
+                                                    <?php boom_radio_card_link(); ?>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -150,10 +161,16 @@ get_header(); ?>
                                                 <div class="entry-content">
                                                     <?php if (has_post_thumbnail()) : ?>
                                                         <img src="<?php the_post_thumbnail_url('card'); ?>" class="gradiented-box" />
-                                                        </a>
                                                     <?php endif; ?>
+                                                    <!-- check if the custom field date created with metabox is not empty before displaying-->
+                                                    <?php $date_custom_field = get_post_meta($post->ID, 'mbs_date', true); ?>
+                                                    <?php if ($date_custom_field) { ?>
+                                                        <h5><?php echo get_post_meta($post->ID, 'mbs_date', true); ?></h5>
+                                                    <?php
+                                                    } else {} ?> <!--don't display Date-->
                                                     <?php the_excerpt(); ?>
-                                                    <?php boom_radio_card_link(); ?>                                                </div>
+                                                    <?php boom_radio_card_link(); ?>                                                
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

@@ -16,6 +16,14 @@
                         </div>
                         <div class="cell auto">
                             <?php esc_html_e(the_title('<h2>', '</h2>')); ?>
+                            <!-- check if there is a custom field metabox to display-->
+                            <?php
+                                $date_custom_field = get_post_meta($post->ID, 'mbs_date', true); ?>
+                                <?php if ($date_custom_field) { ?>
+                                    <h6><?php echo get_post_meta($post->ID, 'mbs_date', true); ?></h6>
+                                <?php
+                                } else {} ?>
+                                    <!--don't display Date title-->
                             <!--OR use the_content for full post, this can be split into template parts at the end;-->
                             <?php the_content(); ?>
                         </div>

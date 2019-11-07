@@ -60,9 +60,8 @@ if (!function_exists('wpdocs_excerpt_more')) {
     {
         if (!is_single()) {
             $more = sprintf(
-                '<a class="read-more" href="%1$s">%2$s</a>',
-                get_permalink(get_the_ID()),
-                __('', 'boom_radio')
+                '<span>%1$s</span>',
+                __('...', 'boom_radio')
             );
         }
 
@@ -81,3 +80,6 @@ function is_post_type($type)
         return true;
     return false;
 }
+
+//automatise plugins update
+add_filter( 'auto_update_plugin', '__return_true' );
