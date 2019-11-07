@@ -1,13 +1,14 @@
 ///////////////////////////////////////////////////////START COMMENT STYLES////////////////////////////////////////////////////// 
 //------------------Comment list including children-------------------------
 .c-comments {
-    p{
-        font-size:0.9rem;
+    p {
+        font-size: 0.9rem;
     }
+
     &__title {
         margin: 1.5rem 0 0 0;
         padding: 0.5rem 0.5rem 1rem 0;
-        font-size:1.3rem!important;
+        font-size: 1.3rem !important;
     }
 
     &__list {
@@ -19,6 +20,7 @@
             list-style: none;
         }
     }
+
     :target:before {
         height: 20px;
     }
@@ -42,7 +44,8 @@
             height: 30px;
             margin-right: rem-calc(15px);
         }
-        article{
+
+        article {
             box-shadow: 4px -4px 8px 0px rgba(0, 0, 0, 0.05);
 
         }
@@ -70,7 +73,8 @@
             .logged-in-as a:hover {
                 color: $color-six;
             }
-            .comment-form-comment label{
+
+            .comment-form-comment label {
                 color: $color-eight;
             }
         }
@@ -132,7 +136,7 @@
         font-weight: 600;
         font-size: rem-calc(20);
         margin: 0.25rem;
-        font-family: 'Fjalla One', sans-serif!important;
+        font-family: 'Fjalla One', sans-serif !important;
 
         a {
             color: inherit;
@@ -147,7 +151,7 @@
 
     .comment-reply-title {
         padding: 0;
-        font-size:1.3rem!important;
+        font-size: 1.3rem !important;
 
         #cancel-comment-reply-link {
             color: $color-four;
@@ -192,7 +196,7 @@
             display: inline-block;
 
             input {
-            //     border-radius: 0.7rem;
+                //     border-radius: 0.7rem;
                 padding: 0;
                 margin-bottom: 0;
                 border: none;
@@ -206,8 +210,10 @@
             // }
         }
     }
+}
 
-
+.comment-notes {
+    color: $color-white;
 }
 
 ///////////////////////////////////////////////////////END COMMENT STYLES////////////////////////////////////////////////////// 

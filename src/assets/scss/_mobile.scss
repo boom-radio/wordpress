@@ -56,7 +56,8 @@ h6{
     padding-bottom: 0.5rem;
 }
 
-p, li {
+p,
+li {
     font-size: 1rem;
     font-family: 'Open Sans', sans-serif;
     line-height: 1.4rem;
@@ -74,6 +75,7 @@ a {
     i:hover {
         color: $color-white;
     }
+
     &:active, &:focus{
         color:$color-three;
     }
@@ -82,14 +84,16 @@ a {
 .test {
     border: 1px solid blue;
 }
-.orange{
+
+.orange {
     color: $color-six;
 }
+
 //--------------Site wide title controller-----------------
 .section-title {
     color: $color-six;
     padding: 0.5rem;
-    min-height:55px;
+    min-height: 55px;
 }
 
 //--------------Site wide contact form controller------------
@@ -130,6 +134,16 @@ iframe {
 //Centering text in the contact page sidebar on mobile and tablets
 .contact-sidebar {
     text-align: center;
+}
+
+//Styles for confirmation messages sent from forms
+#wpforms-confirmation-27551 {
+    @include gradient-three-four;
+}
+
+.wpforms-confirmation-container-full {
+    border: none !important;
+    border-radius: 5px;
 }
 
 ///////////////////////////////////////////////////////END GENERALSTYLES////////////////////////////////////////////////////// 
@@ -280,7 +294,7 @@ $box-shadow: 5px 5px 0 rgba($color-eight, 0.3);
         margin-bottom: 0.5rem;
         font-size: 1rem;
         min-height: 90px;
-        text-align:left;
+        text-align: left;
     }
 }
 
@@ -317,8 +331,9 @@ div {
 
     .tabs-panel {
         padding: 0;
-        p{
-            color:rgba($color-white, 0.7);
+
+        p {
+            color: rgba($color-white, 0.7);
         }
     }
 }
@@ -332,6 +347,7 @@ div {
         /*to correct the space created by the fixer header height*/
     }
 }
+
 .accordion-content {
     padding: 0;
 }
@@ -375,12 +391,13 @@ div.md-tabs {
             display: none;
             border: 0px;
             background-color: #fefefe;
-            color:rgba($color-white, 0.7);
+            color: rgba($color-white, 0.7);
         }
     }
 }
 
-div.md-tabs>.accordion>.accordion-item>.accordion-title:focus, .accordion-title:hover {
+div.md-tabs>.accordion>.accordion-item>.accordion-title:focus,
+.accordion-title:hover {
     background-color: $color-three;
     color: $color-eight;
     outline: none;
@@ -389,6 +406,7 @@ div.md-tabs>.accordion>.accordion-item>.accordion-title:focus, .accordion-title:
 .md-tabs>.tabs>.tabs-title.is-active>a:hover {
     color: $color-white;
 }
+
 //to ensure all the sizes of the devices have the same design, for accordeon and tabs 
 .md-tabs {
     background-color: $color-five;
@@ -463,9 +481,11 @@ div.md-tabs>.accordion>.accordion-item>.accordion-title:focus, .accordion-title:
         padding-bottom: 15px;
     }
 }
-.blockquote p{
-    color:$color-six!important;
+
+.blockquote p {
+    color: $color-six !important;
 }
+
 /*.contact {
     a {
         font-family: inherit !important;
@@ -507,34 +527,39 @@ div.md-tabs>.accordion>.accordion-item>.accordion-title:focus, .accordion-title:
 
 ///////////////////////////////////////////////////////END LISTEN STYLES////////////////////////////////////////////////////// 
 
-///////////////////////////////////////////////////////BEGINNING CONTACT STYLES////////////////////////////////////////////////////// 
+///////////////////////////////////////////////////////BEGINNING CONTACT STYLES///////////////////////////////////////////////
 .info-container li {
     padding: 5px;
 }
 
-.wpforms-field-description{
-    color:rgba($color-white, 0.7);
+.wpforms-field-description {
+    color: rgba($color-white, 0.7);
     font-family: 'Open Sans', sans-serif;
 }
-.wpforms-required-label{
-    color:$color-six!important;
+
+.wpforms-required-label {
+    color: $color-six !important;
 }
-.wpforms-field-select{
-    font-family: 'Fjalla One', sans-serif!important;
+
+.wpforms-field-select {
+    font-family: 'Fjalla One', sans-serif !important;
     font-size: 0.9rem;
 }
-.wpforms-submit{
+
+.wpforms-submit {
     @include button-hover;
 }
-.wpforms-error{
-    color:$color-six!important;
-    padding-top:5px!important;
+
+.wpforms-error {
+    color: $color-six !important;
+    padding-top: 5px !important;
 }
 
 
-.wpforms-container textarea{
+.wpforms-container textarea {
     max-width: 60%;
 }
+
 ///////////////////////////////////////////////////////END CONTACT STYLES////////////////////////////////////////////////////// 
 
 #copyright {
@@ -689,6 +714,12 @@ a.boom-button {
     h5 {
         display: none;
     }
+}
+
+#tag_cloud-6 h5 {
+    visibility: hidden;
+    height: 0;
+    padding: 2px;
 }
 
 ///////////////////////////////////////////////////////END WIDGET STYLES////////////////////////////////////////////////////// 

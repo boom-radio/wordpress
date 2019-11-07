@@ -26,16 +26,17 @@ $color-nav: rgba(10, 10, 10, 1); //#0a0a0a
 //Set the fonts
 @font-face {
   font-family: 'Fjalla One', sans-serif;
-  src: url(//fonts.googleapis.com/css?family=Fjalla+One);
+  src: url('https://fonts.googleapis.com/css?family=Fjalla+One');
 }
 
 // @font-face {
 // font-family: 'Raleway', sans-serif;
 // @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 // }
+
 @font-face {
-font-family: 'Open Sans', sans-serif;
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+  font-family: 'Open Sans', sans-serif;
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 }
 
 @mixin title-font {
@@ -255,7 +256,7 @@ $transform-scale: 0;
     top: -50%;
     bottom: -300%;
     width: 5em;
-    left:10%;
+    left: 10%;
     transform: translateX(-400%) rotate(35deg);
   }
 
@@ -271,8 +272,9 @@ $transform-scale: 0;
     transform: translateX(170%) rotate(5deg);
   }
 
-  &:active, &:focus{
-    color:$color-white;
+  &:active,
+  &:focus {
+    color: $color-white;
   }
 
 }

@@ -164,7 +164,7 @@ html * {
 
 @font-face {
   font-family: 'Fjalla One', sans-serif;
-  src: url(//fonts.googleapis.com/css?family=Fjalla+One); }
+  src: url("https://fonts.googleapis.com/css?family=Fjalla+One"); }
 
 @font-face {
   font-family: 'Open Sans', sans-serif; }
@@ -183,14 +183,14 @@ html * {
 
 @font-face {
   font-family: 'Fjalla One', sans-serif;
-  src: url(//fonts.googleapis.com/css?family=Fjalla+One); }
+  src: url("https://fonts.googleapis.com/css?family=Fjalla+One"); }
 
 @font-face {
   font-family: 'Open Sans', sans-serif; }
 
 /*Styling for button 'glint' effect*/
 .off-canvas {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9) !important;
   width: 100%; }
 
 .off-canvas.is-transition-overlap {
@@ -342,7 +342,7 @@ html * {
 
 @font-face {
   font-family: 'Fjalla One', sans-serif;
-  src: url(//fonts.googleapis.com/css?family=Fjalla+One); }
+  src: url("https://fonts.googleapis.com/css?family=Fjalla+One"); }
 
 @font-face {
   font-family: 'Open Sans', sans-serif; }
@@ -394,7 +394,7 @@ h6 {
   color: #102126;
   padding-bottom: 0.5rem; }
 
-p, li {
+p,li {
   font-size: 1rem;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.4rem; }
@@ -449,6 +449,13 @@ iframe {
 
 .contact-sidebar {
   text-align: center; }
+
+#wpforms-confirmation-27551 {
+  background-image: linear-gradient(to right, #3fc5be, #3aa9e1); }
+
+.wpforms-confirmation-container-full {
+  border: none !important;
+  border-radius: 5px; }
 
 .boomPlayer {
   width: 100%;
@@ -703,7 +710,7 @@ div.md-tabs > .accordion > .accordion-item > .accordion-title:focus, .accordion-
   color: #eb5b27 !important; }
 
 .wpforms-field-select {
-  font-family: "Fjalla One", sans-serif !important;
+  font-family: 'Fjalla One', sans-serif !important;
   font-size: 0.9rem; }
 
 .wpforms-submit {
@@ -1026,6 +1033,11 @@ a.boom-button {
 .widget_categories h5 {
   display: none; }
 
+#tag_cloud-6 h5 {
+  visibility: hidden;
+  height: 0;
+  padding: 2px; }
+
 footer a {
   color: #eb5b27; }
   footer a:hover {
@@ -1044,7 +1056,7 @@ footer a {
 
 @font-face {
   font-family: 'Fjalla One', sans-serif;
-  src: url(//fonts.googleapis.com/css?family=Fjalla+One); }
+  src: url("https://fonts.googleapis.com/css?family=Fjalla+One"); }
 
 @font-face {
   font-family: 'Open Sans', sans-serif; }
@@ -1142,7 +1154,7 @@ footer a {
 
 @font-face {
   font-family: 'Fjalla One', sans-serif;
-  src: url(//fonts.googleapis.com/css?family=Fjalla+One); }
+  src: url("https://fonts.googleapis.com/css?family=Fjalla+One"); }
 
 @font-face {
   font-family: 'Open Sans', sans-serif; }
@@ -1167,7 +1179,12 @@ footer a {
   .card-section {
     min-height: 11.5rem; }
   .contact-sidebar {
-    text-align: left; } }
+    text-align: left; }
+  .bio p {
+    font-size: 0.95rem; }
+  p,
+  li {
+    font-size: 0.95rem; } }
 
 .c-comments p {
   font-size: 0.9rem; }
@@ -1249,7 +1266,7 @@ footer a {
     font-weight: 600;
     font-size: rem-calc(20);
     margin: 0.25rem;
-    font-family: "Fjalla One", sans-serif !important; }
+    font-family: 'Fjalla One', sans-serif !important; }
     .c-comment__author a {
       color: inherit;
       border-bottom: none; }
@@ -1310,6 +1327,9 @@ footer a {
       border: none;
       color: white;
       background-color: transparent; }
+
+.comment-notes {
+  color: white; }
 
 .top-link {
   transition: all 0.2s ease-in-out;
@@ -1378,6 +1398,3 @@ footer a {
     color: #444;
     font-size: 1em;
     clip: auto !important; }
-
-/*@import '../../../node_modules/slick-carousel/slick/slick.scss';
-@import '../../../node_modules/slick-carousel/slick/slick-theme.scss';*/
