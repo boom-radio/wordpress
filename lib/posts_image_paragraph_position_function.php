@@ -26,6 +26,8 @@ if (!function_exists('posts_image_paragraph_position')) {
         //$postContent = get_the_content();
         // Get the post excerpt and set it into the variable $postContent
         $postContent = get_the_excerpt();
+        // Get the post button and set it into the variable $postReadMoreButton
+        $postReadMoreButton = boom_radio_readmore_link();
 
         // Put the HTML for a left image and a right paragraph into the variable $imgLeftParagRight
         $imgLeftParagRight = '
@@ -39,6 +41,7 @@ if (!function_exists('posts_image_paragraph_position')) {
                                         <h2>' . $postTitle . '</h2>
                                     </div>
                                     <div class="cell text-justify">' . $postContent . '</div>
+                                    <div class="cell">' . $postReadMoreButton . '</div>
                                 </div>
                             </div>
                         </div>';
@@ -52,6 +55,7 @@ if (!function_exists('posts_image_paragraph_position')) {
                                         <h2>' . $postTitle . '</h2>
                                     </div>
                                     <div class="cell text-justify">' . $postContent . '</div>
+                                    <div class="cell">' . $postReadMoreButton . '</div>
                                 </div>
                             </div>
                         </div>
