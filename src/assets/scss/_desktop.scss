@@ -2,8 +2,10 @@
 
 @include mediaLg {
     header {
-        background-image: url(src/assets/img/BackHeader.png);
+        background-image: url(src/assets/img/BackHeader.gif);
         height: 150px;
+        opacity:30%;
+        background-size: cover;
     }
 
     //Setting variables for transition of the logo
@@ -41,9 +43,6 @@
 
     .card-section {
         min-height: 11.5rem;
-    }
-    .slide {
-        height: 3px;
     }
 
     //Aligning text on the left in the contact page sidebar on desktop
