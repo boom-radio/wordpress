@@ -131,26 +131,20 @@ get_header(); ?>
                 </div>
             </div>
             <!-------------------End of empty grid for spacing between contact details and map---------------------------->
-            <div class="grid-x ">
-                <div class="cell large-7">    
+            <div class="grid-container ">
+                <div class="grid-x grid-margin-x grid-margin-y shared">
                     <!---Title of the Second Section -->
-                    <div class="grid-x grid-padding-y align-center align-middle">
-                        <div class="cell shrink text-right">
-                            <img src="<?php echo esc_html__(get_theme_file_uri('src/assets/img/wave_left.svg')); ?>" alt="wave left" width="80px">
-                        </div>
-                        <div class="cell shrink">                    
-                            <h3>Send us an Email</h3>
-                    <?php get_template_part('template-parts/components/waveright', 'none'); ?>
-                    <!--------------------- Contact Form ------------------------------------>
-                    <!--Contact form-->
-                    <?php get_template_part('template-parts/components/contactform', get_post_format()); ?>
-                </div>  
-                <!--------------------------Dynamic map---------------------------------->
-                <div class="cell large-5"><?php get_template_part('template-parts/components/map', get_post_format()); ?></div>
+                    <div class="cell large-7">
+                        <!--------------------- Contact Form ------------------------------------>
+                        <!--Contact form-->
+                        <?php get_template_part('template-parts/components/contactform', get_post_format()); ?>
+                    </div>
+                    <!--------------------------Dynamic map---------------------------------->
+                    <div class="cell large-auto"><?php get_template_part('template-parts/components/map', get_post_format()); ?></div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<?php
-get_footer();
+    <?php
+    get_footer();
