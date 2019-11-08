@@ -51,8 +51,8 @@ h5 {
     padding: 0.5em;
 }
 
-h6{
-    color:$color-eight;
+h6 {
+    color: $color-eight;
     padding-bottom: 0.5rem;
 }
 
@@ -76,8 +76,9 @@ a {
         color: $color-white;
     }
 
-    &:active, &:focus{
-        color:$color-three;
+    &:active,
+    &:focus {
+        color: $color-three;
     }
 }
 
@@ -226,8 +227,9 @@ iframe {
 
 .gradient-five-six {
     @include gradient-five-six;
-    a:hover{
-        color:$color-eight;
+
+    a:hover {
+        color: $color-eight;
     }
 }
 
@@ -452,7 +454,7 @@ div.md-tabs>.accordion>.accordion-item>.accordion-title:focus,
 
                     &:hover {
                         color: $color-three;
-                        background-color: transparent; 
+                        background-color: transparent;
                     }
 
                     &:focus {
@@ -523,12 +525,14 @@ div.md-tabs>.accordion>.accordion-item>.accordion-title:focus,
 
 ///////////////////////////////////////////////////////BEGINNING CONTACT STYLES///////////////////////////////////////////////
 .info-container {
-    max-width:900px;
-    margin:auto;
+    max-width: 900px;
+    margin: auto;
+
     li {
-    padding: 5px;
+        padding: 5px;
+    }
 }
-}
+
 .wpforms-field-description {
     color: rgba($color-white, 0.7);
     font-family: 'Open Sans', sans-serif;
@@ -562,17 +566,24 @@ div.md-tabs>.accordion>.accordion-item>.accordion-title:focus,
     border-radius: 5px;
 }
 
-div.wpforms-container-full .wpforms-form input.wpforms-field-medium, div.wpforms-container-full .wpforms-form select.wpforms-field-medium, div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-medium{
-    max-width:85%!important;
+div.wpforms-container-full .wpforms-form input.wpforms-field-medium,
+div.wpforms-container-full .wpforms-form select.wpforms-field-medium,
+div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-medium {
+    max-width: 85% !important;
 }
-div.wpforms-container-full .wpforms-form input.wpforms-field-small, div.wpforms-container-full .wpforms-form select.wpforms-field-small, div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-small{
-    max-width:28%;
+
+div.wpforms-container-full .wpforms-form input.wpforms-field-small,
+div.wpforms-container-full .wpforms-form select.wpforms-field-small,
+div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-small {
+    max-width: 28%;
 }
+
 .wpforms-container textarea {
     max-width: 85%;
 }
 
-.wpgmza_map, #wpgmza_map{
+.wpgmza_map,
+#wpgmza_map {
     margin-top: 130px;
 }
 
