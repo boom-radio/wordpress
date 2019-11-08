@@ -14,6 +14,7 @@ get_header(); ?>
 <!--Title with waves and page title -->
 <?php get_template_part('template-parts/content/title', 'none'); ?>
 
+<!-- About Section -->
 <div class="grid-container">
     <div class="grid-x grid-margin-x grid-margin-y align-center">
         <?php
@@ -56,6 +57,25 @@ get_header(); ?>
             <p style="color: #FFF;"><?php _e('Sorry, no posts matched your criteria.'); ?></p>
         <?php endif; ?>
         <!-- End of the loop.-->
+        <?php //get_template_part('template-parts/content/terms', 'none'); 
+        ?>
+    </div>
+</div>
+
+<!-- Sponsors section -->
+<div class="grid-container">
+    <div class="grid-x grid-margin-x grid-margin-y align-center">
+        <div class="cell"></div>
+        <!-- Sponsors template part -->
+        <?php get_template_part('template-parts/content/supporters', 'none'); ?>
+    </div>
+</div>
+
+<!-- Terms & Conds section -->
+<div class="grid-container">
+    <div class="grid-x grid-margin-x grid-margin-y align-center">
+        <div class="cell"></div>
+        <!-- Terms template part -->
         <?php get_template_part('template-parts/content/terms', 'none'); ?>
     </div>
 </div>
