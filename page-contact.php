@@ -136,7 +136,7 @@ get_header(); ?>
             <?php get_template_part('template-parts/components/waveleft', 'none'); ?>
             <h3>Send us an Email</h3>
             <?php get_template_part('template-parts/components/waveright', 'none'); ?>
-            
+
             <!--------------------- Contact Form ------------------------------------>
             <!--Contact form-->
             <?php get_template_part('template-parts/components/contactform', get_post_format()); ?>

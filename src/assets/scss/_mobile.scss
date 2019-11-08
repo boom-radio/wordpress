@@ -51,8 +51,8 @@ h5 {
     padding: 0.5em;
 }
 
-h6{
-    color:$color-eight;
+h6 {
+    color: $color-eight;
     padding-bottom: 0.5rem;
 }
 
@@ -76,8 +76,9 @@ a {
         color: $color-white;
     }
 
-    &:active, &:focus{
-        color:$color-three;
+    &:active,
+    &:focus {
+        color: $color-three;
     }
 }
 
@@ -136,15 +137,6 @@ iframe {
     text-align: center;
 }
 
-//Styles for confirmation messages sent from forms
-#wpforms-confirmation-27551 {
-    @include gradient-three-four;
-}
-
-.wpforms-confirmation-container-full {
-    border: none !important;
-    border-radius: 5px;
-}
 
 ///////////////////////////////////////////////////////END GENERALSTYLES////////////////////////////////////////////////////// 
 
@@ -235,8 +227,9 @@ iframe {
 
 .gradient-five-six {
     @include gradient-five-six;
-    a:hover{
-        color:$color-eight;
+
+    a:hover {
+        color: $color-eight;
     }
 }
 
@@ -461,7 +454,7 @@ div.md-tabs>.accordion>.accordion-item>.accordion-title:focus,
 
                     &:hover {
                         color: $color-three;
-                        background-color: transparent; 
+                        background-color: transparent;
                     }
 
                     &:focus {
@@ -531,8 +524,13 @@ div.md-tabs>.accordion>.accordion-item>.accordion-title:focus,
 ///////////////////////////////////////////////////////END LISTEN STYLES////////////////////////////////////////////////////// 
 
 ///////////////////////////////////////////////////////BEGINNING CONTACT STYLES///////////////////////////////////////////////
-.info-container li {
-    padding: 5px;
+.info-container {
+    max-width: 900px;
+    margin: auto;
+
+    li {
+        padding: 5px;
+    }
 }
 
 .wpforms-field-description {
@@ -558,9 +556,35 @@ div.md-tabs>.accordion>.accordion-item>.accordion-title:focus,
     padding-top: 5px !important;
 }
 
+//Styles for confirmation messages sent from forms
+#wpforms-confirmation-27551 {
+    @include gradient-three-four;
+}
+
+.wpforms-confirmation-container-full {
+    border: none !important;
+    border-radius: 5px;
+}
+
+div.wpforms-container-full .wpforms-form input.wpforms-field-medium,
+div.wpforms-container-full .wpforms-form select.wpforms-field-medium,
+div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-medium {
+    max-width: 85% !important;
+}
+
+div.wpforms-container-full .wpforms-form input.wpforms-field-small,
+div.wpforms-container-full .wpforms-form select.wpforms-field-small,
+div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-small {
+    max-width: 28%;
+}
 
 .wpforms-container textarea {
-    max-width: 60%;
+    max-width: 85%;
+}
+
+.wpgmza_map,
+#wpgmza_map {
+    margin-top: 130px;
 }
 
 ///////////////////////////////////////////////////////END CONTACT STYLES////////////////////////////////////////////////////// 

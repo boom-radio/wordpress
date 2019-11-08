@@ -8,6 +8,11 @@ $color-black: rgba(0, 0, 0, 0.9);
     width: 100%;
 }
 
+//Delivers black background styling to mobile screens - overides standard
+.drilldown a {
+    background-color: $color-black;
+}
+
 .off-canvas.is-transition-overlap {
     z-index: 200;
 }
