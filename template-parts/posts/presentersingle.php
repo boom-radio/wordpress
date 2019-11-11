@@ -3,7 +3,6 @@
     $list = array('gradient-one-two', 'gradient-three-four', 'gradient-five-six'); ?>
     <?php $i = array_rand($list); ?>
     <?php $gradient = $list[$i]; ?>
-    ?>
     <div class="grid-container-fluid gradiented-box <?php echo $gradient ?>">
         <div class="grid-x grid-padding-x grid-padding-y align-spaced align-middle">
             <div class="cell medium-10">

@@ -9,19 +9,21 @@
  */
 get_header(); ?>
 <!--This is Page Sponsor template-->
-<!--- Go to top button -->
+<!-- Go to top button -->
 <?php get_template_part('template-parts/components/gototop', 'none'); ?>
-<!-----------------------Start of Sponsors Introduction Section------------------------------>
+<!--Start of Sponsors Introduction Section-->
 <div class="grid-container">
     <div class="grid-x grid-padding-x grid-padding-y align-center">
         <!--Title with waves and page title -->
-        <?php get_template_part('template-parts/content/title', 'none'); ?>
+        <div class="cell">
+            <?php get_template_part('template-parts/content/title', 'none'); ?>
+        </div>
         <!--Sponsors message-->
         <?php get_template_part('template-parts/content/sponsors', 'none'); ?>
     </div>
 </div>
 
-<!-----------------------------Start of Artists Section---------------------------->
+<!--Start of Artists Section-->
 <article class="grid-container">
     <!--Start of card section for maximum of three Artist posts-->
     <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3">
@@ -59,6 +61,6 @@ get_header(); ?>
     </div>
 </article>
 <div class="cell"></div>
-<!-----------------------------End of Sponsors Section------------------------------->
+<!--End of Sponsors Section-->
 <?php
 get_footer();

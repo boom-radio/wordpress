@@ -3,7 +3,8 @@
 
 <head>
     <?php wp_head(); ?>
-    <meta charset="<?php bloginfo('charset'); ?>">
+    <!--<meta charset="<?php //bloginfo('charset'); 
+                        ?>">-->
     <!--Lines 9-13 are taken from the Boom Radio Prototype meta-->
     <meta name="title" content="Boom Radio">
     <meta name="description" content="Home site for the TAFE Student Radio station based in Leederville, Perth. Plays all modern music genres and promotes locals artists and new music">

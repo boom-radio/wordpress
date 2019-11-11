@@ -77,6 +77,12 @@ $color-black: rgba(0, 0, 0, 0.9);
     }
 }
 
+//Nav bar orange icons open/close
+.main-nav-button,
+.close-button img {
+    width: 25px;
+}
+
 //Mobile logo styles
 #mobile-logo {
     width: 150px;

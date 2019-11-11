@@ -30,7 +30,7 @@
     background-color: #EAEBEB;
     //border: 1px solid $color-six;
     box-shadow: 4px -4px 8px 0px rgba(0, 0, 0, 0.05);
-    padding: rem-calc(20);
+    padding: 2px;
     position: relative;
     $p: &;
 
@@ -42,7 +42,7 @@
         #{$p}__avatar {
             width: 30px;
             height: 30px;
-            margin-right: rem-calc(15px);
+            margin-right: 5px;
         }
 
         article {
@@ -94,7 +94,7 @@
 
     &__edit-link {
         position: absolute;
-        top: 10px;
+        top: 25px;
         right: 10px;
 
         a {
@@ -106,7 +106,6 @@
         margin: 0.25rem;
         color: $color-four;
         display: inline-block;
-        //font-size: rem-calc(14);
         border-bottom: none;
         font-size: 0.9rem;
     }
@@ -133,8 +132,8 @@
 
     &__author {
         color: $color-eight;
-        font-weight: 600;
-        font-size: rem-calc(20);
+        font-weight: 500;
+        font-size: 1rem;
         margin: 0.25rem;
         font-family: 'Fjalla One', sans-serif !important;
 
