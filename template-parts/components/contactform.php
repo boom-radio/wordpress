@@ -1,6 +1,6 @@
     <!-- Empty cell/s used  for spacing-->
     <!-- <div class="cell"></div> -->
-    <!--------------------Start of Contact Form---------------->
+    <!--Start of Contact Form-->
     <div class="grid-container-fluid">
         <div class="grid-x grid-padding-x align-center">
             <div class="cell">
@@ -8,4 +8,4 @@
             </div>
         </div>
     </div>
-    <!--------------------End of Contact Form---------------->
+    <!--End of Contact Form-->

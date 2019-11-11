@@ -16,7 +16,7 @@ if (!function_exists('posts_image_paragraph_position')) {
             // Clean the URL and set the result into $thumbnail 
             $thumbnail = esc_url($featuredImgUrl);
         } else {
-            $thumbnail = get_bloginfo("template_url") . esc_html__('/src/assets/img/img-default.png', 'boom_radio');
+            $thumbnail = get_bloginfo("template_url") . esc_html__('/src/assets/img/img-default.png alt="Boom Logo"', 'boom_radio');
         }
 
 

@@ -8,12 +8,12 @@
  * @since boom_radio 1.0
  */
 get_header(); ?>
-<!-----------------------CONTENT HERE-------------------------------------->
+<!--CONTENT HERE-->
 <!--<h3>This is front page</h3>-->
 <!--- Go to top button -->
 <?php get_template_part('template-parts/components/gototop', 'none');
 ?>
-<!-----------------------Start of News Section------------------------------------------------------>
+<!--Start of News Section-->
 <article class="grid-container">
     <!---Title of the Second Section -->
     <?php get_template_part('template-parts/components/waveleft', 'none'); ?>
@@ -23,7 +23,7 @@ get_header(); ?>
     <!--Start of card section for maximum of three Artist posts-->
     <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3">
 
-        <!-----------------------------Start Last post News---------------------------------->
+        <!--Start Last post News-->
         <?php
         $args = array(
             //
@@ -61,9 +61,9 @@ get_header(); ?>
         <?php else : ?>
             <p style="color: #FFF;"><?php _e('Sorry, no posts matched your criteria.'); ?></p>
         <?php endif; ?>
-        <!---------------------End Last post News--------------------------->
+        <!--End Last post News-->
 
-        <!---------------------Last post Music--------------------------->
+        <!--Last post Music-->
         <?php
         $args = array(
             //
@@ -100,9 +100,9 @@ get_header(); ?>
         <?php else : ?>
             <p style="color: #FFF;"><?php _e('Sorry, no posts matched your criteria.'); ?></p>
         <?php endif; ?>
-        <!------------------End Last post Music--------------------------->
+        <!--End Last post Music-->
 
-        <!--------------------- Start Last post News - Breaking news--------------------------->
+        <!--Start Last post News - Breaking news-->
         <?php
         $args = array(
             //
@@ -139,12 +139,12 @@ get_header(); ?>
         <?php else : ?>
             <p style="color: #FFF;"><?php _e('Sorry, no posts matched your criteria.'); ?></p>
         <?php endif; ?>
-        <!------------------End Last post News - Breaking News--------------------------->
+        <!--End Last post News - Breaking News-->
     </div>
 </article>
-<!-----------------------End of News Section------------------------------------------------------>
+<!--End of News Section-->
 
-<!-----------------------Start of Artist of the Month Section------------------------------------------>
+<!--Start of Artist of the Month Section-->
 <div class="grid-container">
     <div class="grid-container" id="artist">
         <div class="grid-x grid-padding-x grid-padding-y align-center content">
@@ -200,8 +200,8 @@ get_header(); ?>
         </div>
     </div>
 </div>
-<!------------------------End of Featured Artist Section-------------------------------->
-<!------------------------Start of Social Section------------------------------>
+<!--End of Featured Artist Section-->
+<!--Start of Social Section-->
 <div class="grid-container">
     <div class="grid-x grid-margin-x grid-margin-y align-center">
 
@@ -212,7 +212,7 @@ get_header(); ?>
         <h3>Competition</h3>
         <?php get_template_part('template-parts/components/waveright', 'none'); ?>
 
-        <!-------------------------Start of competitions loop-------------------------->
+        <!--Start of competitions loop-->
         <div class="cell">
             <!--wp query arg set-->
             <?php
@@ -241,18 +241,18 @@ get_header(); ?>
             <?php else : ?>
                 <p style="color: #FFF;"><?php _e('Sorry, no posts matched your criteria.'); ?></p>
             <?php endif; ?>
-            <!------------------------ End of competition loop.---------------------------->
+            <!--End of competition loop.-->
         </div>
 
         <!-- Empty cell/s used  for spacing-->
         <div class="cell"></div>
         <div class="cell"></div>
 
-        <!---------------------------------Social section------------------------------->
+        <!--Social section-->
         <div class="cell">
             <article class="grid-container">
                 <div class="grid-x grid-margin-x">
-                    <!------------------------ Start of Events loop.---------------------------->
+                    <!--Start of Events loop.-->
                     <div class="cell large-8 shared" style="margin-bottom: 1rem">
                         <h3 class="text-center">Events</h3>
                         <div class="grid-container-fluid gradiented-box gradient-one-two">
@@ -290,12 +290,12 @@ get_header(); ?>
                             <?php endif; ?>
                         </div>
                     </div>
-                    <!------------------------ End of Events loop.---------------------------->
+                    <!--End of Events loop.-->
 
                     <!--Create space between cells in card section
                     <div class="cell show-for-small show-for-medium hide-for-large"><br></div>-->
 
-                    <!------------------------ Start of Social Schedule loop.---------------------------->
+                    <!-- Start of Social Schedule loop.-->
                     <div class="cell auto">
                         <h3 class="text-center">Shows</h3>
                         <?php
@@ -317,7 +317,7 @@ get_header(); ?>
 
 
                         <?php if ($the_query->have_posts()) : ?>
-                            <!--Robbo Set variable for the loop to control amount of posts-->
+                            <!--Set variable for the loop to control amount of posts-->
                             <?php $i = 1; ?>
                             <?php while ($the_query->have_posts() && $i < 2) : $the_query->the_post(); ?>
 
@@ -331,12 +331,12 @@ get_header(); ?>
                             <p style="color: #FFF;"><?php _e('Sorry, no posts matched your criteria.'); ?></p>
                         <?php endif; ?>
                     </div>
-                    <!------------------------ End of Social Schedule loop.---------------------------->
+                    <!--End of Social Schedule loop.-->
                 </div>
             </article>
         </div>
     </div>
 </div>
-<!-------------------------End of Social section------------------------------->
+<!--End of Social section-->
 <?php
 get_footer();

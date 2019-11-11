@@ -15,7 +15,7 @@
                                     </div>
                                     <!-- Empty cell/s used  for spacing  THIS CELL IS NEEDED TO CENTER THE logo -->
                                     <div class="cell small-1">
-                                        <button type="button" data-toggle="offCanvas"><img src="<?php echo esc_url(get_theme_file_uri('src/assets/img/icons/+.svg')); ?>" alt="plus button" width="25px"></button>
+                                        <button class="main-nav-button" type="button" data-toggle="offCanvas"><img src="<?php echo esc_url(get_theme_file_uri('src/assets/img/icons/+.svg')); ?>" alt="plus button"></button>
                                     </div>
                                 </div>
                             </div>

@@ -17,10 +17,10 @@
                         //Recommend setting this to false, but if you need a fallback...
                         'fallback_cb'    => 'false',
                         'walker'         => new F6_drill_menu_walker()
-                        ));
+                    ));
                     ?>
                     <button class="close-button" aria-label="Close alert" type="button" data-close>
-                        <img src="<?php echo esc_url(get_theme_file_uri('src/assets/img/icons/x.svg')); ?>" alt="close button" width="25px"></button>
+                        <img src="<?php echo esc_url(get_theme_file_uri('src/assets/img/icons/x.svg')); ?>" alt="close button">
                     </button>
                 </div>
                 <!-- Empty cell/s used  for spacing-->

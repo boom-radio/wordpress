@@ -17,8 +17,7 @@ if (!function_exists('boom_radio_assets')) {
         //REPLACED --- wp_enqueue_style('boom_radio-slick_theme', '//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css', false, '1.8.1', 'all');
 
         //Foundation CDN files
-        wp_enqueue_style('foundation_min_stylesheet', '//cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css', false, '6.5.3', 'all');
-        //DO NOT USE --- wp_enqueue_style('foundation_min_stylesheet', get_template_directory_uri() . '/src/assets/vendor/foundation/css/foundation.css', false, '6.5.3', 'all');
+        wp_enqueue_style('foundation_min_stylesheet', 'http://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css', false, '6.5.3', 'all');
 
         //Main theme stylesheet
         wp_enqueue_style('boom_radio_stylesheet', get_template_directory_uri() . '/style.css', false, '1.0.0', 'all');
@@ -34,12 +33,10 @@ if (!function_exists('boom_radio_assets')) {
         // Deregister the jquery-migrate version bundled with WordPress.
         wp_deregister_script('jquery-migrate');
         // CDN hosted jQuery migrate for compatibility with jQuery 3.x
-        wp_register_script('jquery-migrate', '//code.jquery.com/jquery-migrate-3.0.1.min.js', array('jquery'), '3.0.1', false);
+        wp_register_script('jquery-migrate', 'https://code.jquery.com/jquery-migrate-3.0.1.min.js', array('jquery'), '3.0.1', false);
 
         //Foundation scripts CDN
-        wp_enqueue_script('foundation_min_scripts', '//cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/js/foundation.min.js', array('jquery'), '6.5.3', true);
-        //DO NOT USE --- wp_enqueue_script('foundation_min_scripts', get_template_directory_uri() . '/src/assets/vendor/foundation/js/foundation.js', array('jquery'), '6.5.3', true);
-        //DO NOT USE --- wp_enqueue_script('foundation_min_scripts', get_template_directory_uri() . '/src/assets/vendor/foundation/js/what-input.js', array('jquery'), '6.5.3', true);
+        wp_enqueue_script('foundation_min_scripts', 'http://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/js/foundation.min.js', array('jquery'), '6.5.3', true);
 
         //Enqueues the scripts for the listen slick carousel
         wp_enqueue_script('boom_radio_slick_scripts', get_template_directory_uri() . '/src/assets/vendor/slick/slick.min.js', array('jquery'), '1.0.0', true);

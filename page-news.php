@@ -11,7 +11,7 @@ get_header();
 ?>
 
 <!--<h3>This is page-news.php</h3>-->
-<!--- Go to top button -->
+<!-- Go to top button -->
 <?php get_template_part('template-parts/components/gototop', 'none'); ?>
 <!--Set the latest search query variable and delivers it to the title-->
 <?php get_template_part('template-parts/components/results', get_post_format()); ?>
@@ -21,7 +21,7 @@ get_header();
         <div class="grid-x grid-padding-x grid-padding-y">
             <div class="cell"></div>
             <div class="cell large-<?php echo is_active_sidebar('primary-sidebar') ? '9' : '12'; ?> shared">
-                <!-----------------------Start of Sponsors Introduction Section------------------------------>
+                <!--Start of Sponsors Introduction Section-->
                 <div class="grid-container">
                     <div class="grid-x grid-padding-x grid-padding-y align-center">
                         <!--Title with waves and page title -->
@@ -29,7 +29,7 @@ get_header();
                     </div>
                 </div>
 
-                <!-----------------------------Start of Artists Section---------------------------->
+                <!--Start of Artists Section-->
                 <article class="grid-container">
                     <!--Start of card section for maximum of three Artist posts-->
                     <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-2">

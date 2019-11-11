@@ -9,13 +9,13 @@
  */
 get_header(); ?>
 <!--<h3>This is listen</h3>-->
-<!-----------CONTENT HERE---------------->
-<!--- Go to top button -->
+<!--CONTENT HERE-->
+<!--Go to top button-->
 <?php get_template_part('template-parts/components/gototop', 'none'); ?>
 <!--Title with waves and page title -->
 <?php get_template_part('template-parts/content/title', 'none'); ?>
 
-<!-- TABS MULTI CONTENT : RADIO SHOWS - CATEGORY SHOWS-->
+<!--TABS MULTI CONTENT : RADIO SHOWS - CATEGORY SHOWS-->
 <div class="grid-container">
     <div class="cell ">
         <div class="md-tabs">
@@ -65,7 +65,8 @@ get_header(); ?>
                                                     <?php if ($date_custom_field) { ?>
                                                         <h5><?php echo get_post_meta($post->ID, 'mbs_date', true); ?></h5>
                                                     <?php
-                                                    } else {} ?> <!--don't display Date-->
+                                                            } else { } ?>
+                                                    <!--don't display Date-->
                                                     <?php the_excerpt(); ?>
                                                     <?php boom_radio_card_link(); ?>
                                                 </div>
@@ -116,7 +117,8 @@ get_header(); ?>
                                                     <?php if ($date_custom_field) { ?>
                                                         <h5><?php echo get_post_meta($post->ID, 'mbs_date', true); ?></h5>
                                                     <?php
-                                                    } else {} ?> <!--don't display Date-->
+                                                            } else { } ?>
+                                                    <!--don't display Date-->
                                                     <?php the_excerpt(); ?>
                                                     <?php boom_radio_card_link(); ?>
                                                 </div>
@@ -167,9 +169,10 @@ get_header(); ?>
                                                     <?php if ($date_custom_field) { ?>
                                                         <h5><?php echo get_post_meta($post->ID, 'mbs_date', true); ?></h5>
                                                     <?php
-                                                    } else {} ?> <!--don't display Date-->
+                                                            } else { } ?>
+                                                    <!--don't display Date-->
                                                     <?php the_excerpt(); ?>
-                                                    <?php boom_radio_card_link(); ?>                                                
+                                                    <?php boom_radio_card_link(); ?>
                                                 </div>
                                             </div>
                                         </div>

@@ -30,7 +30,7 @@
             </li>
             <li class="orange">&#x25CF;</li>
             <li>
-                <a href="<?php echo esc_url(wp_login_url()); ?>" alt="<?php esc_attr_e('Login', 'boom_radio'); ?>"><?php _e('Login', 'boom_radio'); ?></a>
+                <a href="<?php echo esc_url(wp_login_url()); ?>"><?php _e('Login', 'boom_radio'); ?></a>
             </li>
         </ul>
     </div>

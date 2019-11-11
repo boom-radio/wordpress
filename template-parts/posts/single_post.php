@@ -3,7 +3,7 @@
         <?php if (has_post_thumbnail()) { ?>
             <?php the_post_thumbnail('card_single'); ?>
         <?php } else { ?>
-            <?php echo '<img style="width: 100%;" src="' . esc_url(get_bloginfo("template_url")) . '/src/assets/img/img-default.png"/>'; ?>
+            <?php echo '<img style="width: 100%;" src="' . esc_url(get_bloginfo("template_url")) . '/src/assets/img/img-default.png" alt="Boom Logo"/>'; ?>
         <?php } ?>
         <div class="card-section card-single">
             <div class="bio">

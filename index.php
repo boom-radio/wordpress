@@ -51,7 +51,7 @@ get_header();
                                         $postNumber++; ?>
                             <?php endwhile;
                                 ?>
-                            <!------------End of the loop.------------->
+                            <!--End of the loop.-->
                             <div class="cell"></div>
                             <div class="cell">
                                 <?php the_posts_pagination(array('mid_size' => 5)); ?>

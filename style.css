@@ -231,6 +231,10 @@ html * {
   .close-button:hover {
     color: white; }
 
+.main-nav-button,
+.close-button img {
+  width: 25px; }
+
 #mobile-logo {
   width: 150px; }
 
@@ -1230,14 +1234,14 @@ footer a {
 .c-comment {
   background-color: #EAEBEB;
   box-shadow: 4px -4px 8px 0px rgba(0, 0, 0, 0.05);
-  padding: rem-calc(20);
+  padding: 2px;
   position: relative; }
   .c-comment--child {
     box-shadow: none; }
     .c-comment--child .c-comment__avatar {
       width: 30px;
       height: 30px;
-      margin-right: rem-calc(15px); }
+      margin-right: 5px; }
     .c-comment--child article {
       box-shadow: 4px -4px 8px 0px rgba(0, 0, 0, 0.05); }
   .c-comment .comment-respond {
@@ -1262,7 +1266,7 @@ footer a {
       color: #eb5b27; }
   .c-comment__edit-link {
     position: absolute;
-    top: 10px;
+    top: 25px;
     right: 10px; }
     .c-comment__edit-link a {
       color: #eb5b27; }
@@ -1286,8 +1290,8 @@ footer a {
       margin: 0.50rem 0.25rem 0.25rem 0.25rem; }
   .c-comment__author {
     color: #102126;
-    font-weight: 600;
-    font-size: rem-calc(20);
+    font-weight: 500;
+    font-size: 1rem;
     margin: 0.25rem;
     font-family: 'Fjalla One', sans-serif !important; }
     .c-comment__author a {
