@@ -1,7 +1,9 @@
 <!---Title of the Second Section -->
-<?php get_template_part('template-parts/components/waveleft', 'none'); ?>
-<h3>Sponsors</h3>
-<?php get_template_part('template-parts/components/waveright', 'none'); ?>
+<div class="grid-container">
+    <?php get_template_part('template-parts/components/waveleft', 'none'); ?>
+    <h3>Sponsors</h3>
+    <?php get_template_part('template-parts/components/waveright', 'none'); ?>
+</div>
 <!--END OF H3 WAVE-->
 
 <div class="grid-container">

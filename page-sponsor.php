@@ -15,7 +15,9 @@ get_header(); ?>
 <div class="grid-container">
     <div class="grid-x grid-padding-x grid-padding-y align-center">
         <!--Title with waves and page title -->
-        <?php get_template_part('template-parts/content/title', 'none'); ?>
+        <div class="cell">
+            <?php get_template_part('template-parts/content/title', 'none'); ?>
+        </div>
         <!--Sponsors message-->
         <?php get_template_part('template-parts/content/sponsors', 'none'); ?>
     </div>

@@ -70,11 +70,15 @@ get_header(); ?>
     <div class="grid-x grid-padding-x grid-padding-y align-center">
         <!-- Empty cell/s used  for spacing-->
         <div class="cell"></div>
-        <!---Title of the Second Section -->
-        <?php get_template_part('template-parts/components/waveleft', 'none'); ?>
-        <h3>Featured Artist</h3>
-        <?php get_template_part('template-parts/components/waveright', 'none'); ?>
-        <!-- Empty cell/s used  for spacing-->
+        <div class="cell">
+            <div class="grid-container">
+                <!---Title of the Second Section -->
+                <?php get_template_part('template-parts/components/waveleft', 'none'); ?>
+                <h3>Featured Artist</h3>
+                <?php get_template_part('template-parts/components/waveright', 'none'); ?>
+                <!-- Empty cell/s used  for spacing-->
+            </div>
+        </div>
         <div class="cell"></div>
 
         <!--wp query arg set for events-->
@@ -123,30 +127,38 @@ get_header(); ?>
 
 <!--Start of Events Section-->
 <div class="grid-container" id="yoursong">
-    <!---Title of the Second Section -->
-    <?php get_template_part('template-parts/components/waveleft', 'none'); ?>
-    <h3>Get in Touch</h3>
-    <?php get_template_part('template-parts/components/waveright', 'none'); ?>
-    <!-- Empty cell/s used  for spacing-->
-    <div class="cell"></div>
+    <div class="grid-x grid-padding-x grid-padding-y align-center">
+        <!---Title of the Second Section -->
+        <div class="cell">
+            <div class="grid-container">
+                <?php get_template_part('template-parts/components/waveleft', 'none'); ?>
+                <h3>Get in Touch</h3>
+                <?php get_template_part('template-parts/components/waveright', 'none'); ?>
+            </div>
+        </div>
+        <!-- Empty cell/s used  for spacing-->
+        <div class="cell"></div>
 
-    <!--Social split cell section-->
-    <article class="grid-container">
-        <div class="grid-x grid-margin-x">
-            <!--<div class="cell large-8 shared">-->
-            <div class="cell shared">
-                <div class="cell shared">
-                    <!--Music upload message-->
-                    <?php get_template_part('template-parts/content/musiclink', 'none'); ?>
+        <!--Social split cell section-->
+        <div class="cell">
+            <article class="grid-container">
+                <div class="grid-x grid-margin-x">
+                    <div class="cell">
+                        <!--Music upload message-->
+                        <?php get_template_part('template-parts/content/musiclink', 'none'); ?>
 
-                    <!--Contact form-->
-                    <?php get_template_part('template-parts/components/contactform', get_post_format()); ?>
+                        <!--Contact form-->
+                        <?php get_template_part('template-parts/components/contactform', get_post_format()); ?>
+                    </div>
+
+                    <!--Create space between cells in card section
+            <div class="cell show-for-small show-for-medium hide-for-large"><br></div>
+
+            <div class="cell"></div>-->
                 </div>
-
-                <!--Create space between cells in card section-->
-                <div class="cell show-for-small show-for-medium hide-for-large"><br></div>
-
-                <div class="cell"></div>
-
-                <?php
-                get_footer();
+            </article>
+        </div>
+    </div>
+</div>
+<?php
+get_footer();
