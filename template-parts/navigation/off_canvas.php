@@ -13,7 +13,7 @@
                         'theme_location' => 'side-menu',
                         'menu_class' => 'multilevel-accordion-menu vertical menu text-center',
                         'container'      => false,
-                        'items_wrap'     => '<ul id="%1$s" class="%2$s" data-responsive-menu="drilldown medium-accordion">%3$s</ul>',
+                        'items_wrap'     => '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion" data-multi-open="false">%3$s</ul>',
                         //Recommend setting this to false, but if you need a fallback...
                         'fallback_cb'    => 'false',
                         'walker'         => new F6_drill_menu_walker()
