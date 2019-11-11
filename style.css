@@ -227,7 +227,8 @@ html * {
   z-index: 100; }
 
 .close-button {
-  font-size: 1em; }
+  font-size: 1em;
+  top: 1.2rem; }
   .close-button:hover {
     color: white; }
 
@@ -422,7 +423,8 @@ a {
   border: 1px solid blue; }
 
 .orange {
-  color: #eb5b27; }
+  color: #eb5b27;
+  font-size: 0.6rem; }
 
 .section-title {
   color: #eb5b27;
@@ -434,6 +436,10 @@ textarea,
 button,
 label {
   font-family: 'Fjalla One', sans-serif !important; }
+
+.button {
+  border: none !important;
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.1); }
 
 label {
   color: white;
