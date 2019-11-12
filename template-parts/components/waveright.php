@@ -1,6 +1,6 @@
 </div>
 <div class="cell auto text-left">
-    <img src="<?php echo esc_html__(get_theme_file_uri('src/assets/img/wave_right.svg')); ?>" alt="wave right" width="80">
+    <img class="wave-image" src="<?php echo esc_html__(get_theme_file_uri('src/assets/img/wave_right.svg')); ?>" alt="wave right" />
 </div>
 </div>
 <!--End of Title with Wave-->

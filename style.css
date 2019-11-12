@@ -431,6 +431,9 @@ a {
   padding: 0.5rem;
   min-height: 55px; }
 
+.wave-image {
+  width: 80px; }
+
 input,
 textarea,
 button,
@@ -1066,7 +1069,7 @@ a.boom-button {
 .widget_categories h5 {
   display: none; }
 
-#tag_cloud-6 h5 {
+#tag_cloud-2 h5 {
   visibility: hidden;
   height: 0;
   padding: 2px; }

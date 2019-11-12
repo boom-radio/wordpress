@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     <div class="cell medium-4">
-                        <?php echo '<img class="img-left box-shadowed"src="' . esc_url(get_bloginfo("template_url")) . '/src/assets/img/sponsors-handwriting-400x300.jpg" />'; ?>
+                        <?php echo '<img class="img-left box-shadowed" src="' . esc_url(get_bloginfo("template_url")) . '/src/assets/img/sponsors-handwriting-400x300.jpg" alt="Handwriting Image"/>'; ?>
                     </div>
                 </div>
             </div>

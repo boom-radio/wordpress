@@ -16,7 +16,7 @@ if (!function_exists('posts_image_paragraph_position')) {
             // Clean the URL and set the result into $thumbnail 
             $thumbnail = esc_url($featuredImgUrl);
         } else {
-            $thumbnail = get_bloginfo("template_url") . esc_html__('/src/assets/img/img-default.png alt="Boom Logo"', 'boom_radio');
+            $thumbnail = get_bloginfo("template_url") . esc_html__('/src/assets/img/img-default.png', 'boom_radio');
         }
 
 
@@ -32,7 +32,7 @@ if (!function_exists('posts_image_paragraph_position')) {
         // Put the HTML for a left image and a right paragraph into the variable $imgLeftParagRight
         $imgLeftParagRight = '
                         <div class="cell medium-4">
-                            <img src="' . $thumbnail . '" class="img-left box-shadowed">
+                            <img src="' . $thumbnail . '" class="img-left box-shadowed" alt="Boom Image">
                         </div>
                         <div class="cell medium-6">
                             <div class="grid-container-fluid">
@@ -60,7 +60,7 @@ if (!function_exists('posts_image_paragraph_position')) {
                             </div>
                         </div>
                         <div class="cell medium-4">
-                            <img src="' . $thumbnail . '" class="img-left box-shadowed">
+                            <img src="' . $thumbnail . '" class="img-left box-shadowed" alt="Boom Image">
                         </div>';
 
         // Check whether the post number (basically the post order, first post on page, second post etc.) is even or odd
