@@ -764,23 +764,6 @@ div.md-tabs > .accordion > .accordion-item > .accordion-title:focus,
   border: none !important;
   border-radius: 5px; }
 
-div.wpforms-container-full .wpforms-form input.wpforms-field-medium,
-div.wpforms-container-full .wpforms-form select.wpforms-field-medium,
-div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-medium {
-  max-width: 85% !important; }
-
-div.wpforms-container-full .wpforms-form input.wpforms-field-small,
-div.wpforms-container-full .wpforms-form select.wpforms-field-small,
-div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-small {
-  max-width: 28%; }
-
-.wpforms-container textarea {
-  max-width: 85%; }
-
-.wpgmza_map,
-#wpgmza_map {
-  margin-top: 130px; }
-
 #copyright {
   color: white;
   font-size: 0.75rem;
