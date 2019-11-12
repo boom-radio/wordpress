@@ -55,7 +55,6 @@ get_header();
 
                         <!--The Query-->
                         <?php $the_query = new WP_Query($args); ?>
-
                         <!--Start of the Loop-->
                         <?php if ($the_query->have_posts()) : ?>
                             <?php //Set variable for the loop to control amount of posts
