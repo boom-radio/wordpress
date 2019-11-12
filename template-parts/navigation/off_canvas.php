@@ -27,12 +27,18 @@
                 <div class="cell"></div>
                 <div class="cell shrink">
                     <ul class="menu text-center">
-                        <li><a href="https://www.facebook.com/boomradioau/"><i class="fab fa-facebook-f fa-1x"></i></a>
+                        <li><a href="https://www.facebook.com/boomradioau/"><i class="fab fa-facebook-f fa-1x" aria-hidden="true"></i></a>
+                            <span class="u-screen-reader-text">Facebook</span>
                         </li>
-                        <li><a href="https://twitter.com/boomradioau"><i class="fab fa-twitter fa-1x"></i></a></li>
-                        <li><a href="https://www.instagram.com/boomradioau/"><i class="fab fa-instagram fa-1x"></i></a>
+                        <li><a href="https://twitter.com/boomradioau"><i class="fab fa-twitter fa-1x" aria-hidden="true"></i></a>
+                            <span class="u-screen-reader-text">Twitter</span>
                         </li>
-                        <li><a href="index.html"><i class="fab fa-snapchat-ghost fa-1x"></i></a></li>
+                        <li><a href="https://www.instagram.com/boomradioau/"><i class="fab fa-instagram fa-1x" aria-hidden="true"></i></a>
+                            <span class="u-screen-reader-text">Instagram</span>
+                        </li>
+                        <li><a href="front-page.php"><i class="fab fa-snapchat-ghost fa-1x" aria-hidden="true"></i></a>
+                            <span class="u-screen-reader-text">Snapchat</span>
+                        </li>
                     </ul>
                 </div>
             </div>
