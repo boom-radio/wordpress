@@ -30,7 +30,7 @@
             </li>
             <li class="orange">&#x25CF;</li>
             <li>
-                <a href="<?php echo esc_url(get_permalink(get_page_by_title('General Terms'))); ?>"><?php esc_html_e('Privacy', 'boom_radio'); ?></a>
+                <a href="<?php echo esc_url(get_permalink(get_page_by_title('Privacy'))); ?>"><?php esc_html_e('Privacy', 'boom_radio'); ?></a>
             </li>
             <li class="orange">&#x25CF;</li>
             <li>
