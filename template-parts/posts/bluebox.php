@@ -19,7 +19,7 @@
         </div>
         <div class="cell medium-4">
             <?php if (has_post_thumbnail()) : ?>
-                <?php the_post_thumbnail('card', array('class' => 'img-right box-shadowed')); ?>
+                <?php the_post_thumbnail('card', array('class' => 'img-right box-shadowed', 'alt' => esc_html(get_the_title()))); ?>
             <?php endif; ?>
         </div>
     </div>

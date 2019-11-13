@@ -1,7 +1,7 @@
 <div <?php post_class('cell small-12 medium-10 large-9'); ?>>
     <div class="card">
         <?php if (has_post_thumbnail()) { ?>
-            <?php the_post_thumbnail('card_single'); ?>
+            <?php the_post_thumbnail('card_single', ['alt' => esc_html(get_the_title())]); ?>
         <?php } else { ?>
             <?php echo '<img style="width: 100%;" src="' . esc_url(get_bloginfo("template_url")) . '/src/assets/img/img-default.png" alt="Boom Logo"/>'; ?>
         <?php } ?>

@@ -2,7 +2,7 @@
     <div class="grid-x grid-padding-x grid-margin-x grid-padding-y align-spaced align-middle">
         <div class="cell medium-4">
             <?php if (has_post_thumbnail()) { ?>
-                <?php the_post_thumbnail('card', array('class' => 'img-right box-shadowed')); ?>
+                <?php the_post_thumbnail('card', array('class' => 'img-right box-shadowed', 'alt' => esc_html(get_the_title()))); ?>
             <?php } else { ?>
                 <?php echo '<img class="img-left box-shadowed" src="' . esc_url(get_bloginfo("template_url")) . '/src/assets/img/img-default.png" alt="Boom Logo"/>'; ?>
             <?php } ?>

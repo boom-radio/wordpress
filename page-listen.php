@@ -59,7 +59,7 @@ get_header(); ?>
                                                 <div class="bio">
                                                     <div class="entry-content">
                                                         <?php if (has_post_thumbnail()) : ?>
-                                                            <img src="<?php the_post_thumbnail_url('card'); ?>" class="gradiented-box" />
+                                                            <img src="<?php the_post_thumbnail_url('card'); ?>" class="gradiented-box" alt="Presenter Image" />
                                                         <?php endif; ?>
                                                         <!-- check if the custom field date created with metabox is not empty before displaying-->
                                                         <?php $date_custom_field = get_post_meta($post->ID, 'mbs_date', true); ?>
@@ -111,7 +111,7 @@ get_header(); ?>
                                                 <div class="bio">
                                                     <div class="entry-content">
                                                         <?php if (has_post_thumbnail()) : ?>
-                                                            <img src="<?php the_post_thumbnail_url('card'); ?>" class="gradiented-box" />
+                                                            <img src="<?php the_post_thumbnail_url('card'); ?>" class="gradiented-box" alt="Presenter Image" />
                                                         <?php endif; ?>
                                                         <!-- check if the custom field date created with metabox is not empty before displaying-->
                                                         <?php $date_custom_field = get_post_meta($post->ID, 'mbs_date', true); ?>
@@ -163,7 +163,7 @@ get_header(); ?>
                                                 <div class="bio">
                                                     <div class="entry-content">
                                                         <?php if (has_post_thumbnail()) : ?>
-                                                            <img src="<?php the_post_thumbnail_url('card'); ?>" class="gradiented-box" />
+                                                            <img src="<?php the_post_thumbnail_url('card'); ?>" class="gradiented-box" alt="Presenter Image" />
                                                         <?php endif; ?>
                                                         <!-- check if the custom field date created with metabox is not empty before displaying-->
                                                         <?php $date_custom_field = get_post_meta($post->ID, 'mbs_date', true); ?>
@@ -245,7 +245,7 @@ get_header(); ?>
                             <!-- insert selected post's title-->
                             <h4><?php esc_html_e(the_title()); ?></h4>
                             <?php if (has_post_thumbnail()) { ?>
-                                <?php the_post_thumbnail(); ?>
+                                <?php the_post_thumbnail('full', ['alt' => esc_html(get_the_title())]); ?>
                             <?php } ?>
                             <a href="<?php echo esc_url(the_permalink()); ?>" class="boom-button-white float-right">Tell me more!</a>
                         </div>

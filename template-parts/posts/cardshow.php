@@ -1,7 +1,7 @@
 <div <?php post_class('card'); ?>>
     <div class="cell"></div>
     <?php if (has_post_thumbnail()) : ?>
-        <?php the_post_thumbnail('card_single'); ?>
+        <?php the_post_thumbnail('card_single', ['alt' => esc_html(get_the_title())]); ?>
     <?php endif; ?>
 
     <div class="card-section">
