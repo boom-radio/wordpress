@@ -23,12 +23,15 @@ function boom_radio_comment_callback($comment, $args, $depth)
                     </time>
                 </a>
 
+                <!--Display the content of the comment-->
                 <?php if ($comment->comment_approved == '0') { ?>
                     <p class="c-comment__awaiting-moderation"><?php esc_html_e('Your comment is awaiting moderation.', 'boom_radio'); ?></p>
                 <?php } ?>
 
                 <?php
-                    if ($comment->comment_type == '' || (($comment->comment_type == 'pingback' || $comment->comment_type == 'trackback') && !$args['short_ping'])) {
+                    //echo $comment->comment_type;
+                    //Check to see if the comment is a ping or track and if the short_ping arg is false, then deliver entire comment text
+                    if ($comment->comment_type == 'comment' || (($comment->comment_type == 'pingback' || $comment->comment_type == 'trackback') && !$args['short_ping'])) {
                         comment_text();
                     }
                     ?>

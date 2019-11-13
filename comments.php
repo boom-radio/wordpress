@@ -27,7 +27,7 @@ if (post_password_required()) {
         <!--List the comment fo the post-->
         <div class="c-comments__list">
             <?php wp_list_comments(array(
-                    'short_ping' => true,
+                    //'short_ping' => true,
                     'avatar_size' => 50,
                     'reply_text' => 'Reply',
                     //Callback to function to create comment markup

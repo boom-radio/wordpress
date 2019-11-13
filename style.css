@@ -1208,14 +1208,16 @@ footer a {
 .c-comments__title {
   margin: 1.5rem 0 0 0;
   padding: 0.5rem 0.5rem 1rem 0;
-  font-size: 1.3rem !important; }
+  font-size: 1.3rem !important;
+  color: #eb5b27; }
 
 .c-comments__list {
   list-style: none;
   margin: 0; }
   .c-comments__list .children {
     font-size: 100%;
-    list-style: none; }
+    list-style: none;
+    margin-left: 1rem; }
 
 .c-comments :target:before {
   height: 20px; }
@@ -1303,9 +1305,12 @@ footer a {
   .comment-respond .comment-form .comment-form-comment label {
     padding: 0.5rem 0; }
   .comment-respond .comment-form .comment-form-author label,
+  .comment-respond .comment-form .comment-form-comment label,
   .comment-respond .comment-form .comment-form-email label,
-  .comment-respond .comment-form .comment-form-url label {
-    padding: 0.5rem 0 0.5rem 0; }
+  .comment-respond .comment-form .comment-form-url label,
+  .comment-respond .comment-form .comment-form-cookies-consent label {
+    padding: 0.5rem 0 0.5rem 0;
+    color: #eb5b27; }
   .comment-respond .comment-form .form-submit {
     margin-top: 0.75rem;
     border-radius: 0.7rem;
@@ -1345,7 +1350,7 @@ footer a {
       background-color: transparent; }
 
 .comment-notes {
-  color: white; }
+  color: #3aa9e1; }
 
 .top-link {
   transition: all 0.2s ease-in-out;
