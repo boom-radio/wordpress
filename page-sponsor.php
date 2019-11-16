@@ -10,7 +10,8 @@
 get_header(); ?>
 <!--This is Page Sponsor template-->
 <!-- Go to top button -->
-<?php get_template_part('template-parts/components/gototop', 'none'); ?>
+<?php //get_template_part('template-parts/components/gototop', 'none'); 
+?>
 <!--Start of Sponsors Introduction Section-->
 <div class="grid-container">
     <div class="grid-x grid-padding-x grid-padding-y align-center">

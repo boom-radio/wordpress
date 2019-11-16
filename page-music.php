@@ -10,7 +10,8 @@
 get_header(); ?>
 <!--<h3>This is music</h3>-->
 <!-- Go to top button -->
-<?php get_template_part('template-parts/components/gototop', 'none'); ?>
+<?php //get_template_part('template-parts/components/gototop', 'none'); 
+?>
 <!--Start of Artists Section-->
 <article class="grid-container">
     <!--Title with waves and page title -->

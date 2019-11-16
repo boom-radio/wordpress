@@ -12,7 +12,8 @@ get_header(); ?>
 <!-----------CONTENT HERE---------->
 <!--This is page-contact.php-->
 <!--- Go to top button -->
-<?php get_template_part('template-parts/components/gototop', 'none'); ?>
+<?php //get_template_part('template-parts/components/gototop', 'none'); 
+?>
 <!--Title with waves and page title -->
 <?php get_template_part('template-parts/content/title', 'none'); ?>
 
