@@ -10,9 +10,6 @@
 get_header(); ?>
 <!--CONTENT HERE-->
 <!--<h3>This is front page</h3>-->
-<!--- Go to top button -->
-<?php get_template_part('template-parts/components/gototop', 'none');
-?>
 <!--Start of News Section-->
 <article class="grid-container">
     <div class="grid-x grid-margin-x">
