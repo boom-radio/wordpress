@@ -9,9 +9,7 @@
 
 get_header();
 ?>
-<!--This is archive.php-->
-<!--- Go to top button -->
-<?php get_template_part('template-parts/components/gototop', 'none'); ?>
+<h3>This is archive.php </h3>
 <!--Set the latest search query variable and delivers it to the title-->
 <?php get_template_part('template-parts/components/archiveresults', 'none'); ?>
 

@@ -10,8 +10,6 @@
 
 get_header(); ?>
 <!--<h3>The is single-schedule.php</h3>-->
-<!-- Go to top button -->
-<?php get_template_part('template-parts/components/gototop', 'none'); ?>
 <div class="grid-container">
     <div class="grid-x grid-margin-x grid-margin-y align-center">
         <!-- empty cell for spacing -->
