@@ -22,7 +22,7 @@
     "foundation": "^4.2.1-1",
     "node-sass": "^4.12.0",
     "slick-carousel": "^1.8.1",
-    "yarn": "^1.17.3"
+    "yarn": "^1.22.0"
   },
   "devDependencies": {},
   "repository": {
