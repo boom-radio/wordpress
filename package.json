@@ -20,7 +20,7 @@
   "license": "ISC",
   "dependencies": {
     "foundation": "^4.2.1-1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "slick-carousel": "^1.8.1",
     "yarn": "^1.17.3"
   },
